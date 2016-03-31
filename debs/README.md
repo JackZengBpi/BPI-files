@@ -5,9 +5,18 @@ for Banana Pi:
 
 dpkg -i xxx.deb
 
-for ubuntu(x86):
+for ubuntu 14.04 (x86):
 
 dpkg --add-architecture armhf
+
+or
+
+for ubuntu 12.04 (x86):
+
+echo "foreign-architecture armhf" >> /etc/dpkg/dpkg.cfg.d/multiarch
+
+
+
 
 dpkg -i bananapi-bpi-tools*.deb
 
