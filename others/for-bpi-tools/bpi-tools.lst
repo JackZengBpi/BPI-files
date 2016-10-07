@@ -1,6 +1,6 @@
-dbadb1ed7bbc6a0cb6f029b0ee8fa825  bpi-tools https://github.com/BPI-SINOVOIP/bpi-tools/raw/master/bpi-tools	v1.2.0(gethub) /usr/bin/bpi-tools
+dbadb1ed7bbc6a0cb6f029b0ee8fa825  bpi-tools https://github.com/BPI-SINOVOIP/bpi-tools/raw/master/bpi-tools	v1.2.0(github) /usr/bin/bpi-tools
 66a1773a2b0ff2c0f337513328b2363e  bpi-bootsel https://github.com/BPI-SINOVOIP/bpi-tools/raw/master/bpi-bootsel	v1.0.5 /usr/bin/bpi-bootsel
 47516d97d66f71d2afb530606a42717e  bpi-copy https://github.com/BPI-SINOVOIP/bpi-tools/raw/master/bpi-copy	v1.0.10a /usr/bin/bpi-copy
-c6a42687d833880166b41a7a49f326e6  bpi-get https://github.com/BPI-SINOVOIP/bpi-tools/raw/master/bpi-get	v1.0.3(gethub) /usr/bin/bpi-get
+c6a42687d833880166b41a7a49f326e6  bpi-get https://github.com/BPI-SINOVOIP/bpi-tools/raw/master/bpi-get	v1.0.3(github) /usr/bin/bpi-get
 e8dc4f5043d005ceaaac971747d4cb7d  bpi-migrate https://github.com/BPI-SINOVOIP/bpi-tools/raw/master/bpi-migrate v1.2.2c(github) /usr/bin/bpi-migrate
 89ad8667be11d8b266d6e6d4974693e4  bpi-hw https://github.com/BPI-SINOVOIP/bpi-tools/raw/master/bpi-hw v1.2.8 /usr/bin/bpi-hw
