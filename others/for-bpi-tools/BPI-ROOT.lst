@@ -9,7 +9,7 @@ a479c8a9953061d2062c2be080e43825  BPI_M2P_720P.img.gz https://github.com/BPI-SIN
 40bff6c98c4d71b576439acb76728074  BPI_M3_720P.img.gz https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/100MB/BPI_M3_720P.img.gz v1.2.9 8k
 3231142a5f94ca2ff9b8a0c9346479db  uboot-bpi-m2.img.gz https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/100MB/uboot-bpi-m2.img.gz v1.0 8k
 703aa13ffa187dfbfab32c1fe4a15b84  BPI-BOOT.tgz https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-BOOT/BPI-BOOT.tgz v1.1.0(2016-08-10) /boot
-ee99800afbce31ad66d8ec460eeda595  bpi-tools.tgz https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/bpi-tools.tgz v1.0.9(2016-07-23) /
+0fcf9688a91ee7c888dc8de0300e462e  bpi-tools.tgz https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/bpi-tools.tgz v1.0.10-github(2016-10-07) /
 12a11c206228ab99676b9ac823145fbc  3.3.0-BPI-M2-Kernel.tgz https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/3.3.0-BPI-M2-Kernel.tgz v1.2.3 /
 738de3dd357b1a6dd5382be4d14300bd  3.4.39-BPI-M2P-Kernel.tgz https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/3.4.39-BPI-M2P-Kernel.tgz v1.2.6 /
 72dc8d5f1cef0b02a29a69a37fd35a12  3.4.39-BPI-M3-Kernel.tgz https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/3.4.39-BPI-M3-Kernel.tgz (2016-07-26,v1.2.9) /
