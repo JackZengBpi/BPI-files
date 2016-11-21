@@ -1,3 +1,5 @@
+#!/bin/sh
+BOARD=$(bpi-hw)
 #
 # Default it is called to be uncertain wich MAC address the chipset has.
 # Therefore it is recommendable to set the MAC address manually.
@@ -32,6 +34,9 @@ MAC_ADDR=43:29:B1:55:01:01
 #
 
 PORT=ttyS1
+if [ "x$BOARD" == "xbpi-m2u" ] ; then
+	PORT=ttyS3
+fi
 #BPI
 PATCHRAM="/lib/firmware/ap6212/bcm43438a0.hcd"
 PATCHLOG="/tmp/ap6212.firmware"
