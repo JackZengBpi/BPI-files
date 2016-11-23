@@ -195,7 +195,7 @@ state.audiocodec {
 	control.15 {
 		iface MIXER
 		name 'Phone Out Mixer LOMIX Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -305,7 +305,7 @@ state.audiocodec {
 	control.26 {
 		iface MIXER
 		name 'Left Input Mixer ROMIX Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -385,7 +385,7 @@ state.audiocodec {
 	control.34 {
 		iface MIXER
 		name 'Right Output Mixer DACR Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
@@ -455,7 +455,7 @@ state.audiocodec {
 	control.41 {
 		iface MIXER
 		name 'Left Output Mixer DACL Switch'
-		value false
+		value true
 		comment {
 			access 'read write'
 			type BOOLEAN
