@@ -1,1 +1,0 @@
-BPI_OS=xenial_minimal

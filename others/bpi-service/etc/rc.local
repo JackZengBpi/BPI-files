@@ -14,15 +14,13 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-. /lib/lsb/init-functions
-
 BPIAUTORUN="/var/lib/bananapi/bpi-autorun.d/bpi-autorun.sh"
-BPIAUTOLOG="/var/lib/bananapi/bpi-autorun.d/bpi-autorun.log"
+BPIAUTOLOG="/var/log/bpi-autorun.log"
 if [ -f ${BPIAUTORUN} ] ; then
-	log_action_msg "BPI-AUTORUN: ${BPIAUTORUN}" >> $BPIAUTOLOG
+	echo "BPI-AUTORUN: ${BPIAUTORUN}" >> $BPIAUTOLOG
 	. ${BPIAUTORUN}
 else
-	log_action_msg "BPI-AUTORUN: not found: ${BPIAUTORUN}" >> /tmp/.bpi-autorun.log
+	echo "BPI-AUTORUN: not found: ${BPIAUTORUN}" >> $BPIAUTOLOG
 fi
 
 exit 0

@@ -11,17 +11,16 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-. /lib/lsb/init-functions
-
 BPIINIT="/var/lib/bananapi/bpi-init.d/bpi-init.sh"
+BPIINITLOG="/var/log/bpi-init.log"
 
 case "$1" in
   start)
 	if [ -f ${BPIINIT} ] ; then
-		log_action_msg "BPI: run ${BPIINIT}"
+		echo "BPI: run ${BPIINIT}" >> $BPIINITLOG
 		. ${BPIINIT}
 	else
-		log_action_msg "BPI: not found:  ${BPIINIT}"
+		echo "BPI: not found:  ${BPIINIT}" >> $BPIINITLOG
 	fi
 	;;
   restart|reload|force-reload)
