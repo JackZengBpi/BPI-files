@@ -13,7 +13,9 @@ fi
 
 # BPI-M3 do audio setup
 if [ -x "/usr/sbin/alsactl" ] ; then
-	/usr/sbin/alsactl -f $ASOUNDFILE restore 2>&1 >/dev/null
+	if [ -f $ASOUNDFILE ] ; then
+		/usr/sbin/alsactl -f $ASOUNDFILE restore 2>&1 >/dev/null
+	fi
 fi
 
 
