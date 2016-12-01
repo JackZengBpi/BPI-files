@@ -1,0 +1,668 @@
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161128# bpi-copy 2016-11-28-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2u.img.zip /dev/sdg
+SRC=2016-11-28-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2u.img.zip
+DST=/dev/sdg
+COPYMODE=imagetodisk
+imagetodisk
+       bpi-copy v1.0.11a
+usage: bpi-copy
+       bpi-copy IMGFILE
+       bpi-copy IMGDIR
+       bpi-copy IMGFILE DEVICE
+       bpi-copy DEVICE IMGFILE
+
+Warning: Try to write 2016-11-28-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2u.img.zip to BOOTDISK /dev/sdg
+==============================================================
+Thu Dec  1 09:03:19 CST 2016
+*** start COPY (blue led on ) .....
+umount device: /dev/sdg
+umount /dev/sdg2
+umount /dev/sdg1
+==============================================================
+IMGFILE=2016-11-28-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2u.img.zip
+==============================================================
+zip
+14.1GB 0:02:51 [84.3MB/s] [                           <=>                      ]
+0+193950 records in
+0+193950 records out
+***  end  COPY (blue led off) .....
+Thu Dec  1 09:06:17 CST 2016
+==============================================================
+RUNTIME 2:58
+OK!! You can remove the BOOTDISK /dev/sdg now!!
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161128# ls
+2016-11-28-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2u.img.zip
+3.10.65-BPI-M2U-Kernel.tgz
+addons.tgz
+BOOTLOADER-bpi-m2u.tgz
+BPI-BOOT-bpi-m2u.tgz
+bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+BPI_M2U_720P.img.gz
+bpi-m2u.conf
+bpi-service.tgz
+bpi-tools.tgz
+brcm.tgz
+bt.tgz
+build.sh
+camera.tgz
+libvdpau_sunxi.tgz
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161128# cd ..
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu# mkdir 20161201
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu# cd 20161201
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# cp -a ../build.sh .
+cp: cannot stat ‘../build.sh’: No such file or directory
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# cp -a ../20161128/build.sh .
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# ls
+build.sh
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# vi build.sh 
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# ls
+build.sh
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# cat build.sh 
+
+bpi-migrate -c bpi-m2p.conf -c bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# ./build.sh 
+CONFFILE=bpi-m2p.conf
+Wait for download bpi-m2p.conf ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/others/for-bpi-tools/conf/board/bpi-m2p.conf
+OK!!\n
+CONFFILE=bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+Wait for download bpi-m2p-ubuntu-mate-1050929-from-sd.conf ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/others/for-bpi-tools/conf/os/bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+OK!!\n
+BPIMODE=migratefromroot
+migratefromroot
+Info: Try to create NEW IMAGE 2016-11-28-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img with /media/pi/BPI-ROOT
+==============================================================
+Thu Dec  1 09:16:42 CST 2016
+SIZE=14456, RAWSIZE=100, BOOTSIZE=256, OFFSET=356
+
+#####################
+# Creating img file #
+#    14456 = 8G EMMC #
+#####################
+
+14.1GB 0:03:02 [79.1MB/s] [                <=>                                 ]
+29605888+0 records in
+29605888+0 records out
+14456+0 records in
+14456+0 records out
+15158214656 bytes (15 GB) copied15158214656 bytes (15 GB) copied, 182.83 s, 82.9 MB/s
+, 182.83 s, 82.9 MB/s
+
+#########################
+ +>/dev/loop0 
+ +->/dev/loop0p1 
+ +->/dev/loop0p2 
+#########################
+
+
+#############################
+# Creating partitions table #
+#############################
+
+Model: Loopback device (loop)
+Disk /dev/loop0: 15.2GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+
+Number  Start  End     Size    Type     File system  Flags
+ 1      105MB  373MB   268MB   primary               boot, lba
+ 2      373MB  15.2GB  14.8GB  primary
+
+
+########################
+# Creating filesystems #
+########################
+
+mkfs.fat 3.0.26 (2014-03-07)
+unable to get drive geometry, using default 255/63
+mke2fs 1.42.9 (4-Feb-2014)
+Discarding device blocks: done                            
+Filesystem label=BPI-ROOT
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=2 blocks, Stripe width=1024 blocks
+903984 inodes, 3609600 blocks
+180480 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=3699376128
+111 block groups
+32768 blocks per group, 32768 fragments per group
+8144 inodes per group
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
+
+Allocating group tables: done                            
+Writing inode tables: done                            
+Writing superblocks and filesystem accounting information: done   
+
+
+##########################
+# Burning the bootloader #
+##########################
+
+Wait for download BPI_M2P_720P.img.gz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/100MB/BPI_M2P_720P.img.gz
+OK!!\n
+102392+0 records in
+102392+0 records out
+104849408 bytes (105 MB) copied, 1.38869 s, 75.5 MB/s
+
+######################
+# Copying boot files #
+######################
+
+Wait for download /media/pi/BPI-BOOT ...
+/usr/bin/bpi-migrate: line 170: /media/pi/BPI-BOOT: Is a directory
+grep: /media/pi/BPI-BOOT: Is a directory
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/100MB//media/pi/BPI-BOOT
+OK!!\n
+tar from dir /media/pi/BPI-BOOT
+tar: ./config.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./uInitrd: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./fixup_x.dat: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./start_x.elf: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./LICENSE.oracle: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bcm2708-rpi-b.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./issue.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bcm2708-rpi-b-plus.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./cmdline.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./fixup_db.dat: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./kernel7.img: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./start_cd.elf: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./script.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./boot.cmd: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./fixup_cd.dat: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./COPYING.linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./kernel.img: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./fixup.dat: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./start.elf: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./uEnv.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./.config: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bcm2710-rpi-3-b.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./LICENCE.broadcom: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bcm2708-rpi-cm.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/sun7i-a20-bananapi.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/sun7i-a20-bananapi-r1.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2/linux/script.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2/linux/uEnv.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2/linux/uImage: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2/linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1/linux/bananapi.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1/linux/script.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1/linux/boot.cmd: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1/linux/bananapi.fex: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1/linux/boot.scr: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1/linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/uInitrd: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/uboot/uboot-bpi-m1-plus.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/uboot/uboot-bpi-r1.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/uboot/uboot-bpi-m1.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/uboot/uboot-bpi-m2.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/uboot: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux/System.map-3.10.101-pine64: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux/initrd.img: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux/config-3.10.101-pine64: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux/pine64.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux/boot.cmd: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux/pine64-plus.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux/boot.scr: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux/Image: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64/linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m64: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-r1/linux/lamobo-r1.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-r1/linux/script.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-r1/linux/boot.cmd: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-r1/linux/lamobo-r1.fex: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-r1/linux/boot.scr: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-r1/linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-r1: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/sun7i-a20-bananapi-m1-plus.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/u-boot-2016.05/u-boot-2016.05-bpi-m2.img.gz: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/u-boot-2016.05/u-boot-2016.05-bpi-m1p.img.gz: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/u-boot-2016.05/u-boot-2016.05-bpi-r1.img.gz: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/u-boot-2016.05/u-boot-2016.05-bpi-m3.img.gz: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/u-boot-2016.05/u-boot-2016.05-bpi-m1.img.gz: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/u-boot-2016.05/u-boot-2016.05-bpi-m2p.img.gz: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/u-boot-2016.05: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1p/linux/script.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1p/linux/boot.cmd: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1p/linux/boot.scr: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1p/linux/bananapipro.fex: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1p/linux/bananapipro.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1p/linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m1p: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/openelec/bpi-m2p.fex: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/openelec/script.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/openelec/uEnv.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/openelec/SYSTEM: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/openelec/KERNEL: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/openelec/init: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/openelec: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/linux/uEnv.txt.org: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/linux/script.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/linux/sys_config.fex: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/linux/uImage.sun8i: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/linux/uEnv.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/linux/uImage: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p/linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2p: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/uImage: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/sun6i-a31s-sinovoip-bpi-m2.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/autorun/bpi-m2p-blink.sh: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/autorun/bpi-autorun.sh: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/autorun: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3/linux/script.bin.otg: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3/linux/script.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3/linux/sys_config.fex: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3/linux/script.bin.emmc: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3/linux/uEnv.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3/linux/uImage: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3/linux/sys_config.fex.emmc: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3/linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m3: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/sun6i-a31s-bananapi-m2.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/chip/a20/uImage.sun7i: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/chip/a20: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/chip: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2u/linux/uEnv.txt: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2u/linux/uImage: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2u/linux: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi/bpi-m2u: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bananapi: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./boot.scr: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./.firmware_revision: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./boot.scr.org: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bcm2709-rpi-2-b.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-ft5406.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hifiberry-dac-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/audioinjector-wm8731-audio.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2s-gpio28-31.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/qca7000-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/tinylcd35-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mcp2515-can1.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pi3-miniuart-bt-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/adau1977-adc.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-dac-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hy28b.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/piscreen-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mmc-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pitft28-resistive.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/at86rf233-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/sc16is752-spi1.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pitft28-capacitive.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/vc4-kms-v3d-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/dht11-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/w1-gpio-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/smi.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mcp23017.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/tinylcd35.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hifiberry-amp.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mz61581-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/dpi24.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hifiberry-dacplus-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi1-3cs.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hifiberry-amp-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pitft22.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/dwc2.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/w1-gpio-pullup-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/w1-gpio-pullup.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/ads1015.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-sense-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c-rtc.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/gpio-poweroff-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/dwc-otg.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/dionaudio-loco.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pwm-2chan-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c1-bcm2708.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c-gpio-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/lirc-rpi-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/README: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/sdhost.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi2-1cs.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/iqaudio-dac.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rra-digidac1-wm8741-audio.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/ads7846.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/akkordion-iqdacplus.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hifiberry-dacplus.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-backlight.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hifiberry-dac.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mcp2515-can0.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/vc4-kms-v3d.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi2-3cs.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pps-gpio-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/qca7000.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pi3-act-led.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/sdtweak.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi-dma-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-display-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-display.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pi3-disable-bt.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/piscreen2r-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pi3-disable-bt-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi0-hw-cs.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pi3-miniuart-bt.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hifiberry-digi-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hy28a-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/enc28j60-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/gpio-ir.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/piscreen2r.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/bmp085_i2c-sensor-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pwm-2chan.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/gpio-poweroff.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c-rtc-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/piscreen.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/sdio.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/enc28j60.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/uart1.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/smi-nand.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/raspidac3.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mz61581.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi-bcm2835-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi1-1cs.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-proto.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi-bcm2708-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/lirc-rpi.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/smi-dev.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pps-gpio.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/iqaudio-digi-wm8804-audio.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/vga666-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/justboom-dac.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-backlight-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mcp2515-can0-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hifiberry-digi.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hy28b-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c0-bcm2708-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/hy28a.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/vga666.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/smi-nand-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/sdio-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/sdhost-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pitft28-capacitive-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/ads7846-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/wittypi.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/at86rf233.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-ft5406-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c1-bcm2708-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi1-2cs.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pwm-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2s-mmap-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c-mux.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/iqaudio-dacplus-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/iqaudio-dacplus.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/smi-dev-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/dht11.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/bmp085_i2c-sensor.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/gpio-ir-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi2-2cs.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c-gpio.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2s-mmap.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pitft28-resistive-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/smi-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-proto-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/w1-gpio.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/uart1-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/sdio-1bit.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/pwm.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mcp2515-can1-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi-rtc.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-sense.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c-pwm-pca9685a.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/rpi-dac.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/mmc.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/iqaudio-dac-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/justboom-digi.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/spi-gpio35-39.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/raspidac3-overlay.dtb: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays/i2c0-bcm2708.dtbo: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./overlays: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./start_db.elf: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: ./bootcode.bin: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: .: Cannot change ownership to uid 1000, gid 1000: Operation not permitted
+tar: Exiting with failure status due to previous errors
+Wait for download BPI-BOOT-bpi-m2p.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-BOOT/BPI-BOOT-bpi-m2p.tgz
+OK!!\n
+tar xf BPI-BOOT-bpi-m2p.tgz --keep-directory-symlink -C /mnt
+total 23828
+drwxr-xr-x  4 root root   16384 Nov 18 08:55 .
+drwxr-xr-x 34 root root    4096 Dec  1 07:45 ..
+drwxr-xr-x 14 root root    4096 Nov 18 08:55 bananapi
+-rwxr-xr-x  1 root root   13384 Jul 20 22:28 bcm2708-rpi-b.dtb
+-rwxr-xr-x  1 root root   13647 Jul 20 22:28 bcm2708-rpi-b-plus.dtb
+-rwxr-xr-x  1 root root   13257 Jul  4 02:40 bcm2708-rpi-cm.dtb
+-rwxr-xr-x  1 root root   14730 Jul 20 22:28 bcm2709-rpi-2-b.dtb
+-rwxr-xr-x  1 root root   15400 Jul 20 22:28 bcm2710-rpi-3-b.dtb
+-rwxr-xr-x  1 root root     763 Jul  4 17:21 boot.cmd
+-rwxr-xr-x  1 root root   17932 Jul  4 02:40 bootcode.bin
+-rwxr-xr-x  1 root root     835 Jul  4 17:23 boot.scr
+-rwxr-xr-x  1 root root     377 Jul  4 16:59 boot.scr.org
+-rwxr-xr-x  1 root root     110 Apr 21  2016 cmdline.txt
+-rwxr-xr-x  1 root root     313 Jul 20 23:47 .config
+-rwxr-xr-x  1 root root   36156 Apr 21  2016 config.txt
+-rwxr-xr-x  1 root root   18693 Aug 21  2015 COPYING.linux
+-rwxr-xr-x  1 root root      41 Jul 20 22:29 .firmware_revision
+-rwxr-xr-x  1 root root    2504 Jul 20 22:28 fixup_cd.dat
+-rwxr-xr-x  1 root root    6482 Jul 20 22:28 fixup.dat
+-rwxr-xr-x  1 root root    9722 Jul 20 22:28 fixup_db.dat
+-rwxr-xr-x  1 root root    9716 Jul 20 22:28 fixup_x.dat
+-rwxr-xr-x  1 root root     145 May 27  2016 issue.txt
+-rwxr-xr-x  1 root root 4224800 Jul 20 22:28 kernel7.img
+-rwxr-xr-x  1 root root 4122672 Jul 20 22:28 kernel.img
+-rwxr-xr-x  1 root root    1494 Nov 18  2015 LICENCE.broadcom
+-rwxr-xr-x  1 root root   18974 Mar 18  2016 LICENSE.oracle
+drwxr-xr-x  2 root root   16384 Jul 20 23:45 overlays
+-rwxr-xr-x  1 root root   36912 Mar  3  2016 script.bin
+-rwxr-xr-x  1 root root  618296 Jul 20 22:28 start_cd.elf
+-rwxr-xr-x  1 root root 4928152 Jul 20 22:28 start_db.elf
+-rwxr-xr-x  1 root root 2747896 Jul 20 22:28 start.elf
+-rwxr-xr-x  1 root root 3879416 Jul 20 22:28 start_x.elf
+-rwxr-xr-x  1 root root      26 Jul  1 13:53 uEnv.txt
+-rwxr-xr-x  1 root root 3526808 Jul  4 05:13 uInitrd
+
+##################
+# Copying rootfs #
+##################
+
+sudo mount -t ext4 /dev/loop0p2 /mnt
+Wait for download /media/pi/BPI-ROOT ...
+/usr/bin/bpi-migrate: line 170: /media/pi/BPI-ROOT: Is a directory
+grep: /media/pi/BPI-ROOT: Is a directory
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/100MB//media/pi/BPI-ROOT
+OK!!\n
+tar from dir /media/pi/BPI-ROOT
+Wait for download bpi-tools.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/bpi-tools.tgz
+OK!!\n
+tar xvf bpi-tools.tgz --keep-directory-symlink -C /mnt
+Wait for download BOOTLOADER-bpi-m2p.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/BOOTLOADER-bpi-m2p.tgz
+OK!!\n
+tar xvf BOOTLOADER-bpi-m2p.tgz --keep-directory-symlink -C /mnt
+Wait for download 3.4.39-BPI-M2P-Kernel.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/3.4.39-BPI-M2P-Kernel.tgz
+OK!!\n
+tar xvf 3.4.39-BPI-M2P-Kernel.tgz --keep-directory-symlink -C /mnt
+Wait for download libvdpau_sunxi.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/libvdpau_sunxi.tgz
+OK!!\n
+tar xvf libvdpau_sunxi.tgz --keep-directory-symlink -C /mnt
+Wait for download bpi-service.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/bpi-service.tgz
+OK!!\n
+tar xvf bpi-service.tgz --keep-directory-symlink -C /mnt
+Wait for download addons.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/addons.tgz
+OK!!\n
+tar xvf addons.tgz --keep-directory-symlink -C /mnt
+Wait for download bt.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/bt.tgz
+OK!!\n
+tar xvf bt.tgz --keep-directory-symlink -C /mnt
+Wait for download camera.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/camera.tgz
+OK!!\n
+tar xvf camera.tgz --keep-directory-symlink -C /mnt
+Wait for download brcm.tgz ...
+https://github.com/BPI-SINOVOIP/BPI-files/raw/master/SD/BPI-ROOT/brcm.tgz
+OK!!\n
+tar xvf brcm.tgz --keep-directory-symlink -C /mnt
+total 112
+drwxr-xr-x  23 root root  4096 Nov  8 11:04 .
+drwxr-xr-x  34 root root  4096 Dec  1 07:45 ..
+drwxr-xr-x   2 root root  4096 Nov 21 08:55 bin
+drwxr-xr-x   2 root root  4096 Apr 22  2016 boot
+drwxr-xr-x   4 root root  4096 Apr 21  2016 dev
+drwxr-xr-x 155 root root 12288 Nov 22 15:29 etc
+drwxr-xr-x   3 root root  4096 Jul 13 09:05 home
+drwxr-xr-x  22 root root  4096 Nov 27  2015 lib
+drwx------   2 root root 16384 Apr 22  2016 lost+found
+drwxr-xr-x   3 root root  4096 Jul 21 00:25 media
+drwxr-xr-x   2 root root  4096 Apr 21  2016 mnt
+drwxr-xr-x   3 root root  4096 Jul 20 22:16 opt
+drwxr-xr-x   2 root root  4096 Apr 13  2016 proc
+drwx------   8 root root  4096 Nov 28 09:12 root
+drwxr-xr-x  11 root root  4096 Apr 21  2016 run
+drwxr-xr-x   2 root root  4096 Nov 28 09:24 sbin
+drwxr-xr-x   2 root root  4096 Apr 19  2016 snap
+drwxr-xr-x   2 root root  4096 Apr 21  2016 srv
+drwxr-xr-x   2 root root  4096 Feb  5  2016 sys
+drwxr-xr-x   3 root root  4096 Nov 27  2015 system
+drwxrwxrwt   7 root root  4096 Nov 28 09:44 tmp
+drwxr-xr-x  11 root root  4096 Nov 21 09:01 usr
+drwxr-xr-x  14 root root  4096 Jul  4 21:22 var
+
+release_loopdev
+
+sudo losetup -d /dev/loop0
+
+###########
+# Done !! #
+###########
+Thu Dec  1 09:25:23 CST 2016
+==============================================================
+RUNTIME 8:41
+OK!!
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# ls
+2016-11-28-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+3.4.39-BPI-M2P-Kernel.tgz
+addons.tgz
+BOOTLOADER-bpi-m2p.tgz
+BPI-BOOT-bpi-m2p.tgz
+BPI_M2P_720P.img.gz
+bpi-m2p.conf
+bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+bpi-service.tgz
+bpi-tools.tgz
+brcm.tgz
+bt.tgz
+build.sh
+camera.tgz
+libvdpau_sunxi.tgz
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# mv 2016-11-28-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img 2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# ls
+2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+3.4.39-BPI-M2P-Kernel.tgz
+addons.tgz
+BOOTLOADER-bpi-m2p.tgz
+BPI-BOOT-bpi-m2p.tgz
+BPI_M2P_720P.img.gz
+bpi-m2p.conf
+bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+bpi-service.tgz
+bpi-tools.tgz
+brcm.tgz
+bt.tgz
+build.sh
+camera.tgz
+libvdpau_sunxi.tgz
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# bpi-copy 2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img /dev/sdg
+SRC=2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+DST=/dev/sdg
+COPYMODE=imagetodisk
+imagetodisk
+       bpi-copy v1.0.11a
+usage: bpi-copy
+       bpi-copy IMGFILE
+       bpi-copy IMGDIR
+       bpi-copy IMGFILE DEVICE
+       bpi-copy DEVICE IMGFILE
+
+Warning: Try to write 2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img to BOOTDISK /dev/sdg
+==============================================================
+Thu Dec  1 09:27:59 CST 2016
+*** start COPY (blue led on ) .....
+umount device: /dev/sdg
+umount /dev/sdg2
+umount /dev/sdg1
+==============================================================
+IMGFILE=2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+==============================================================
+img
+1445+1 records in9.4MB/s] [                               <=>                  ]
+1445+1 records out
+14.1GB 0:02:48 [85.9MB/s] [                              <=>                   ]15158214656 bytes (15 GB) copied
+, 168.237 s, 90.1 MB/s
+0+115648 records in
+0+115648 records out
+***  end  COPY (blue led off) .....
+Thu Dec  1 09:30:53 CST 2016
+==============================================================
+RUNTIME 2:54
+OK!! You can remove the BOOTDISK /dev/sdg now!!
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# ls
+2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+3.4.39-BPI-M2P-Kernel.tgz
+addons.tgz
+BOOTLOADER-bpi-m2p.tgz
+BPI-BOOT-bpi-m2p.tgz
+BPI_M2P_720P.img.gz
+bpi-m2p.conf
+bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+bpi-service.tgz
+bpi-tools.tgz
+brcm.tgz
+bt.tgz
+build.sh
+camera.tgz
+libvdpau_sunxi.tgz
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# zip 2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img.zip 2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+  adding: 2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img (deflated 79%)
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# ls
+2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img.zip
+3.4.39-BPI-M2P-Kernel.tgz
+addons.tgz
+BOOTLOADER-bpi-m2p.tgz
+BPI-BOOT-bpi-m2p.tgz
+BPI_M2P_720P.img.gz
+bpi-m2p.conf
+bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+bpi-service.tgz
+bpi-tools.tgz
+brcm.tgz
+bt.tgz
+build.sh
+camera.tgz
+libvdpau_sunxi.tgz
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# rm 2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# ls
+2016-12-01-ubuntu-16.04.1-mate-1050929-edu-preview-bpi-m2p.img.zip
+3.4.39-BPI-M2P-Kernel.tgz
+addons.tgz
+BOOTLOADER-bpi-m2p.tgz
+BPI-BOOT-bpi-m2p.tgz
+BPI_M2P_720P.img.gz
+bpi-m2p.conf
+bpi-m2p-ubuntu-mate-1050929-from-sd.conf
+bpi-service.tgz
+bpi-tools.tgz
+brcm.tgz
+bt.tgz
+build.sh
+camera.tgz
+libvdpau_sunxi.tgz
+root@bpi-iot-ros-ai:/media/mikey/U3TB-C/SD/edu/20161201# 
+
