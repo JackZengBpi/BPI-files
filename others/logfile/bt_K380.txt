@@ -1,0 +1,45 @@
+@bpi-iot-ros-ai:/tmp$ bpi-hw
+bpi-m2p
+pi@bpi-iot-ros-ai:/tmp$ uname -a
+Linux bpi-iot-ros-ai 3.4.39-BPI-M2P-Kernel #1 SMP PREEMPT Fri Nov 18 00:54:47 UTC 2016 armv7l armv7l armv7l GNU/Linux
+pi@bpi-iot-ros-ai:/tmp$ bluetoothctl 
+[NEW] Controller 43:29:B1:55:01:01 bpi-iot-ros-ai [default]
+[NEW] Device 34:88:5D:29:41:92 Bluetooth Mouse M557
+[bluetooth]# agent on
+Agent registered
+[bluetooth]# default-agent 
+Default agent request successful
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 43:29:B1:55:01:01 Discovering: yes
+[NEW] Device 00:22:15:4C:6F:C9 WIN7USE-K7KHJ2U
+[NEW] Device 34:88:5D:43:0C:0E Keyboard K380
+[NEW] Device 70:F3:95:88:A0:F8 LI-HP
+[NEW] Device 84:A6:C8:C7:18:4C VAIO-RS
+[bluetooth]# pair 34:88:5D:43:0C:0E
+Attempting to pair with 34:88:5D:43:0C:0E
+[CHG] Device 34:88:5D:43:0C:0E Connected: yes
+[Keyboard K380]# trust 34:88:5D:43:0C:0E
+[CHG] Device 34:88:5D:43:0C:0E Trusted: yes
+Changing 34:88:5D:43:0C:0E trust succeeded
+[Keyboard K380]# connect 34:88:5D:43:0C:0E
+Attempting to connect to 34:88:5D:43:0C:0E
+Failed to pair: org.bluez.Error.AuthenticationFailed
+Failed to connect: org.bluez.Error.Failed
+[CHG] Device 34:88:5D:43:0C:0E Connected: no
+[NEW] Device CC:AF:78:AB:AA:CB SIGNOTE08
+[NEW] Device 50:63:13:ED:B5:4C MELANIE-NB
+[bluetooth]# connect 34:88:5D:43:0C:0E
+Attempting to connect to 34:88:5D:43:0C:0E
+[CHG] Device 34:88:5D:43:0C:0E Connected: yes
+[CHG] Device 00:22:15:4C:6F:C9 RSSI: -77
+[CHG] Device 34:88:5D:43:0C:0E Modalias: usb:v046DpB342d4200
+[CHG] Device 34:88:5D:43:0C:0E UUIDs: 00001000-0000-1000-8000-00805f9b34fb
+[CHG] Device 34:88:5D:43:0C:0E UUIDs: 00001124-0000-1000-8000-00805f9b34fb
+[CHG] Device 34:88:5D:43:0C:0E UUIDs: 00001200-0000-1000-8000-00805f9b34fb
+[CHG] Device 34:88:5D:43:0C:0E Paired: yes
+Connection successful
+[Keyboard K380]# exit
+Agent unregistered
+[DEL] Controller 43:29:B1:55:01:01 bpi-iot-ros-ai [default]
+pi@bpi-iot-ros-ai:/tmp$ 

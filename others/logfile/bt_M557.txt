@@ -1,0 +1,54 @@
+pi@bpi-iot-ros-ai:/tmp$ bluetoothctl 
+[NEW] Controller 43:29:B1:55:01:01 bpi-iot-ros-ai [default]
+[bluetooth]# agent on
+Agent registered
+[bluetooth]# default-agent 
+Default agent request successful
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 43:29:B1:55:01:01 Discovering: yes
+[NEW] Device 70:F3:95:88:A0:F8 70-F3-95-88-A0-F8
+[NEW] Device 34:88:5D:29:41:92 Bluetooth Mouse M557
+[CHG] Device 70:F3:95:88:A0:F8 Name: LI-HP
+[CHG] Device 70:F3:95:88:A0:F8 Alias: LI-HP
+[NEW] Device 00:22:15:4C:6F:C9 00-22-15-4C-6F-C9
+[NEW] Device 84:A6:C8:C7:18:4C 84-A6-C8-C7-18-4C
+[NEW] Device CC:AF:78:AB:AA:CB SIGNOTE08
+[NEW] Device 50:63:13:ED:B5:4C MELANIE-NB
+[CHG] Device 84:A6:C8:C7:18:4C Name: VAIO-RS
+[CHG] Device 84:A6:C8:C7:18:4C Alias: VAIO-RS
+[CHG] Device 00:22:15:4C:6F:C9 LegacyPairing: no
+[CHG] Device 00:22:15:4C:6F:C9 Name: WIN7USE-K7KHJ2U
+[CHG] Device 00:22:15:4C:6F:C9 Alias: WIN7USE-K7KHJ2U
+[CHG] Device 00:22:15:4C:6F:C9 LegacyPairing: yes
+[CHG] Device 00:22:15:4C:6F:C9 RSSI: -59
+[bluetooth]# pair
+pair            pairable        paired-devices  
+[bluetooth]# pair 34:88:5D:29:41:92
+Attempting to pair with 34:88:5D:29:41:92
+[CHG] Device 34:88:5D:29:41:92 Connected: yes
+[CHG] Device 34:88:5D:29:41:92 Modalias: usb:v046DpB010d1001
+[CHG] Device 34:88:5D:29:41:92 UUIDs: 00001000-0000-1000-8000-00805f9b34fb
+[CHG] Device 34:88:5D:29:41:92 UUIDs: 00001124-0000-1000-8000-00805f9b34fb
+[CHG] Device 34:88:5D:29:41:92 UUIDs: 00001200-0000-1000-8000-00805f9b34fb
+[CHG] Device 34:88:5D:29:41:92 Paired: yes
+Pairing successful
+[CHG] Device 34:88:5D:29:41:92 Connected: no
+[CHG] Device 50:63:13:ED:B5:4C RSSI: -85
+[CHG] Device CC:AF:78:AB:AA:CB RSSI: -94
+[CHG] Device 00:22:15:4C:6F:C9 RSSI: -71
+[bluetooth]# trust 34:88:5D:29:41:92
+[CHG] Device 34:88:5D:29:41:92 Trusted: yes
+Changing 34:88:5D:29:41:92 trust succeeded
+[bluetooth]# connect 34:88:5D:29:41:92
+Attempting to connect to 34:88:5D:29:41:92
+[CHG] Device 34:88:5D:29:41:92 Connected: yes
+Connection successful
+[CHG] Device 00:22:15:4C:6F:C9 RSSI: -59
+[CHG] Device 70:F3:95:88:A0:F8 RSSI: -81
+[CHG] Device 50:63:13:ED:B5:4C RSSI: -96
+[Bluetooth Mouse M557]# exit
+Agent unregistered
+[DEL] Controller 43:29:B1:55:01:01 bpi-iot-ros-ai [default]
+pi@bpi-iot-ros-ai:/tmp$ 
+
