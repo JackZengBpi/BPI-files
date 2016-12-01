@@ -655,6 +655,10 @@ expired(int sig)
 void
 proc_reset()
 {
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: %s\n", __FUNCTION__);
+#endif
 	signal(SIGALRM, expired);
 
 
@@ -754,11 +758,19 @@ proc_patchram()
 		tcsetattr(uart_fd, TCSANOW, &termios);
 	}
 	proc_reset();
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: F/W load done\n");
+#endif
 }
 
 void
 proc_baudrate()
 {
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: %s\n", __FUNCTION__);
+#endif
 	hci_send_cmd(hci_update_baud_rate, sizeof(hci_update_baud_rate));
 
 	read_event(uart_fd, buffer);
@@ -775,6 +787,10 @@ proc_baudrate()
 void
 proc_bdaddr()
 {
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: %s\n", __FUNCTION__);
+#endif
 	hci_send_cmd(hci_write_bd_addr, sizeof(hci_write_bd_addr));
 
 	read_event(uart_fd, buffer);
@@ -783,6 +799,10 @@ proc_bdaddr()
 void
 proc_enable_lpm()
 {
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: %s\n", __FUNCTION__);
+#endif
 	hci_send_cmd(hci_write_sleep_mode, sizeof(hci_write_sleep_mode));
 
 	read_event(uart_fd, buffer);
@@ -791,6 +811,10 @@ proc_enable_lpm()
 void
 proc_scopcm()
 {
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: %s\n", __FUNCTION__);
+#endif
 	hci_send_cmd(hci_write_sco_pcm_int,
 		sizeof(hci_write_sco_pcm_int));
 
@@ -805,6 +829,10 @@ proc_scopcm()
 void
 proc_i2s()
 {
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: %s\n", __FUNCTION__);
+#endif
 	hci_send_cmd(hci_write_i2spcm_interface_param,
 		sizeof(hci_write_i2spcm_interface_param));
 
@@ -816,6 +844,10 @@ proc_enable_hci()
 {
 	int i = N_HCI;
 	int proto = HCI_UART_H4;
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: %s\n", __FUNCTION__);
+#endif
 	if (ioctl(uart_fd, TIOCSETD, &i) < 0) {
 		fprintf(stderr, "Can't set line discipline\n");
 		return;
@@ -935,5 +967,9 @@ main (int argc, char **argv)
 		}
 	}
 
+#ifdef BPI
+#else
+	fprintf(stderr, "BPI: %s END!!\n", __FUNCTION__);
+#endif
 	exit(0);
 }
