@@ -10,6 +10,9 @@ load_modules()
   bpi-m64)
     modprobe ft5x_ts
     ;;
+  bpi-m2m)
+    modprobe ft5x_ts
+    ;;
   bpi-m2u)
     modprobe ft5x_ts
     ;;
