@@ -1,0 +1,5 @@
+console=tty0 console=ttyS0,115200n8 no_console_suspend
+kernel_filename=a64/Image
+initrd_filename=initrd.img
+ethaddr=36:c9:e3:f1:b8:05
+optargs=disp.screen0_output_mode=1080p60
