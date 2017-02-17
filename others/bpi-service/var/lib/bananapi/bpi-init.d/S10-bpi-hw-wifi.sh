@@ -7,6 +7,9 @@ load_modules()
   bpi-m3)
     modprobe bcmdhd
     ;;
+  bpi-m64)
+    modprobe bcmdhd
+    ;;
   bpi-m2m)
     modprobe bcmdhd
     ;;

@@ -1,0 +1,9 @@
+console=tty0 console=ttyS0,115200n8 no_console_suspend board=bpi-m64
+#fdt_filename=bananapi/bpi-m64/linux/a64-2GB.dtb
+fdt_filename=bananapi/bpi-m64/linux/a64-2GB-sd.dtb
+kernel_filename=bananapi/bpi-m64/linux/Image
+initrd_filename=bananapi/bpi-m64/linux/initrd.img
+ethaddr=36:c9:e3:f1:b8:05
+optargs=disp.screen0_output_mode=720p60
+root=/dev/mmcblk0p2
+init=/sbin/init
