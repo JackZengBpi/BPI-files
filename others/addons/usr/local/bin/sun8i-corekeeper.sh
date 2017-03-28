@@ -6,6 +6,11 @@
 
 set -e
 
+if [ ! -f /sys/devices/virtual/thermal/cooling_device0/cur_state ]; then
+	return
+fi
+
+
 get_cooling_state() {
         echo $(cat /sys/devices/virtual/thermal/cooling_device0/cur_state)
 }
