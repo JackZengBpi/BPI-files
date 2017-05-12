@@ -11,7 +11,7 @@ load_modules()
     modprobe ft5x_ts
     ;;
   bpi-m2m)
-    modprobe ft5x_ts
+    modprobe gt9xxnew_ts
     ;;
   bpi-m2u)
     modprobe ft5x_ts
