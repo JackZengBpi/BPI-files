@@ -1,6 +1,22 @@
 #!/bin/bash
 BOARD=$(bpi-hw)
 
+TOUCH="ft5x_ts"
+
+check_cmdline()
+{
+  # parse command line arguments
+  for arg in $(cat /proc/cmdline); do
+    case $arg in
+      touch=*)
+        TOUCH="${arg#*=}"
+        BOARD=bpi-user
+        return
+        ;;
+    esac
+  done
+}
+
 load_modules()
 {
   case ${BOARD} in
@@ -28,10 +44,14 @@ load_modules()
   bpi-r1)
     modprobe ft5x_ts
     ;;
+  bpi-user)
+    modprobe ${TOUCH}
+    ;;
   *)
     ;;
   esac
 }
 
 #main
+check_cmdline
 load_modules
