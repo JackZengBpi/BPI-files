@@ -1,0 +1,50 @@
+############################################################################################################
+#
+#  General Setting
+#
+############################################################################################################
+- general: MTK_PLATFORM_CFG
+  info: 
+    - config_version: V1.1.2
+      platform: MT7623
+      project: bx7623m1_emmc
+      storage: EMMC
+      boot_channel: MSDC_0
+      block_size: 0x20000
+############################################################################################################
+#
+#  Layout Setting
+#
+############################################################################################################
+- partition_index: SYS0
+  partition_name: PRELOADER
+  file_name: preloader_iotg7623Np1_emmc.bin
+  is_download: true
+  type: SV5_BL_BIN
+  linear_start_addr: 0x0
+  physical_start_addr: 0x0
+  partition_size: 0x40000
+  region: EMMC_BOOT_1
+  storage: HW_STORAGE_EMMC
+  boundary_check: true
+  is_reserved: false
+  operation_type: BOOTLOADERS
+  d_type: FALSE
+  reserve: 0x00
+
+- partition_index: SYS1
+  partition_name: UBOOT
+  file_name: u-boot.bin
+  is_download: true
+  type: NORMAL_ROM
+  linear_start_addr: 0x50000
+  physical_start_addr: 0x50000
+  partition_size: 0x80000
+  region: EMMC_USER
+  storage: HW_STORAGE_EMMC
+  boundary_check: true
+  is_reserved: false
+  operation_type: UPDATE
+  d_type: FALSE
+  reserve: 0x00
+
