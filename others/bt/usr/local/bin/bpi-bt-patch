@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 ### BEGIN INIT INFO
 # Provides:          bpi-bt-patch
 # Required-Start:    $local_fs
@@ -44,7 +44,11 @@ sleep 1
 sleep 1
 date >> $PATCHLOG
 
-/usr/bin/timeout 60s /usr/local/bin/brcm_patchram_plus -d --patchram $PATCHRAM --enable_hci --no2bytes --tosleep 1000 $MAC_OPTIONS /dev/$PORT >> $PATCHLOG 2>&1
+#/usr/bin/timeout 60s /usr/local/bin/brcm_patchram_plus -d --patchram $PATCHRAM --enable_hci --no2bytes --tosleep 1000 $MAC_OPTIONS /dev/$PORT >> $PATCHLOG 2>&1
+#
+## remove $MAC_OPTIONS, use chip default
+#
+/usr/bin/timeout 60s /usr/local/bin/brcm_patchram_plus -d --patchram $PATCHRAM --enable_hci --no2bytes --tosleep 1000  /dev/$PORT >> $PATCHLOG 2>&1
 
 case "$?" in
 0)
