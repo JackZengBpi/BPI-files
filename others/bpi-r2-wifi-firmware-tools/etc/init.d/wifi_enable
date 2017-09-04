@@ -1,0 +1,14 @@
+#!/bin/sh
+
+WIFI_DEV=/dev/wmtWifi
+
+/usr/bin/wmt_loader
+sleep 1
+
+/usr/bin/stp_uart_launcher -p /etc/firmware &
+sleep 1
+
+if [ -e ${WIFI_DEV} ]; then
+    echo 1 >${WIFI_DEV}
+fi
+
