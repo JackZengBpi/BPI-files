@@ -25,6 +25,11 @@ load_modules()
   bpi-m1p)
     modprobe ap6211
     ;;
+  bpi-r2)
+    if [ -x /etc/init.d/wifi_enable ] ; then
+      /etc/init.d/wifi_enable &
+    fi
+    ;;
   *)
     ;;
   esac
