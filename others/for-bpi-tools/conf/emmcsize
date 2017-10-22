@@ -1,0 +1,11 @@
+OLD=7456
+NEW=7296
+
+CONF=`ls os`
+
+mkdir os1
+for IN in $CONF
+do
+	echo "$IN"
+	sed -e "s/$OLD/$NEW/g" os/$IN >os1/$IN
+done
