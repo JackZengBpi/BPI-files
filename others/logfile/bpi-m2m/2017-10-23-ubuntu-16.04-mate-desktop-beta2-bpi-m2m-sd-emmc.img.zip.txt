@@ -1,0 +1,726 @@
+[    0.000000] Booting Linux on physical CPU 0
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.4.39-BPI-M2M-Kernel (root@bpi-iot-ros-ai) (gcc version 5.2.0 (OpenWrt GCC 5.2.0 70-1-1) ) #1 SMP PREEMPT Sun Oct 22 19:57:25 CST 2017
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine: sun8i
+[    0.000000] Initialized persistent memory from 43080800-430907ff
+[    0.000000] cma: CMA: reserved 128 MiB at 58000000
+[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+[    0.000000] On node 0 totalpages: 131072
+[    0.000000] free_area_init_node: node 0, pgdat c0e44a40, node_mem_map c0f45000
+[    0.000000]   Normal zone: 1152 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 129920 pages, LIFO batch:31
+[    0.000000] script_init enter!
+[    0.000000] script_init exit!
+[    0.000000] PERCPU: Embedded 9 pages/cpu @c13da000 s12672 r8192 d16000 u36864
+[    0.000000] pcpu-alloc: s12672 r8192 d16000 u36864 alloc=9*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 129920
+[    0.000000] Kernel command line: boot_type=1 disp_para=100 fb_base=0x0 config_size=42876 boot.serialno=27d7873c9005ffffd07c boot.hardware=sun8i board=bpi-m2m enforcing=1 console=ttyS2,115200 console=tty1 root=/dev/mmcblk0p2 rw rootwait init=/sbin/init ion_cma_list="8m,32m,64m,128m,256m" loglevel=8 bootmenutimeout=10 datadev=mmcblk0p2
+[    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] allocated 1048576 bytes of page_cgroup
+[    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.000000] Memory: 512MB = 512MB total
+[    0.000000] Memory: 370956k/370956k available, 153332k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     vmalloc : 0xe0800000 - 0xff000000   ( 488 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xe0000000   ( 512 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc0c9c05c   (12881 kB)
+[    0.000000]       .init : 0xc0c9d000 - 0xc0d02180   ( 405 kB)
+[    0.000000]       .data : 0xc0d04000 - 0xc0e63378   (1405 kB)
+[    0.000000]        .bss : 0xc0e64204 - 0xc0f44300   ( 897 kB)
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Additional per-CPU info printed with stalls.
+[    0.000000] NR_IRQS:416
+[    0.000000] Architected local timer running at 24.00MHz.
+[    0.000000] Switching to timer-based delay loop
+[    0.000000] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 178956ms
+[    0.000000] Console: colour dummy device 80x30
+[    0.000000] console [tty1] enabled
+[    0.001376] Calibrating delay loop (skipped), value calculated using timer frequency.. 4800.00 BogoMIPS (lpj=24000000)
+[    0.001445] pid_max: default: 32768 minimum: 301
+[    0.001692] Security Framework initialized
+[    0.001969] Mount-cache hash table entries: 512
+[    0.003125] Initializing cgroup subsys cpuacct
+[    0.003169] Initializing cgroup subsys memory
+[    0.003239] Initializing cgroup subsys devices
+[    0.003270] Initializing cgroup subsys freezer
+[    0.003300] Initializing cgroup subsys blkio
+[    0.003347] Initializing cgroup subsys perf_event
+[    0.003466] CPU: Testing write buffer coherency: ok
+[    0.003542] ftrace: allocating 32785 entries in 97 pages
+[    0.040361] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.040411] [sunxi_smp_prepare_cpus] enter
+[    0.040468] Setting up static identity map for 0x408d30b0 - 0x408d3108
+[    0.041588] CPU1: Booted secondary processor
+[    0.041588] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.041726] CPU2: Booted secondary processor
+[    0.041726] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.050568] CPU3: Booted secondary processor
+[    0.050568] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.050692] Brought up 4 CPUs
+[    0.050692] SMP: Total of 4 processors activated (19200.00 BogoMIPS).
+[    0.051181] devtmpfs: initialized
+[    0.062363] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.062889] pinctrl core: initialized pinctrl subsystem
+[    0.068684] NET: Registered protocol family 16
+[    0.071831] DMA: preallocated 2048 KiB pool for atomic coherent allocations
+[    0.071945] script_sysfs_init success
+[    0.071993] sunxi_dump_init success
+[    0.073068] gpiochip_add: registered GPIOs 0 to 383 on device: sunxi-pinctrl
+[    0.074580] sunxi-pinctrl sunxi-pinctrl: initialized sunXi PIO driver
+[    0.074975] gpiochip_add: registered GPIOs 1024 to 1031 on device: axp-pinctrl
+[    0.074975] persistent_ram: uncorrectable error in header
+[    0.074975] persistent_ram: no valid data in buffer (sig = 0xffffffff)
+[    0.084191] console [ram-1] enabled
+[    0.084477] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.084630] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.085676] [sunxi-module]: [sunxi-module.0] probe success
+[    0.085865] script config pll3 to 297 Mhz
+[    0.086116] script config pll4 to 300 Mhz
+[    0.086276] script config pll6 to 600 Mhz
+[    0.086524] script config pll8 to 408 Mhz
+[    0.086673] script config pll9 to 480 Mhz
+[    0.086814] script config pll10 to 297 Mhz
+[    0.087054] sunxi_default_clk_init
+[    0.087190] try to set pll6ahb1 to 200000000
+[    0.087370] try to set ahb clk source to pll6ahb1
+[    0.087614] set ahb clk source to pll6ahb1
+[    0.087754] try to set ahb1 to 200000000
+[    0.087893] try to set apb1 to 100000000
+[    0.100337] bio: create slab <bio-0> at 0
+[    0.100698] [ARISC] :sunxi-arisc driver v1.02
+[    0.115739] [ARISC] :arisc version: [v0.1.33]
+[    0.122502] [ARISC] :sunxi-arisc driver v1.02 startup succeeded
+[    0.122761] pwm module init!
+[    0.123177] SCSI subsystem initialized
+[    0.123177] usbcore: registered new interface driver usbfs
+[    0.123177] usbcore: registered new interface driver hub
+[    0.123177] usbcore: registered new device driver usb
+[    0.123177] twi_chan_cfg()340 - [twi0] has no twi_regulator.
+[    0.123177] twi_chan_cfg()340 - [twi1] has no twi_regulator.
+[    0.123177] twi_chan_cfg()340 - [twi2] has no twi_regulator.
+[    0.123177] Linux video capture interface: v2.00
+[    0.123177] [axp22_init_chip] read axp22 ic type=0x6
+[    0.131944] current_limit = 700000
+[    0.140323] Advanced Linux Sound Architecture Driver Version 1.0.25.
+[    0.141196] Bluetooth: Core ver 2.16
+[    0.141395] NET: Registered protocol family 31
+[    0.141536] Bluetooth: HCI device and connection manager initialized
+[    0.141785] Bluetooth: HCI socket layer initialized
+[    0.141926] Bluetooth: L2CAP socket layer initialized
+[    0.142188] Bluetooth: SCO socket layer initialized
+[    0.142577] cfg80211: Calling CRDA to update world regulatory domain
+[    0.143056] Switching to clocksource arch_sys_counter
+[    0.176343] FS-Cache: Loaded
+[    0.176846] CacheFiles: Loaded
+[    0.188331] hci: ERR: get ehci1 abh clk failed.
+[    0.188492] hci: ERR: clock_init failed
+[    0.188643] hci: ERR: get ohci1 abh clk failed.
+[    0.188887] hci: ERR: clock_init failed
+[    0.190941] NET: Registered protocol family 2
+[    0.191430] IP route cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.192339] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.192834] TCP bind hash table entries: 16384 (order: 5, 196608 bytes)
+[    0.193246] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.193493] TCP: reno registered
+[    0.193632] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.193895] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.194427] NET: Registered protocol family 1
+[    0.195142] RPC: Registered named UNIX socket transport module.
+[    0.195294] RPC: Registered udp transport module.
+[    0.195537] RPC: Registered tcp transport module.
+[    0.195676] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.196877] hw perfevents: enabled with ARMv7 Cortex_A7 PMU driver, 5 counters available
+[    0.197147] [pm]aw_pm_init!
+[    0.197390] standby_mode = 1. 
+[    0.197523] wakeup src cnt is : 2. 
+[    0.197661] [exstandby]leave extended_standby_enable_wakeup_src : event 0x800000
+[    0.197913] [exstandby]leave extended_standby_enable_wakeup_src : wakeup_gpio_map 0x80
+[    0.198061] [exstandby]leave extended_standby_enable_wakeup_src : wakeup_gpio_group 0x0
+[    0.198315] [exstandby]leave extended_standby_enable_wakeup_src : event 0x800000
+[    0.198567] [exstandby]leave extended_standby_enable_wakeup_src : wakeup_gpio_map 0x280
+[    0.198822] [exstandby]leave extended_standby_enable_wakeup_src : wakeup_gpio_group 0x0
+[    0.198989] sunxi_reg_init enter
+[    0.200256] audit: initializing netlink socket (disabled)
+[    0.200455] type=2000 audit(0.200:1): initialized
+[    0.202381] VFS: Disk quotas dquot_6.5.2
+[    0.202817] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.204445] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.205733] NFS: Registering the id_resolver key type
+[    0.206381] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[    0.207748] NTFS driver 2.1.30 [Flags: R/W].
+[    0.208366] fuse init (API version 7.18)
+[    0.209230] JFS: nTxBlock = 3922, nTxLock = 31376
+[    0.215010] SGI XFS with ACLs, security attributes, large block/inode numbers, no debug enabled
+[    0.217713] Btrfs loaded
+[    0.218128] ceph: loaded (mds proto 32)
+[    0.218288] msgmni has been set to 980
+[    0.219043] alg: No test for cipher_null (cipher_null-generic)
+[    0.219317] alg: No test for ecb(cipher_null) (ecb-cipher_null)
+[    0.219668] alg: No test for digest_null (digest_null-generic)
+[    0.219904] alg: No test for compress_null (compress_null-generic)
+[    0.225556] alg: No test for fcrypt (fcrypt-generic)
+[    0.234386] alg: No test for stdrng (krng)
+[    0.274971] alg: No test for fips(ansi_cprng) (fips_ansi_cprng)
+[    0.275334] NET: Registered protocol family 38
+[    0.275723] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    0.275987] io scheduler noop registered
+[    0.276127] io scheduler deadline registered
+[    0.276502] io scheduler cfq registered (default)
+[    0.276830] [DISP]disp_module_init
+[    0.278005] [DISP] OSAL_CCMU_SetMclkFreq,line:481:    clk 26 freq is 0, fail
+[    0.281356] [DISP] parser_disp_init_para,line:158:    fetch script data disp_init.screen2_output_type fail
+[    0.281753] [DISP] parser_disp_init_para,line:175:    fetch script data disp_init.screen2_output_mode fail
+[    0.282142] [DISP] parser_disp_init_para,line:236:    fetch script data disp_init.fb2_format fail
+[    0.282519] [DISP] parser_disp_init_para,line:241:    fetch script data disp_init.fb2_scaler_mode_enable fail
+[    0.282899] [DISP] parser_disp_init_para,line:246:    fetch script data disp_init.fb2_width fail
+[    0.283172] [DISP] parser_disp_init_para,line:251:    fetch script data disp_init.fb2_height fail
+[    0.292767] [fb_map_boot_logo]w=0,h=0,addr=0x0
+[    0.293032] vmalloc: allocation failure: 0 bytes
+[    0.293172] swapper/0: page allocation failure: order:0, mode:0xd2
+[    0.293314] [DISP] Fb_map_boot_logo,line:440:    Fb_map_boot_logo err: Fb_map_kernel failed!
+[    0.310080] Console: switching to colour frame buffer device 90x80
+[    0.327826] [DISP]disp_module_init finish
+[    0.328310] sw_uart_get_devinfo()1503 - uart1 has no uart_regulator.
+[    0.328725] sw_uart_get_devinfo()1503 - uart2 has no uart_regulator.
+[    0.329028] sw_uart_get_devinfo()1503 - uart3 has no uart_regulator.
+[    0.330122] uart1: ttyS1 at MMIO 0x1c28400 (irq = 33) is a SUNXI
+[    0.330797] uart2: ttyS2 at MMIO 0x1c28800 (irq = 34) is a SUNXI
+[    0.331209] sw_console_setup()1233 - console setup baud 115200 parity n bits 8, flow n
+[    0.523935] console [ttyS2] enabled
+[    0.625106] uart3: ttyS3 at MMIO 0x1c28c00 (irq = 35) is a SUNXI
+[    0.937156] brd: module loaded
+[    0.941421] loop: module loaded
+[    0.941443] [NAND][NAND]nand init start, nand0_used_flag is 0
+[    0.941452] [NAND]nand_cache_level err! 0[NAND]nand_capacity_level err! 0
+[    0.941463] regisger ISP =====================
+[    0.941493] [NAND]nand driver is disabled 
+[    0.941737] [rf_pm]: select module num is 10
+[    0.941746] [rf_pm]: module power1 name axp22_dldo1
+[    0.941755] [rf_pm]: module power1 vol 3300000
+[    0.941763] [rf_pm]: module power2 name axp22_dldo2
+[    0.941771] [rf_pm]: module power2 vol 3300000
+[    0.941780] [rf_pm]: module power3 name axp22_aldo1
+[    0.941788] [rf_pm]: module power3 vol 3300000
+[    0.941796] [rf_pm]: mod has no power_switch gpio
+[    0.941803] [rf_pm]: mod has no chip_en gpio
+[    0.941811] [rf_pm]: lpo_use_apclk: losc_out
+[    0.941958] [rf_pm]: set axp22_dldo1 to 3300000 v
+[    1.159129] [rf_pm]: enable axp22_dldo1.
+[    1.390846] [rf_pm]: set axp22_dldo2 to 3300000 v
+[    2.959740] [rf_pm]: enable axp22_dldo2.
+[    2.973145] [rf_pm]: set axp22_aldo1 to 3300000 v
+[    2.986964] [rf_pm]: enable axp22_aldo1.
+[    2.999891] [rf_pm]: mod info power switch -1
+[    3.013229] [rf_pm]: set losc_out 32k out
+[    3.025995] scene_lock_init name=rf_pm
+[    3.038722] [wifi_pm]: wifi gpio init is OK !!
+[    3.052119] [rfkill]: mod has no ls_int gpio
+[    3.065195] [rfkill]: mod has no pcm_ch gpio
+[    3.078414] [rfkill]: rfkill set power 0
+[    3.110609] Loading iSCSI transport class v2.0-870.
+[    3.124560] iscsi: registered transport (tcp)
+[    3.137691] SCSI Media Changer driver v0.25 
+[    3.150743] sunxi_spi_chan_cfg()1376 - [spi-0] has no spi_regulator.
+[    3.166603] spi spi0: master is unqueued, this is deprecated
+[    3.181550] bonding: Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[    3.199545] PPP generic driver version 2.4.2
+[    3.212891] PPP BSD Compression module registered
+[    3.226379] PPP Deflate Compression module registered
+[    3.241259] 
+[    3.241263] test_skcipher()811 - Test 1 of ecb(arc4-generic), fail: 0 ...
+[    3.267171] 
+[    3.267174] test_skcipher()811 - Test 2 of ecb(arc4-generic), fail: 0 ...
+[    3.293083] 
+[    3.293086] test_skcipher()811 - Test 3 of ecb(arc4-generic), fail: 0 ...
+[    3.319023] 
+[    3.319026] test_skcipher()811 - Test 4 of ecb(arc4-generic), fail: 0 ...
+[    3.345150] 
+[    3.345154] test_skcipher()811 - Test 5 of ecb(arc4-generic), fail: 0 ...
+[    3.371432] 
+[    3.371435] test_skcipher()811 - Test 6 of ecb(arc4-generic), fail: 0 ...
+[    3.397550] 
+[    3.397553] test_skcipher()811 - Test 7 of ecb(arc4-generic), fail: 0 ...
+[    3.423490] 
+[    3.423493] test_skcipher()811 - Test 1 of ecb(arc4-generic), fail: 0 ...
+[    3.449105] 
+[    3.449109] test_skcipher()811 - Test 2 of ecb(arc4-generic), fail: 0 ...
+[    3.474621] 
+[    3.474624] test_skcipher()811 - Test 3 of ecb(arc4-generic), fail: 0 ...
+[    3.499935] 
+[    3.499938] test_skcipher()811 - Test 4 of ecb(arc4-generic), fail: 0 ...
+[    3.525031] 
+[    3.525034] test_skcipher()811 - Test 5 of ecb(arc4-generic), fail: 0 ...
+[    3.550345] 
+[    3.550348] test_skcipher()811 - Test 6 of ecb(arc4-generic), fail: 0 ...
+[    3.575561] 
+[    3.575564] test_skcipher()811 - Test 7 of ecb(arc4-generic), fail: 0 ...
+[    3.600809] PPP MPPE Compression module registered
+[    3.614116] NET: Registered protocol family 24
+[    3.627224] usbcore: registered new interface driver qf9700
+[    3.641763] usbcore: registered new interface driver smsc95xx
+[    3.656278] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.691949] sunxi-ehci sunxi-ehci.1: SW USB2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.709218] sunxi-ehci sunxi-ehci.1: new USB bus registered, assigned bus number 1
+[    3.726506] sunxi-ehci sunxi-ehci.1: irq 104, io mem 0xf1c1a000
+[    3.760046] sunxi-ehci sunxi-ehci.1: USB 0.0 started, EHCI 1.00
+[    3.774709] ehci_irq: highspeed device connect
+[    3.774808] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    3.774823] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.774836] usb usb1: Product: SW USB2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.774847] usb usb1: Manufacturer: Linux 3.4.39-BPI-M2M-Kernel ehci_hcd
+[    3.774857] usb usb1: SerialNumber: sunxi-ehci
+[    3.865349] hub 1-0:1.0: USB hub found
+[    3.877732] hub 1-0:1.0: 1 port detected
+[    3.890755] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    3.926165] sunxi-ohci sunxi-ohci.1: SW USB2.0 'Open' Host Controller (OHCI) Driver
+[    3.943301] sunxi-ohci sunxi-ohci.1: new USB bus registered, assigned bus number 2
+[    3.960309] sunxi-ohci sunxi-ohci.1: irq 105, io mem 0xf1c1a400
+[    4.034122] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+[    4.050393] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.067283] usb usb2: Product: SW USB2.0 'Open' Host Controller (OHCI) Driver
+[    4.084142] usb usb2: Manufacturer: Linux 3.4.39-BPI-M2M-Kernel ohci_hcd
+[    4.100514] usb usb2: SerialNumber: sunxi-ohci
+[    4.114954] hub 2-0:1.0: USB hub found
+[    4.128002] hub 2-0:1.0: 1 port detected
+[    4.141710] usbcore: registered new interface driver cdc_acm
+[    4.157019] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    4.175133] usbcore: registered new interface driver cdc_wdm
+[    4.190527] Initializing USB Mass Storage driver...
+[    4.205178] usbcore: registered new interface driver usb-storage
+[    4.220061] usb 1-1: new high-speed USB device number 2 using sunxi-ehci
+[    4.237946] USB Mass Storage support registered.
+[    4.252530] usbcore: registered new interface driver usbserial
+[    4.268573] usbcore: registered new interface driver usbserial_generic
+[    4.285247] USB Serial support registered for generic
+[    4.370637] usb 1-1: New USB device found, idVendor=1a40, idProduct=0101
+[    4.387559] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    4.405087] usb 1-1: Product: USB 2.0 Hub
+[    4.419540] hub 1-1:1.0: USB hub found
+[    4.433261] hub 1-1:1.0: 4 ports detected
+[    4.448276] usbserial: USB Serial Driver core
+[    4.462678] file system registered
+[    4.477518] android_usb gadget: Mass Storage Function, version: 2009/09/11
+[    4.494602] android_usb gadget: Number of LUNs=3
+[    4.508982]  lun0: LUN: removable file: (no medium)
+[    4.523727]  lun1: LUN: removable file: (no medium)
+[    4.538243]  lun2: LUN: removable file: (no medium)
+[    4.553139] android_usb gadget: android_usb ready
+[    4.567731] WRN:L431(drivers/usb/sunxi_usb/hcd/hcd0/sunxi_hcd0.c):get no_suspend status failed
+[    4.595341] sunxi_hcd_host0 sunxi_hcd_host0: sunxi_hcd host driver
+[    4.611416] sunxi_hcd_host0 sunxi_hcd_host0: new USB bus registered, assigned bus number 3
+[    4.638617] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+[    4.655488] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.672712] usb usb3: Product: sunxi_hcd host driver
+[    4.687444] usb usb3: Manufacturer: Linux 3.4.39-BPI-M2M-Kernel sunxi_hcd-hcd
+[    4.704649] usb usb3: SerialNumber: sunxi_hcd_host0
+[    4.719666] hub 3-0:1.0: USB hub found
+[    4.732896] hub 3-0:1.0: 1 port detected
+[    4.747167] mousedev: PS/2 mouse device common for all mice
+[    4.763013] sunxi-rtc sunxi-rtc: rtc core: registered sunxi-rtc as rtc0
+[    4.779463] usb 1-1.1: new high-speed USB device number 3 using sunxi-ehci
+[    4.779612] i2c /dev entries driver
+[    4.780319] sunxi cedar version 0.1 
+[    4.780388] [cedar]: install start!!!
+[    4.780609] [cedar]: install end!!!
+[    4.785010] sunxi_wdt_init_module: sunxi WatchDog Timer Driver v1.0
+[    4.785243] sunxi_wdt_probe: devm_ioremap return wdt_reg 0xf1c20ca0, res->start 0x01c20ca0, res->end 0x01c20cbf
+[    4.785418] sunxi_wdt_probe: initialized (g_timeout=16s, g_nowayout=0)
+[    4.785430] wdt_enable, write reg 0xf1c20cb8 val 0x00000000
+[    4.785440] timeout_to_interv, line 167
+[    4.785447] interv_to_timeout, line 189
+[    4.785456] wdt_set_tmout, write 0x000000b0 to mode reg 0xf1c20cb8, actual timeout 16 sec
+[    4.975451] device-mapper: uevent: version 1.0.3
+[    4.989834] device-mapper: ioctl: 4.22.0-ioctl (2011-10-19) initialised: dm-devel@redhat.com
+[    5.017629] axp22_dcdc3: Failed to create debugfs directory
+[    5.033264] [mmc]: SD/MMC/SDIO Host Controller Driver(v1.123 2017-01-11 15:04) Compiled in Oct 22 2017 at 19:52:04
+[    5.063100] [mmc]: get mmc1's sdc_power failed
+[    5.077134] [mmc]: get mmc2's 2xmode ok, val = 1
+[    5.091476] [mmc]: get mmc2's ddrmode ok, val = 1
+[    5.104440] [mmc]: MMC host used card: 0x7, boot card: 0x5, io_card 2
+[    5.120423] [mmc]: sdc0 set ios: clk 0Hz bm OD pm OFF vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.146495] [mmc]: sdc0 set ios: clk 0Hz bm PP pm UP vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.171855] [mmc]: sdc2 set ios: clk 0Hz bm OD pm OFF vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.172880] usb 1-1.1: New USB device found, idVendor=0bda, idProduct=8153
+[    5.172892] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=6
+[    5.172902] usb 1-1.1: Product: USB 10/100/1000 LAN
+[    5.172909] usb 1-1.1: Manufacturer: Realtek
+[    5.172917] usb 1-1.1: SerialNumber: 000002000000
+[    5.173067] axp22_dcdc1: Failed to create debugfs directory
+[    5.190040] [mmc]: sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.210864] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 0 err, cmd 52,  RTO !!
+[    5.211724] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 0 err, cmd 52,  RTO !!
+[    5.211758] [mmc]: sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.214264] [mmc]: sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.215718] *******************Try sdio*******************
+[    5.216547] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 0 err, cmd 5,  RTO !!
+[    5.216576] mmc0: req failed (CMD5): -110, retrying...
+[    5.217404] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 0 err, cmd 5,  RTO !!
+[    5.217432] mmc0: req failed (CMD5): -110, retrying...
+[    5.218259] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 0 err, cmd 5,  RTO !!
+[    5.218288] mmc0: req failed (CMD5): -110, retrying...
+[    5.219114] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 0 err, cmd 5,  RTO !!
+[    5.219142] *******************Try sd *******************
+[    5.219818] [mmc]: sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.219926] [mmc]: sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.222455] [mmc]: sdc0 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.261590] [mmc]: sdc0 set ios: clk 25000000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.261709] [mmc]: sdc0 set ios: clk 25000000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.263501] [mmc]: sdc0 set ios: clk 25000000Hz bm PP pm ON vdd 3.3V width 1 timing SD-HS(SDR25) dt B
+[    5.263575] [mmc]: sdc0 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 1 timing SD-HS(SDR25) dt B
+[    5.263696] [mmc]: sdc0 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 4 timing SD-HS(SDR25) dt B
+[    5.263773] mmc0: new high speed SDHC card at address aaaa
+[    5.270206] usb 1-1.4: new full-speed USB device number 4 using sunxi-ehci
+<6>[    5.307546] mmcblk0: mmc0:aaaa SP32G 29.7 GiB 
+[    5.403134] usb 1-1.4: New USB device found, idVendor=046d, idProduct=c534
+[    5.403146] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    5.403155] usb 1-1.4: Product: USB Receiver
+[    5.403161] usb 1-1.4: Manufacturer: Logitech
+[    5.517053] [mmc]: sdc1 set ios: clk 0Hz bm OD pm OFF vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.517944]  mmcblk0: p1 p2
+[    5.518695] *******************sd init ok*******************
+[    5.518721] [mmc]: sdc2 set ios: clk 0Hz bm PP pm UP vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.520081] axp22_dcdc1: Failed to create debugfs directory
+[    5.540052] [mmc]: sdc2 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.560877] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 52,  RTO !!
+[    5.561730] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 52,  RTO !!
+[    5.561763] [mmc]: sdc2 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.564256] [mmc]: sdc2 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.566168] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 8,  RTO !!
+[    5.566197] *******************Try sdio*******************
+[    5.567026] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 5,  RTO !!
+[    5.567054] mmc1: req failed (CMD5): -110, retrying...
+[    5.567881] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 5,  RTO !!
+[    5.567908] mmc1: req failed (CMD5): -110, retrying...
+[    5.568736] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 5,  RTO !!
+[    5.568763] mmc1: req failed (CMD5): -110, retrying...
+[    5.569591] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 5,  RTO !!
+[    5.569618] *******************Try sd *******************
+[    5.570448] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 55,  RTO !!
+[    5.571298] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 55,  RTO !!
+[    5.572143] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 55,  RTO !!
+[    5.572988] [mmc]: *** sunxi_mci_dump_errinfo(L923): smc 2 err, cmd 55,  RTO !!
+[    5.573011] *******************Try mmc*******************
+[    5.573022] [mmc]: sdc2 set ios: clk 400000Hz bm OD pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.573455] [mmc]: sdc2 set ios: clk 400000Hz bm OD pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.573552] [mmc]: sdc2 set ios: clk 400000Hz bm OD pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.573647] [mmc]: sdc2 set ios: clk 400000Hz bm OD pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.576133] [mmc]: sdc2 set ios: clk 400000Hz bm OD pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.631273] [mmc]: sdc2 set ios: clk 400000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.643639] [mmc]: sdc2 set ios: clk 25000000Hz bm PP pm ON vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+[    5.643776] [mmc]: sdc2 set ios: clk 25000000Hz bm PP pm ON vdd 3.3V width 1 timing MMC-HS(SDR20) dt B
+[    5.643838] [mmc]: sdc2 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 1 timing MMC-HS(SDR20) dt B
+[    5.643967] [mmc]: sdc2 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 8 timing MMC-HS(SDR20) dt B
+[    5.644137] [mmc]: sdc2 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 8 timing UHS-DDR50 dt B
+[    5.644202] [mmc]: sdc2 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 8 timing UHS-DDR50 dt B
+[    5.644311] mmc1: new high speed DDR MMC card at address 0001
+[    5.644797] mmcblk1: mmc1:0001 8WPD3R 7.28 GiB 
+[    5.645026] mmcblk1boot0: mmc1:0001 8WPD3R partition 1 4.00 MiB
+[    5.645247] mmcblk1boot1: mmc1:0001 8WPD3R partition 2 4.00 MiB
+[    5.646204]  mmcblk1:
+[    5.648698]  mmcblk1boot1: unknown partition table
+[    5.650047]  mmcblk1boot0: unknown partition table
+[    5.650251] *******************mmc init ok *******************
+[    5.783965] [led]:sunxi_led_init begin!
+[    6.030706] =====led_sysconfig_para=====.
+[    6.271130] led1 gpio number is 355
+[    6.529178] led1_trigger is default-on
+[    6.811269] led1_active_low is 1
+[    6.877179] led2 gpio number is 354
+[    6.889902] led2_trigger is heartbeat
+[    6.902750] led2_active_low is 1
+[    6.915110] led3 gpio number is 71
+[    6.927479] led3_trigger is default-on
+[    6.940213] led3_active_low is 1
+[    6.952607] gpio_led_probe probe 
+[    6.964949] Registered led device: led1
+[    6.977747] Registered led device: led2
+[    6.990497] Registered led device: led3
+[    7.003018] gpio_led_probe probe successful
+[    7.019999] generic-usb 0003:046D:C534.0001: input,hidraw0: USB HID v1.11 Keyboard [Logitech USB Receiver] on usb-sunxi-ehci-1.4/input0
+[    7.101208] generic-usb 0003:046D:C534.0002: input,hiddev0,hidraw1: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-sunxi-ehci-1.4/input1
+[    7.132321] usbcore: registered new interface driver usbhid
+[    7.146832] usbhid: USB HID core driver
+[    7.159324] zram: num_devices not specified. Using default: 1
+[    7.174147] zram: Creating 1 devices ...
+[    7.187685] Linux telephony interface: v1.00
+[    7.201180] usbcore: registered new interface driver snd-usb-audio
+[    7.217425] [ audio ] err:try to get audio_pa_en failed!
+[    7.231596] request gpio failed!
+[    7.243502] [ audio ] err:try to get audio_linein_detect failed!
+[    7.260767] codec_set_bias_level,line:2219, SND_SOC_BIAS_STANDBY
+[    7.278322] asoc: codec-aif1 <-> sunxi-codec mapping ok
+[    7.292584] asoc: codec-aif2 <-> sunxi-codec-aif2-dai mapping ok
+[    7.307636] asoc: codec-aif3 <-> sunxi-codec-aif2-dai mapping ok
+[    7.324877] [I2S0]sunxi-i2s0 cannot find any using configuration for controllers, return directly!
+[    7.350915] [I2S]sndi2s0 cannot find any using configuration for controllers, return directly!
+[    7.376393] [I2S0] driver not init,just return.
+[    7.389381] [I2S1]sunxi-i2s1 cannot find any using configuration for controllers, return directly!
+[    7.415836] [I2S]sndi2s1 cannot find any using configuration for controllers, return directly!
+[    7.442157] I2S1 driver not init,just return.
+[    7.455553] oprofile: using arm/armv7-ca7
+[    7.468784] IPv4 over IPv4 tunneling driver
+[    7.482236] TCP: bic registered
+[    7.493825] TCP: cubic registered
+[    7.505564] TCP: westwood registered
+[    7.517404] TCP: highspeed registered
+[    7.529238] TCP: hybla registered
+[    7.540664] TCP: htcp registered
+[    7.551786] TCP: vegas registered
+[    7.562900] TCP: veno registered
+[    7.573803] TCP: scalable registered
+[    7.585091] TCP: lp registered
+[    7.595589] TCP: yeah registered
+[    7.606170] TCP: illinois registered
+[    7.617128] Initializing XFRM netlink socket
+[    7.629155] NET: Registered protocol family 10
+[    7.642057] NET: Registered protocol family 17
+[    7.653762] NET: Registered protocol family 15
+[    7.665376] Bluetooth: RFCOMM TTY layer initialized
+[    7.677339] Bluetooth: RFCOMM socket layer initialized
+[    7.689375] Bluetooth: RFCOMM ver 1.11
+[    7.699740] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    7.711886] Bluetooth: BNEP filters: protocol multicast
+[    7.723752] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    7.736773] Registering the dns_resolver key type
+[    7.748141] libceph: loaded (mon/osd proto 15/24, osdmap 5/6 5/6)
+[    7.761639] ThumbEE CPU extension supported.
+[    7.772531] Registering SWP/SWPB emulation handler
+[    7.784592] registered taskstats version 1
+[    7.795354] [LCD]lcd_module_init
+[    7.806424] [BPI]LCD_power_on
+[    7.815841] [LCD]lcd_module_init finish
+[    7.826274] [DISP] OSAL_Power_Enable,line:23:    OSAL_Power_Enable: some error happen, fail to get regulator 
+[    7.849798] console [netcon0] enabled
+[    7.849822] [LCD]open, step 0 finish
+[    7.870268] netconsole: network logging started
+[    7.881675] otg_wakelock_init: No USB transceiver found
+[    7.893840] sunxi-rtc sunxi-rtc: setting system clock to 1970-01-01 00:00:21 UTC (21)
+[    7.909130] ths_fetch_sysconfig_para: type err  device_used = 1. 
+[    7.923024] sunxi_cpu_budget_vftable_init: support only one vf_table
+[    7.937254] CPU Budget:Register notifier
+[    7.948233] CPU Budget:register Success
+[    7.950062] [BPI]LCD_panel_init
+[    7.969235] sunxi-budget-cooling sunxi-budget-cooling: Cooling device registered: thermal-budget-0
+[    7.992814] ====codec_init_events===
+[    8.003978] =========GPS========= :gsp not used in configuration
+[    8.017654] ALSA device list:
+[    8.030059]   #0: sndcodec
+[    8.100700] EXT3-fs (mmcblk0p2): error: couldn't mount because of unsupported optional features (240)
+[    8.180034] [LCD]open, step 1 finish
+[    8.191302] EXT2-fs (mmcblk0p2): error: couldn't mount because of unsupported optional features (240)
+[    8.300476] EXT4-fs (mmcblk0p2): mounted filesystem without journal. Opts: (null)
+[    8.379365] VFS: Mounted root (ext4 filesystem) on device 179:2.
+[    8.394648] [LCD]open, step 2 finish
+[    8.408039] devtmpfs: mounted
+[    8.418782] Freeing init memory: 404K
+[    8.610133] [BPI]LCD_bl_open
+[    8.620299] [LCD]open, step 3 finish
+[    8.687294] systemd[1]: System time before build time, advancing clock.
+[    9.190273] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
+[    9.231461] systemd[1]: Detected architecture arm.
+[    9.272368] systemd[1]: Set hostname to <bpi-iot-ros-ai>.
+[    9.715397] systemd[1]: Reached target Remote File Systems (Pre).
+[    9.736550] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    9.759109] systemd[1]: Listening on Journal Socket.
+[    9.778559] systemd[1]: Listening on Syslog Socket.
+[    9.798147] systemd[1]: Listening on udev Kernel Socket.
+[    9.818206] systemd[1]: Reached target User and Group Name Lookups.
+[    9.840299] systemd[1]: Listening on Journal Audit Socket.
+[    9.861220] systemd[1]: Reached target Swap.
+[    9.881441] systemd[1]: Created slice User and Session Slice.
+[    9.903406] systemd[1]: Created slice System Slice.
+[   10.023360] systemd[1]: Starting Nameserver information manager...
+[   10.250743] systemd[1]: Starting Uncomplicated firewall...
+[   10.380795] systemd[1]: Starting Set console keymap...
+[   10.540870] systemd[1]: Starting Load Kernel Modules...
+[   10.563157] systemd[1]: Reached target Slices.
+[   10.584253] systemd[1]: Reached target Remote File Systems.
+[   10.670799] systemd[1]: Started Braille Device Support.
+[   10.730490] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[   10.840787] systemd[1]: Started Read required files in advance.
+[   10.865054] systemd[1]: Listening on udev Control Socket.
+[   10.888321] systemd[1]: Started Trigger resolvconf update for networkd DNS.
+[   10.913851] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[   10.950518] systemd[1]: Listening on fsck to fsckd communication Socket.
+[   10.976311] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+[   11.001727] systemd[1]: Reached target Encrypted Volumes.
+[   11.025492] systemd[1]: Listening on Journal Socket (/dev/log).
+[   11.120786] systemd[1]: Starting Journal Service...
+[   11.300405] systemd[1]: Mounting Debug File System...
+[   11.400417] systemd[1]: Mounting POSIX Message Queue File System...
+[   11.550778] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+[   11.670759] systemd[1]: Starting Restore / save the current clock...
+[   11.823463] systemd[1]: Mounted POSIX Message Queue File System.
+[   11.849677] systemd[1]: Mounted Debug File System.
+[   11.873510] systemd[1]: Started Journal Service.
+[   32.049196] ctp_fetch_sysconfig_para: ctp_power_io script_get_item err. 
+[   32.057053] ctp_irq gpio number is 37
+
+Ubuntu 16.04.3 LTS bpi-iot-ros-ai ttyS2
+
+bpi-iot-ros-ai login: root
+Password: 
+Last login: Mon Oct 23 09:32:40 CST 2017 on ttyS2
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 3.4.39-BPI-M2M-Kernel armv7l)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+0 packages can be updated.
+0 updates are security updates.
+
+root@bpi-iot-ros-ai:~# tin
+tinacameratest    tinaplayerdemo    tinarecorderdemo  tinymembench
+root@bpi-iot-ros-ai:~# tinymembench 
+tinymembench v0.4.9 (simple benchmark for memory throughput and latency)
+
+==========================================================================
+== Memory bandwidth tests                                               ==
+==                                                                      ==
+== Note 1: 1MB = 1000000 bytes                                          ==
+== Note 2: Results for 'copy' tests show how many bytes can be          ==
+==         copied per second (adding together read and writen           ==
+==         bytes would have provided twice higher numbers)              ==
+== Note 3: 2-pass copy means that we are using a small temporary buffer ==
+==         to first fetch data into it, and only then write it to the   ==
+==         destination (source -> L1 cache, L1 cache -> destination)    ==
+== Note 4: If sample standard deviation exceeds 0.1%, it is shown in    ==
+==         brackets                                                     ==
+==========================================================================
+
+ C copy backwards                                     :    230.9 MB/s (0.7%)
+ C copy backwards (32 byte blocks)                    :    730.0 MB/s
+ C copy backwards (64 byte blocks)                    :    749.7 MB/s (1.2%)
+ C copy                                               :    754.4 MB/s (1.2%)
+ C copy prefetched (32 bytes step)                    :    800.9 MB/s
+ C copy prefetched (64 bytes step)                    :    810.4 MB/s (1.5%)
+ C 2-pass copy                                        :    712.2 MB/s (1.1%)
+ C 2-pass copy prefetched (32 bytes step)             :    745.7 MB/s (3.1%)
+ C 2-pass copy prefetched (64 bytes step)             :    764.3 MB/s (1.2%)
+ C fill                                               :   1942.6 MB/s
+ C fill (shuffle within 16 byte blocks)               :   1942.9 MB/s (1.5%)
+ C fill (shuffle within 32 byte blocks)               :    305.2 MB/s (1.2%)
+ C fill (shuffle within 64 byte blocks)               :    311.7 MB/s
+ ---
+ standard memcpy                                      :    784.0 MB/s (1.5%)
+ standard memset                                      :   1943.2 MB/s
+ ---
+ NEON read                                            :   1222.8 MB/s (1.2%)
+ NEON read prefetched (32 bytes step)                 :   1368.3 MB/s
+ NEON read prefetched (64 bytes step)                 :   1369.7 MB/s (1.4%)
+ NEON read 2 data streams                             :    364.8 MB/s
+ NEON read 2 data streams prefetched (32 bytes step)  :    678.6 MB/s (1.9%)
+ NEON read 2 data streams prefetched (64 bytes step)  :    705.6 MB/s
+ NEON copy                                            :    756.1 MB/s
+ NEON copy prefetched (32 bytes step)                 :    757.7 MB/s (1.6%)
+ NEON copy prefetched (64 bytes step)                 :    820.9 MB/s
+ NEON unrolled copy                                   :    745.6 MB/s (1.4%)
+ NEON unrolled copy prefetched (32 bytes step)        :    785.8 MB/s
+ NEON unrolled copy prefetched (64 bytes step)        :    799.9 MB/s
+ NEON copy backwards                                  :    734.1 MB/s (1.3%)
+ NEON copy backwards prefetched (32 bytes step)       :    738.0 MB/s
+ NEON copy backwards prefetched (64 bytes step)       :    803.3 MB/s (1.2%)
+ NEON 2-pass copy                                     :    719.2 MB/s (1.5%)
+ NEON 2-pass copy prefetched (32 bytes step)          :    771.1 MB/s
+ NEON 2-pass copy prefetched (64 bytes step)          :    786.7 MB/s (3.8%)
+ NEON unrolled 2-pass copy                            :    697.1 MB/s (1.4%)
+ NEON unrolled 2-pass copy prefetched (32 bytes step) :    680.6 MB/s (0.9%)
+ NEON unrolled 2-pass copy prefetched (64 bytes step) :    714.6 MB/s
+ NEON fill                                            :   1945.7 MB/s
+ NEON fill backwards                                  :   1944.9 MB/s (1.0%)
+ VFP copy                                             :    750.0 MB/s (1.4%)
+ VFP 2-pass copy                                      :    696.5 MB/s
+ ARM fill (STRD)                                      :   1945.1 MB/s
+ ARM fill (STM with 8 registers)                      :   1944.9 MB/s (1.5%)
+ ARM fill (STM with 4 registers)                      :   1944.7 MB/s (1.9%)
+ ARM copy prefetched (incr pld)                       :    801.4 MB/s (1.5%)
+ ARM copy prefetched (wrap pld)                       :    744.3 MB/s
+ ARM 2-pass copy prefetched (incr pld)                :    761.8 MB/s (3.2%)
+ ARM 2-pass copy prefetched (wrap pld)                :    722.8 MB/s (1.2%)
+
+==========================================================================
+== Framebuffer read tests.                                              ==
+==                                                                      ==
+== Many ARM devices use a part of the system memory as the framebuffer, ==
+== typically mapped as uncached but with write-combining enabled.       ==
+== Writes to such framebuffers are quite fast, but reads are much       ==
+== slower and very sensitive to the alignment and the selection of      ==
+== CPU instructions which are used for accessing memory.                ==
+==                                                                      ==
+== Many x86 systems allocate the framebuffer in the GPU memory,         ==
+== accessible for the CPU via a relatively slow PCI-E bus. Moreover,    ==
+== PCI-E is asymmetric and handles reads a lot worse than writes.       ==
+==                                                                      ==
+== If uncached framebuffer reads are reasonably fast (at least 100 MB/s ==
+== or preferably >300 MB/s), then using the shadow framebuffer layer    ==
+== is not necessary in Xorg DDX drivers, resulting in a nice overall    ==
+== performance improvement. For example, the xf86-video-fbturbo DDX     ==
+== uses this trick.                                                     ==
+==========================================================================
+
+ NEON read (from framebuffer)                         :     51.7 MB/s (0.4%)
+ NEON copy (from framebuffer)                         :     50.2 MB/s (0.6%)
+ NEON 2-pass copy (from framebuffer)                  :     50.2 MB/s
+ NEON unrolled copy (from framebuffer)                :     50.6 MB/s (0.5%)
+ NEON 2-pass unrolled copy (from framebuffer)         :     49.9 MB/s
+ VFP copy (from framebuffer)                          :    303.6 MB/s (0.6%)
+ VFP 2-pass copy (from framebuffer)                   :    282.7 MB/s
+ ARM copy (from framebuffer)                          :    181.7 MB/s (1.9%)
+ ARM 2-pass copy (from framebuffer)                   :    173.8 MB/s (0.7%)
+
+==========================================================================
+== Memory latency test                                                  ==
+==                                                                      ==
+== Average time is measured for random memory accesses in the buffers   ==
+== of different sizes. The larger is the buffer, the more significant   ==
+== are relative contributions of TLB, L1/L2 cache misses and SDRAM      ==
+== accesses. For extremely large buffer sizes we are expecting to see   ==
+== page table walk with several requests to SDRAM for almost every      ==
+== memory access (though 64MiB is not nearly large enough to experience ==
+== this effect to its fullest).                                         ==
+==                                                                      ==
+== Note 1: All the numbers are representing extra time, which needs to  ==
+==         be added to L1 cache latency. The cycle timings for L1 cache ==
+==         latency can be usually found in the processor documentation. ==
+== Note 2: Dual random read means that we are simultaneously performing ==
+==         two independent memory accesses at a time. In the case if    ==
+==         the memory subsystem can't handle multiple outstanding       ==
+==         requests, dual random read has the same timings as two       ==
+==         single reads performed one after another.                    ==
+==========================================================================
+
+block size : single random read / dual random read
+      1024 :    0.0 ns          /     0.0 ns 
+      2048 :    0.0 ns          /     0.0 ns 
+      4096 :    0.0 ns          /     0.0 ns 
+      8192 :    0.0 ns          /     0.0 ns 
+     16384 :    0.0 ns          /     0.0 ns 
+     32768 :    0.0 ns          /     0.0 ns 
+     65536 :    5.2 ns          /     9.0 ns 
+    131072 :    8.1 ns          /    12.7 ns 
+    262144 :    9.6 ns          /    14.1 ns 
+    524288 :   26.8 ns          /    44.4 ns 
+   1048576 :  103.0 ns          /   160.9 ns 
+   2097152 :  154.1 ns          /   212.7 ns 
+   4194304 :  182.2 ns          /   231.9 ns 
+   8388608 :  195.4 ns          /   241.8 ns 
+  16777216 :  207.6 ns          /   251.8 ns 
+  33554432 :  218.9 ns          /   267.6 ns 
+  67108864 :  234.6 ns          /   298.2 ns 
+root@bpi-iot-ros-ai:~# bpi-hw
+bpi-m2m
+root@bpi-iot-ros-ai:~# uname -a
+Linux bpi-iot-ros-ai 3.4.39-BPI-M2M-Kernel #1 SMP PREEMPT Sun Oct 22 19:57:25 CST 2017 armv7l armv7l armv7l GNU/Linux
+root@bpi-iot-ros-ai:~# 
