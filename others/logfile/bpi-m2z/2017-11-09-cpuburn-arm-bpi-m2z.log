@@ -1,0 +1,230 @@
+root@bpi-iot-ros-ai:~/cpuburn-arm# ls
+cpuburn-a53.S  cpuburn-a8.S  cpuburn-krait.S          gnuplot-sunxi-cpufreq
+cpuburn-a7.S   cpuburn-a9.S  cpufreq-ljt-stress-test  README.md
+root@bpi-iot-ros-ai:~/cpuburn-arm# ./cpufreq-ljt-stress-test 
+/usr/bin/env: ‘ruby’: No such file or directory
+root@bpi-iot-ros-ai:~/cpuburn-arm# apt-get install ruby
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 62%Building dependency tree... 74%Building dependency tree... 86%Building dependency tree... 98%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  fonts-lato javascript-common libjs-jquery libruby2.3 rake ruby-did-you-mean
+  ruby-minitest ruby-net-telnet ruby-power-assert ruby-test-unit ruby2.3
+  rubygems-integration
+Suggested packages:
+  apache2 | lighttpd | httpd ri ruby-dev bundler
+The following NEW packages will be installed:
+  fonts-lato javascript-common libjs-jquery libruby2.3 rake ruby
+  ruby-did-you-mean ruby-minitest ruby-net-telnet ruby-power-assert
+  ruby-test-unit ruby2.3 rubygems-integration
+0 upgraded, 13 newly installed, 0 to remove and 140 not upgraded.
+Need to get 5,847 kB of archives.
+After this operation, 25.8 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+0% [Working]0% [Connecting to ports.ubuntu.com (91.189.88.150)]                                                   Get:1 http://ports.ubuntu.com xenial/main armhf fonts-lato all 2.0-1 [2,693 kB]
+                                                   0% [1 fonts-lato 12.3 kB/2,693 kB 0%]1% [1 fonts-lato 40.8 kB/2,693 kB 2%]                                     2% [1 fonts-lato 131 kB/2,693 kB 5%]3% [1 fonts-lato 204 kB/2,693 kB 8%]6% [1 fonts-lato 444 kB/2,693 kB 16%]11% [1 fonts-lato 831 kB/2,693 kB 31%]18% [1 fonts-lato 1,303 kB/2,693 kB 48%]29% [1 fonts-lato 2,111 kB/2,693 kB 78%]                                        38% [Working]             Get:2 http://ports.ubuntu.com xenial/main armhf javascript-common all 11 [6,066 B]
+38% [2 javascript-common 3,854 B/6,066 B 64%]                                             40% [Working]             Get:3 http://ports.ubuntu.com xenial/main armhf libjs-jquery all 1.11.3+dfsg-4 [161 kB]
+41% [3 libjs-jquery 36.9 kB/161 kB 23%]                                       44% [Working]             Get:4 http://ports.ubuntu.com xenial/main armhf rubygems-integration all 1.10 [4,966 B]
+44% [4 rubygems-integration 4,966 B/4,966 B 100%]                                                 45% [Working]             Get:5 http://ports.ubuntu.com xenial/main armhf ruby-did-you-mean all 1.0.0-2 [8,390 B]
+45% [5 ruby-did-you-mean 4,096 B/8,390 B 49%]                                             47% [Working]             Get:6 http://ports.ubuntu.com xenial/main armhf ruby-minitest all 5.8.4-2 [36.6 kB]
+47% [6 ruby-minitest 4,096 B/36.6 kB 11%]                                         49% [Working]             Get:7 http://ports.ubuntu.com xenial/main armhf ruby-net-telnet all 0.1.1-2 [12.6 kB]
+49% [7 ruby-net-telnet 4,096 B/12.6 kB 33%]                                           51% [Working]             Get:8 http://ports.ubuntu.com xenial/main armhf ruby-power-assert all 0.2.7-1 [7,668 B]
+51% [8 ruby-power-assert 7,668 B/7,668 B 100%]                                              52% [Working]             Get:9 http://ports.ubuntu.com xenial/main armhf ruby-test-unit all 3.1.7-2 [60.3 kB]
+53% [9 ruby-test-unit 16.5 kB/60.3 kB 27%]                                          55% [Working]             Get:10 http://ports.ubuntu.com xenial-updates/main armhf libruby2.3 armhf 2.3.1-2~16.04.2 [2,762 kB]
+55% [10 libruby2.3 4,096 B/2,762 kB 0%]69% [10 libruby2.3 1,004 kB/2,762 kB 36%]81% [10 libruby2.3 1,922 kB/2,762 kB 70%]                           797 kB/s 1s94% [Working]                                                       797 kB/s 0s                                                                               Get:11 http://ports.ubuntu.com xenial-updates/main armhf ruby2.3 armhf 2.3.1-2~16.04.2 [40.7 kB]
+94% [11 ruby2.3 11.4 kB/40.7 kB 28%]                                797 kB/s 0s96% [Working]                                                       797 kB/s 0s                                                                               Get:12 http://ports.ubuntu.com xenial/main armhf ruby all 1:2.3.0+1 [5,530 B]
+98% [Waiting for headers]                                           797 kB/s 0s                                                                               Get:13 http://ports.ubuntu.com xenial/main armhf rake all 10.5.0-2 [48.2 kB]
+98% [13 rake 30.2 kB/48.2 kB 63%]                                   797 kB/s 0s100% [Working]                                                      797 kB/s 0s                                                                               Fetched 5,847 kB in 6s (886 kB/s)
+Selecting previously unselected package fonts-lato.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 181279 files and directories currently installed.)
+Preparing to unpack .../fonts-lato_2.0-1_all.deb ...
+Unpacking fonts-lato (2.0-1) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../javascript-common_11_all.deb ...
+Unpacking javascript-common (11) ...
+Selecting previously unselected package libjs-jquery.
+Preparing to unpack .../libjs-jquery_1.11.3+dfsg-4_all.deb ...
+Unpacking libjs-jquery (1.11.3+dfsg-4) ...
+Selecting previously unselected package rubygems-integration.
+Preparing to unpack .../rubygems-integration_1.10_all.deb ...
+Unpacking rubygems-integration (1.10) ...
+Selecting previously unselected package ruby-did-you-mean.
+Preparing to unpack .../ruby-did-you-mean_1.0.0-2_all.deb ...
+Unpacking ruby-did-you-mean (1.0.0-2) ...
+Selecting previously unselected package ruby-minitest.
+Preparing to unpack .../ruby-minitest_5.8.4-2_all.deb ...
+Unpacking ruby-minitest (5.8.4-2) ...
+Selecting previously unselected package ruby-net-telnet.
+Preparing to unpack .../ruby-net-telnet_0.1.1-2_all.deb ...
+Unpacking ruby-net-telnet (0.1.1-2) ...
+Selecting previously unselected package ruby-power-assert.
+Preparing to unpack .../ruby-power-assert_0.2.7-1_all.deb ...
+Unpacking ruby-power-assert (0.2.7-1) ...
+Selecting previously unselected package ruby-test-unit.
+Preparing to unpack .../ruby-test-unit_3.1.7-2_all.deb ...
+Unpacking ruby-test-unit (3.1.7-2) ...
+Selecting previously unselected package libruby2.3:armhf.
+Preparing to unpack .../libruby2.3_2.3.1-2~16.04.2_armhf.deb ...
+Unpacking libruby2.3:armhf (2.3.1-2~16.04.2) ...
+Selecting previously unselected package ruby2.3.
+Preparing to unpack .../ruby2.3_2.3.1-2~16.04.2_armhf.deb ...
+Unpacking ruby2.3 (2.3.1-2~16.04.2) ...
+Selecting previously unselected package ruby.
+Preparing to unpack .../ruby_1%3a2.3.0+1_all.deb ...
+Unpacking ruby (1:2.3.0+1) ...
+Selecting previously unselected package rake.
+Preparing to unpack .../archives/rake_10.5.0-2_all.deb ...
+Unpacking rake (10.5.0-2) ...
+Processing triggers for fontconfig (2.11.94-0ubuntu1.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up fonts-lato (2.0-1) ...
+Setting up javascript-common (11) ...
+Setting up libjs-jquery (1.11.3+dfsg-4) ...
+Setting up rubygems-integration (1.10) ...
+Setting up ruby-did-you-mean (1.0.0-2) ...
+Setting up ruby-minitest (5.8.4-2) ...
+Setting up ruby-net-telnet (0.1.1-2) ...
+Setting up ruby-power-assert (0.2.7-1) ...
+Setting up ruby-test-unit (3.1.7-2) ...
+Setting up libruby2.3:armhf (2.3.1-2~16.04.2) ...
+Setting up ruby2.3 (2.3.1-2~16.04.2) ...
+Setting up ruby (1:2.3.0+1) ...
+Setting up rake (10.5.0-2) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+root@bpi-iot-ros-ai:~/cpuburn-arm# ./cpufreq-ljt-stress-test 
+The cjpeg and djpeg tools from libjpeg-turbo are not found.
+Trying to download and compile them.
+Downloading libjpeg-turbo-1.3.1.tar.gz ... done
+Extracting libjpeg-turbo-1.3.1.tar.gz ... done
+Compiling libjpeg-turbo, please be patient ... done
+Creating './whitenoise-1920x1080.jpg' ... done
+CPU stress test, which is doing JPEG decoding by libjpeg-turbo
+at different cpufreq operating points.
+
+Testing CPU 0
+ 1536 MHz SKIPPED
+ 1440 MHz SKIPPED
+ 1344 MHz SKIPPED
+ 1296 MHz SKIPPED
+ 1248 MHz SKIPPED
+ 1200 MHz SKIPPED
+ 1152 MHz SKIPPED
+ 1104 MHz SKIPPED
+ 1056 MHz SKIPPED
+ 1008 MHz ............................................................ OK
+  960 MHz SKIPPED
+  912 MHz SKIPPED
+  864 MHz SKIPPED
+  816 MHz ............................................................ OK
+  768 MHz ............................................................ OK
+  720 MHz ............................................................ OK
+  672 MHz ............................................................ OK
+  648 MHz ............................................................ OK
+  624 MHz ............................................................ OK
+  600 MHz ............................................................ OK
+  576 MHz ............................................................ OK
+  528 MHz ............................................................ OK
+  504 MHz ............................................................ OK
+  480 MHz ............................................................ OK
+  408 MHz ............................................................ OK
+  312 MHz ............................................................ OK
+  240 MHz ............................................................ OK
+  120 MHz SKIPPED
+   60 MHz SKIPPED
+
+Testing CPU 1
+ 1536 MHz SKIPPED
+ 1440 MHz SKIPPED
+ 1344 MHz SKIPPED
+ 1296 MHz SKIPPED
+ 1248 MHz SKIPPED
+ 1200 MHz ............................................................ OK
+ 1152 MHz ............................................................ OK
+ 1104 MHz SKIPPED
+ 1056 MHz SKIPPED
+ 1008 MHz ............................................................ OK
+  960 MHz ............................................................ OK
+  912 MHz ............................................................ OK
+  864 MHz ............................................................ OK
+  816 MHz ............................................................ OK
+  768 MHz ............................................................ OK
+  720 MHz ............................................................ OK
+  672 MHz ............................................................ OK
+  648 MHz ............................................................ OK
+  624 MHz ............................................................ OK
+  600 MHz ............................................................ OK
+  576 MHz ............................................................ OK
+  528 MHz ............................................................ OK
+  504 MHz ............................................................ OK
+  480 MHz ............................................................ OK
+  408 MHz ............................................................ OK
+  312 MHz ............................................................ OK
+  240 MHz ............................................................ OK
+  120 MHz SKIPPED
+   60 MHz SKIPPED
+
+Testing CPU 2
+ 1536 MHz SKIPPED
+ 1440 MHz SKIPPED
+ 1344 MHz SKIPPED
+ 1296 MHz SKIPPED
+ 1248 MHz SKIPPED
+ 1200 MHz ............................................................ OK
+ 1152 MHz ............................................................ OK
+ 1104 MHz SKIPPED
+ 1056 MHz SKIPPED
+ 1008 MHz ............................................................ OK
+  960 MHz ............................................................ OK
+  912 MHz ............................................................ OK
+  864 MHz ............................................................ OK
+  816 MHz ............................................................ OK
+  768 MHz ............................................................ OK
+  720 MHz ............................................................ OK
+  672 MHz ............................................................ OK
+  648 MHz ............................................................ OK
+  624 MHz ............................................................ OK
+  600 MHz ............................................................ OK
+  576 MHz ............................................................ OK
+  528 MHz ............................................................ OK
+  504 MHz ............................................................ OK
+  480 MHz ............................................................ OK
+  408 MHz ............................................................ OK
+  312 MHz ............................................................ OK
+  240 MHz ............................................................ OK
+  120 MHz SKIPPED
+   60 MHz SKIPPED
+
+Testing CPU 3
+ 1536 MHz SKIPPED
+ 1440 MHz SKIPPED
+ 1344 MHz SKIPPED
+ 1296 MHz SKIPPED
+ 1248 MHz SKIPPED
+ 1200 MHz ............................................................ OK
+ 1152 MHz ............................................................ OK
+ 1104 MHz ............................................................ OK
+ 1056 MHz SKIPPED
+ 1008 MHz ............................................................ OK
+  960 MHz ............................................................ OK
+  912 MHz ............................................................ OK
+  864 MHz ............................................................ OK
+  816 MHz ............................................................ OK
+  768 MHz ............................................................ OK
+  720 MHz ............................................................ OK
+  672 MHz ............................................................ OK
+  648 MHz ............................................................ OK
+  624 MHz ............................................................ OK
+  600 MHz ............................................................ OK
+  576 MHz ............................................................ OK
+  528 MHz ............................................................ OK
+  504 MHz ............................................................ OK
+  480 MHz ............................................................ OK
+  408 MHz ............................................................ OK
+  312 MHz ............................................................ OK
+  240 MHz ............................................................ OK
+  120 MHz SKIPPED
+   60 MHz SKIPPED
+
+Overall result : PASSED
+root@bpi-iot-ros-ai:~/cpuburn-arm# 
