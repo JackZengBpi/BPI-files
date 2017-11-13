@@ -21,6 +21,9 @@ load_modules()
   bpi-m2p)
     MODULES="ov5640 vfe_v4l2"
     ;;
+  bpi-m2z)
+    MODULES="ov5640 vfe_v4l2"
+    ;;
   bpi-m2)
     MODULES="ov5640 vfe_v4l2"
     ;;
