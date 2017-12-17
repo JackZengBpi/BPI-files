@@ -16,6 +16,9 @@ load_modules()
   bpi-m2u)
     modprobe bcmdhd
     ;;
+  bpi-m2z)
+    modprobe bcmdhd
+    ;;
   bpi-m2p)
     modprobe bcmdhd
     ;;

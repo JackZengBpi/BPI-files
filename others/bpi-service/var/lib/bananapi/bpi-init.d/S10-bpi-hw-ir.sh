@@ -13,6 +13,9 @@ load_modules()
   bpi-m2u)
     modprobe sunxi-ir-rx
     ;;
+  bpi-m2z)
+    #modprobe sunxi-ir-rx
+    ;;
   bpi-m2p)
     modprobe sunxi-ir-rx
     ;;
