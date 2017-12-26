@@ -1,0 +1,838 @@
+F0: 102B 0000
+F5: 0000 0000
+V0: 0000 0000 [0001]
+00: 0000 0000
+BP: 0000 0041 [0000]
+G0: 0190 0000
+T0: 0000 0333 [000F]
+Jump to BL
+
+UNIVPLL_CON0 = 0xFE000000!!!
+mt_pll_init: Set pll frequency for 25M crystal
+RAM_CONSOLE preloader last status: 0x0 0x0 0x0 0x0 0x0 0x0 
+[PMIC_WRAP]wrap_init pass,the return value=0.
+[pmic_init] Preloader Start..................
+[pmic_init] MT6380 CHIP Code, reg_val = 0, 1:E2  0:E3
+[pmic_init] Done...................
+Chip part number:7622A
+MT7622 Version: 1.2.5, (iPA) 
+SSC OFF
+mt_pll_post_init: mt_get_cpu_freq = 1350000Khz
+mt_pll_post_init: mt_get_mem_freq = 1600000Khz
+mt_pll_post_init: mt_get_bus_freq = 1119920Khz
+[PLFM] Init I2C: OK(0)
+
+[BLDR] Build Time: 20171226-085016
+==== Dump RGU Reg ========
+RGU MODE:     14
+RGU LENGTH:   FFE0
+RGU STA:      40000000
+RGU INTERVAL: FFF
+RGU SWSYSRST: 8000
+==== Dump RGU Reg End ====
+RGU: g_rgu_satus:2
+ mtk_wdt_mode_config  mode value=10, tmp:22000010
+PL RGU RST: ??
+SW reset with bypass power key flag
+Find bypass powerkey flag
+WDT NONRST=0x20000000
+WDT IRQ_EN=0x300002
+RGU mtk_wdt_init:MTK_WDT_DEBUG_CTL(590200F3)
+[EMI] MDL number = 2
+[EMI] DRAMC calibration start
+
+[EMI] DRAMC calibration end
+
+[EMI]rank size auto detect
+[EMI]rank0 size: 0x20000000
+[MEM] complex R/W mem test pass
+RAM_CONSOLE wdt status (0x2)=0x2
+[mmc_init]: msdc1 start mmc_init_host() in PL...
+[msdc_init]: msdc1 Host controller intialization start 
+[SD1] Pins mode(1), none(0), down(1), up(2), keep(3)
+[SD1] Pins mode(2), none(0), down(1), up(2), keep(3)
+[info][msdc_config_clksrc] input clock is 200000kHz
+[SD1] Bus Width: 1
+[info][msdc_config_clksrc] input clock is 200000kHz
+[SD1] SET_CLK(260kHz): SCLK(259kHz) MODE(0) DDR(0) DIV(193) DS(0) RS(0)
+[msdc_init]: msdc1 Host controller intialization done
+[mmc_init]: msdc1 start mmc_init_card() in PL...
+[mmc_init_card]: start
+[SD1] Bus Width: 4
+[SD1] Size: 7600 MB, Max.Speed: 25000 kHz, blklen(512), nblks(15564800), ro(0)
+[mmc_init_mem_card 3140][SD1] Initialized, SD10
+before host->cur_bus_clk(259067)
+[info][msdc_config_clksrc] input clock is 200000kHz
+[SD1] SET_CLK(25000kHz): SCLK(25000kHz) MODE(0) DDR(0) DIV(2) DS(0) RS(0)
+host->cur_bus_clk(25000000)
+[mmc_init_card]: finish successfully
+[PLFM] Init Boot Device: OK(0)
+[GPT_PL](BPI)Parsing Primary GPT now...
+[GPT_PL]check header, err(signature 0x00000054594C5242!=0x5452415020494645)
+[GPT_PL]Success to find valid GPT.
+
+[PART] blksz: 512B
+[PART] [0x0000000000020000-0x000000000007FFFF] "preloader" (768 blocks) 
+[PART] [0x0000000000080000-0x00000000000BFFFF] "tee1" (512 blocks) 
+[PART] [0x00000000000C0000-0x000000000013FFFF] "lk" (1024 blocks) 
+
+Device APC domain init setup:
+
+Domain Setup (0x0)
+Domain Setup (0x0)
+Device APC domain after setup:
+Domain Setup (0x0)
+Domain Setup (0x0)
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[get_part] part->nr_sects=1024, part->info->name=lk
+[PART] Image with part header
+[PART] name : LK
+[PART] addr : FFFFFFFFh mode : -1
+[PART] size : 293360
+[PART] magic: 58881688h
+
+[PART] load "lk" from 0x00000000000C0200 (dev) to 0x41E00000 (mem) [SUCCESS]
+[PART] load speed: 3451KB/s, 293360 bytes, 83ms
+load lk (ret=0)
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[PART] Image with part header
+[PART] name : atf
+[PART] addr : FFFFFFFFh mode : -1
+[PART] size : 62032
+[PART] magic: 58881688h
+
+[PART] load "tee1" from 0x0000000000080200 (dev) to 0x43000DC0 (mem) [SUCCESS]
+[PART] load speed: 2752KB/s, 62032 bytes, 22ms
+load tee1 (ret=0)
+[BLDR] bldr load tee part ret=0x0, addr=0x43001000
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[get_part] part->nr_sects=1024, part->info->name=lk
+[BLDR] boot part. not found
+[BLDR] part_load_images ret=0x0
+[BLDR] Others, jump to ATF
+
+[BLDR] jump to 0x41E00000
+[BLDR] <0x41E00000>=0xEA00000F
+[BLDR] <0x41E00004>=0xE59FF014
+
+
+U-Boot 2014.04-rc1 (Dec 19 2017 - 15:36:11)
+
+DRAM:  496 MiB
+dev_num = 1
+***size=4096, offset=1310720, blk_start=2560, blk_cnt=8
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+dev_num = 1
+***size=4096, offset=1310720, blk_start=2560, blk_cnt=8
+*** Warning - bad CRC, using default environment
+
+Net:   mtk_eth
+Uip activated
+  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~b to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot system code via Flash.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. System Load CTP then write to Flash via TFTP.     a. System Load CTP then Boot to CTP (via Flash).     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  Hit any key to stop autoboot:  3  2  1  0 mmc1 is current device
+mmc1 operation
+dev_num = 1
+
+MMC read: dev # 1, block # 4096, count 1 ... 1 blocks read: OK
+[do_read_image_blks]This is a FIT image,img_size = 0xa489c8
+mmc1 operation
+dev_num = 1
+
+MMC read: dev # 1, block # 4096, count 21061 ... 21061 blocks read: OK
+bootm flag=0, states=70f
+## Loading kernel from FIT Image at 4007ff28 ...
+   Using 'conf@1' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Kernel Image
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x40080000
+     Data Size:    10754512 Bytes = 10.3 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x40080000
+     Entry Point:  0x40080000
+   Verifying Hash Integrity ... OK
+## Loading fdt from FIT Image at 4007ff28 ...
+   Using 'conf@1' configuration
+   Trying 'fdt@1' fdt subimage
+     Description:  mt7622-ac4300rfb1.dtb
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x40ac1a7c
+     Data Size:    26860 Bytes = 26.2 KiB
+     Architecture: ARM
+     Hash algo:    sha1
+     Hash value:   98bf414f8251aad80e9fc3b20b8a839cb73f981c
+   Verifying Hash Integrity ... sha1+ OK
+   Loading fdt from 0x40ac1a7c to 0x47000000
+   Booting using the fdt blob at 0x47000000
+   XIP Kernel Image ... OK
+   Loading Device Tree to 5cf2a000, end 5cf338eb ... OK
+
+Starting kernel ...
+
+[ATF][     4.967106]save kernel info
+[ATF][     4.970137]Kernel_EL2
+[ATF][     4.972894]Kernel is 64Bit
+[ATF][     4.976082]pc=0x40080000, r0=0x5cf2a000, r1=0x0
+INFO:    BL3-1: Preparing for EL3 exit to normal world, Kernel
+INFO:    BL3-1: Next image address = 0x40080000
+INFO:    BL3-1: Next image spsr = 0x3c9
+[ATF][     4.994350]el3_exit
+Booting Linux on physical CPU 0x0
+Initializing cgroup subsys cpuset
+Initializing cgroup subsys cpu
+Initializing cgroup subsys cpuacct
+Linux version 4.4.92-BPI-R64-Kernel (root@bpi-iot-ros-ai) (gcc version 5.4.0 20160609 (Ubuntu/Linaro 5.4.0-6ubuntu1~16.04.4) ) #3 SMP PREEMPT Wed Dec 20 00:58:12 CST 2017
+Boot CPU: AArch64 Processor [410fd034]
+On node 0 totalpages: 131024
+  DMA zone: 2048 pages used for memmap
+  DMA zone: 0 pages reserved
+  DMA zone: 131024 pages, LIFO batch:31
+psci: probing for conduit method from DT.
+psci: PSCIv0.2 detected in firmware.
+psci: Using standard PSCI v0.2 function IDs
+psci: Trusted OS migration not required
+PERCPU: Embedded 21 pages/cpu @ffffffc01ffa5000 s45208 r8192 d32616 u86016
+pcpu-alloc: s45208 r8192 d32616 u86016 alloc=21*4096
+pcpu-alloc: [0] 0 [0] 1 
+Detected VIPT I-cache on CPU0
+CPU features: enabling workaround for ARM erratum 845719
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 128976
+Kernel command line: board=bpi-r64 console=ttyS0,115200n1 root=/dev/mmcblk0p2 rootwait initrd=0x44000000,0x615E36 loglevel=8 androidboot.hardware=mt7622 swiotlb=512
+PID hash table entries: 2048 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 65536 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 32768 (order: 6, 262144 bytes)
+software IO TLB [mem 0x5ecf5000-0x5edf5000] (1MB) mapped at [ffffffc01ecf5000-ffffffc01edf4fff]
+Memory: 496420K/524096K available (7092K kernel code, 718K rwdata, 2212K rodata, 464K init, 489K bss, 27676K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB)
+    vmalloc : 0xffffff8008000000 - 0xffffffbdbfff0000   (   246 GB)
+      .init : 0xffffff800899a000 - 0xffffff8008a0e000   (   464 KB)
+      .text : 0xffffff8008080000 - 0xffffff800876e000   (  7096 KB)
+    .rodata : 0xffffff800876e000 - 0xffffff800899a000   (  2224 KB)
+      .data : 0xffffff8008a0e000 - 0xffffff8008ac19d0   (   719 KB)
+    fixed   : 0xffffffbffe7fd000 - 0xffffffbffec00000   (  4108 KB)
+    PCI I/O : 0xffffffbffee00000 - 0xffffffbfffe00000   (    16 MB)
+    memory  : 0xffffffc000000000 - 0xffffffc020000000   (   512 MB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Build-time adjustment of leaf fanout to 64.
+NR_IRQS:64 nr_irqs:64 0
+Architected cp15 timer(s) running at 12.50MHz (phys).
+clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x2e2049cda, max_idle_ns: 440795202628 ns
+sched_clock: 56 bits at 12MHz, resolution 80ns, wraps every 4398046511080ns
+clocksource: timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 191126102035 ns
+Console: colour dummy device 80x25
+Calibrating delay loop (skipped), value calculated using timer frequency.. 25.00 BogoMIPS (lpj=50000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 1, 8192 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 1, 8192 bytes)
+Initializing cgroup subsys io
+Initializing cgroup subsys memory
+Initializing cgroup subsys devices
+Initializing cgroup subsys freezer
+Initializing cgroup subsys perf_event
+Initializing cgroup subsys pids
+sched-energy: CPU device node has no sched-energy-costs
+Invalid sched_group_energy for CPU0
+CPU0: update cpu_capacity 1024
+ASID allocator initialised with 65536 entries
+Detected VIPT I-cache on CPU1
+Invalid sched_group_energy for CPU1
+CPU1: update cpu_capacity 1024
+CPU1: Booted secondary processor [410fd034]
+Brought up 2 CPUs
+SMP: Total of 2 processors activated.
+CPU: All CPU(s) started at EL2
+alternatives: patching kernel code
+Invalid sched_group_energy for CPU1
+Invalid sched_group_energy for Cluster1
+Invalid sched_group_energy for CPU0
+Invalid sched_group_energy for Cluster0
+devtmpfs: initialized
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+futex hash table entries: 512 (order: 4, 65536 bytes)
+xor: measuring software checksum speed
+   8regs     :  2440.000 MB/sec
+   8regs_prefetch:  2189.000 MB/sec
+   32regs    :  3064.000 MB/sec
+   32regs_prefetch:  2524.000 MB/sec
+xor: using function: 32regs (3064.000 MB/sec)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+[SPM] spm_base = ffffff8008024000
+[SPM] spm_irq_0 = 6, spm_irq_1 = 7
+[SPM] spm_irq_2 = 8, spm_irq_3 = 9
+[SPM] set spm as wakeup devcie.
+[SPM] spm_rtc cnt: 24414.
+cpuidle: using governor menu
+vdso: 2 pages (1 code @ ffffff8008774000, 1 data @ ffffff8008a14000)
+hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+DMA: preallocated 256 KiB pool for atomic allocations
+Serial: AMBA PL011 UART driver
+[SPM] PWAKE_EN:1, PCMWDT_EN:0, BYPASS_SYSPWREQ:0, I2C_CHANNEL:2
+[SLP] SLEEP_DPIDLE_EN:1, REPLACE_DEF_WAKESRC:0, SUSPEND_LOG_EN:1
+genirq: Setting trigger mode 2 for irq 227 failed (mtk_sysirq_set_type+0x0/0xc8)
+raid6: int64x1  gen()   431 MB/s
+raid6: int64x1  xor()   418 MB/s
+raid6: int64x2  gen()   675 MB/s
+raid6: int64x2  xor()   630 MB/s
+raid6: int64x4  gen()  1076 MB/s
+raid6: int64x4  xor()   770 MB/s
+raid6: int64x8  gen()   750 MB/s
+raid6: int64x8  xor()   604 MB/s
+raid6: neonx1   gen()   839 MB/s
+raid6: neonx1   xor()   834 MB/s
+raid6: neonx2   gen()  1309 MB/s
+raid6: neonx2   xor()  1118 MB/s
+raid6: neonx4   gen()  1770 MB/s
+raid6: neonx4   xor()  1314 MB/s
+raid6: neonx8   gen()  1783 MB/s
+raid6: neonx8   xor()  1314 MB/s
+raid6: using algorithm neonx8 gen() 1783 MB/s
+raid6: .... xor() 1314 MB/s, rmw enabled
+raid6: using intx1 recovery algorithm
+vgaarb: loaded
+SCSI subsystem initialized
+libata version 3.00 loaded.
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+mtk-pcie 1a143000.pcie: failed to init pcie rc 0 h/w, check the connection
+mtk-pcie 1a143000.pcie: failed to init pcie rc 1 h/w, check the connection
+mtk-pcie 1a143000.pcie: PCI host bridge to bus 0000:00
+pci_bus 0000:00: root bus resource [mem 0x20000000-0x21ffffff]
+pci_bus 0000:00: root bus resource [bus 00-ff]
+mtk-pcie 1a143000.pcie: pcie probe done
+clocksource: Switched to clocksource arch_sys_counter
+NET: Registered protocol family 2
+TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+TCP bind hash table entries: 4096 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 4096 bind 4096)
+UDP hash table entries: 256 (order: 1, 8192 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+NET: Registered protocol family 1
+PCI: CLS 0 bytes, default 128
+Unpacking initramfs...
+Initramfs unpacking failed: junk in compressed archive
+Freeing initrd memory: 6228K
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(1.780:1): initialized
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+efs: 1.0a - http://aeschi.ch.eu.org/efs/
+jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+romfs: ROMFS MTD (C) 2007 Red Hat, Inc.
+fuse init (API version 7.23)
+NILFS version 2 loaded
+befs: version: 0.9.3
+io scheduler noop registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+console [ttyS0] disabled
+11002000.serial: ttyS0 at MMIO 0x11002000 (irq = 230, base_baud = 1562500) is a ST16650V2
+console [ttyS0] enabled
+Unable to detect cache hierarchy from DT for CPU 0
+loop: module loaded
+dump_power_table[0] = { .cpufreq_khz = 1350000,	.cpufreq_ncpu = 2,	.cpufreq_power = 995 }
+dump_power_table[1] = { .cpufreq_khz = 1262500,	.cpufreq_ncpu = 2,	.cpufreq_power = 811 }
+dump_power_table[2] = { .cpufreq_khz = 1137500,	.cpufreq_ncpu = 2,	.cpufreq_power = 736 }
+dump_power_table[3] = { .cpufreq_khz = 1025000,	.cpufreq_ncpu = 2,	.cpufreq_power = 624 }
+dump_power_table[4] = { .cpufreq_khz = 1350000,	.cpufreq_ncpu = 1,	.cpufreq_power = 517 }
+dump_power_table[5] = { .cpufreq_khz = 812500,	.cpufreq_ncpu = 2,	.cpufreq_power = 492 }
+dump_power_table[6] = { .cpufreq_khz = 1262500,	.cpufreq_ncpu = 1,	.cpufreq_power = 377 }
+dump_power_table[7] = { .cpufreq_khz = 600000,	.cpufreq_ncpu = 2,	.cpufreq_power = 376 }
+dump_power_table[8] = { .cpufreq_khz = 1137500,	.cpufreq_ncpu = 1,	.cpufreq_power = 333 }
+dump_power_table[9] = { .cpufreq_khz = 437500,	.cpufreq_ncpu = 2,	.cpufreq_power = 295 }
+dump_power_table[10] = { .cpufreq_khz = 1025000,	.cpufreq_ncpu = 1,	.cpufreq_power = 258 }
+dump_power_table[11] = { .cpufreq_khz = 300000,	.cpufreq_ncpu = 2,	.cpufreq_power = 225 }
+dump_power_table[12] = { .cpufreq_khz = 812500,	.cpufreq_ncpu = 1,	.cpufreq_power = 204 }
+dump_power_table[13] = { .cpufreq_khz = 600000,	.cpufreq_ncpu = 1,	.cpufreq_power = 166 }
+dump_power_table[14] = { .cpufreq_khz = 437500,	.cpufreq_ncpu = 1,	.cpufreq_power = 140 }
+dump_power_table[15] = { .cpufreq_khz = 300000,	.cpufreq_ncpu = 1,	.cpufreq_power = 119 }
+[cal] calefuse1	= 0x76360ac0
+[cal] calefuse2	= 0x694010
+[cal] g_adc_ge_t	= 0x360
+[cal] g_adc_oe_t	= 0x1d8
+[cal] g_degc_cali	= 0x2b
+[cal] g_adc_cali_en_t	= 0x1
+[cal] g_o_slope	= 0x0
+[cal] g_o_slope_sign	= 0x0
+[cal] g_id		= 0x0
+[cal] g_o_vtsmcu1	= 0x0
+[cal] g_o_vtsmcu2	= 0x1a5
+[cal] g_o_vtsmcu3	= 0x0
+[cal] g_o_vtsmcu4	= 0x0
+[cal] g_ge		= 0x35b
+[cal] g_gain		= 0x2a6b
+[cal] g_x_roomt1	= 0x1f51
+MTK-BTIF[E]hal_btif_clk_get_and_prepare(286):[CCF]clk_btif=ffffffc01eaf6900
+MTK-BTIF[E]hal_btif_clk_get_and_prepare(292):[CCF]clk_btif_apdma=ffffffc01eaf6a00
+[btmtk_err] btmtk_get_irq: irq_id:238 irq_flags:8
+mtk-snand 1100d000.snfi: mtk_snand_init_hw
+mtk-snand 1100d000.snfi: # MTK SNAND # : Use HW ECC
+Not Found NAND: ID [
+0 0 
+]
+mtk-snand 1100d000.snfi: Not Support this Device! 
+nand: No NAND device found
+[NAND]: NFI not support oobsize: 0
+[NAND]select ecc bit:4, sparesize :0
+mtk-snand 1100d000.snfi: # MTK SNAND # : nand_scan fail.
+mtk-snand 1100d000.snfi: [mtk_snand] mtk_snand_probe fail, err = -6!
+mtk-nor 11014000.spi: unrecognized JEDEC id bytes: 00, ef, aa
+mtk-nor: probe of 11014000.spi failed with error -2
+[rather_probe]ei_local->features = 0xb209db33
+[rather_probe]ei_local->architecture_config = 533003
+ethdma_sysctl_base = 0xffffff8008c00000
+ethdma_frame_engine_base = 0xffffff8008c40000
+ei_local->irq0 = 248
+ei_local->irq1 = 249
+ei_local->irq2 = 250
+[rather_probe]ei_local->chip_name = 7622
+[Raether] HW IO coherent is enabled !
+generated random MAC address 52:54:75:5d:2c:6b
+Mediatek APSoC Ethernet Driver Initialization.
+STD_v0.1  2048 rx/3072 tx descriptors allocated, mtu = 1500!
+NAPI enable, Tx Ring = 3072, Rx Ring = 2048
+PPP generic driver version 2.4.2
+NET: Registered protocol family 24
+PPTP driver version 0.8.5
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-pci: EHCI PCI platform driver
+ehci-platform: EHCI generic platform driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-pci: OHCI PCI platform driver
+ohci-platform: OHCI generic platform driver
+1a0c0000.usb supply vbus not found, using dummy regulator
+1a0c0000.usb supply vusb33 not found, using dummy regulator
+xhci-mtk 1a0c0000.usb: xHCI Host Controller
+xhci-mtk 1a0c0000.usb: new USB bus registered, assigned bus number 1
+xhci-mtk 1a0c0000.usb: hcc params 0x01403198 hci version 0x96 quirks 0x00210010
+xhci-mtk 1a0c0000.usb: irq 245, io mem 0x1a0c0000
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+xhci-mtk 1a0c0000.usb: xHCI Host Controller
+xhci-mtk 1a0c0000.usb: new USB bus registered, assigned bus number 2
+usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+usbcore: registered new interface driver uas
+usbcore: registered new interface driver usb-storage
+MTK_WDT_NONRST_REG(20000000)
+mtk-wdt 10212000.watchdog: register restart_handler on reboot_notifier_list for psci reset
+mtk-wdt 10212000.watchdog: Watchdog enabled (timeout=31 sec, nowayout=0)
+register cpuidle driver!!!!!!!!!!!!!!!!!
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+msdc_drv_probe!
+mtk-msdc 11230000.mmc: Regulator set error -22: 3300000 - 3300000
+msdc_drv_probe!
+mtk-msdc 11240000.mmc: Got CD GPIO
+mtk-msdc 11230000.mmc: Regulator set error -22: 3300000 - 3300000
+Synopsys Designware Multimedia Card Interface Driver
+sdhci-pltfm: SDHCI platform and OF driver helper
+nf_conntrack version 0.5.0 (3926 buckets, 15704 max)
+gre: GRE over IPv4 demultiplexor driver
+ip_tables: (C) 2000-2006 Netfilter Core Team
+NET: Registered protocol family 10
+sit: IPv6 over IPv4 tunneling driver
+NET: Registered protocol family 17
+bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+mtk-msdc 11230000.mmc: Regulator set error -22: 3300000 - 3300000
+l2tp_core: L2TP core driver, V2.0
+l2tp_ppp: PPPoL2TP kernel driver, V2.0
+8021q: 802.1Q VLAN Support v1.8
+registered taskstats version 1
+Btrfs loaded, debug=on, assert=on, integrity-checker=on
+BTRFS: selftest: Running btrfs free space cache tests
+BTRFS: selftest: Running extent only tests
+BTRFS: selftest: Running bitmap only tests
+mtk-msdc 11230000.mmc: Regulator set error -22: 3300000 - 3300000
+BTRFS: selftest: Running bitmap and extent tests
+BTRFS: selftest: Running space stealing from bitmap to extent
+BTRFS: selftest: Free space cache tests finished
+BTRFS: selftest: Running extent buffer operation tests
+BTRFS: selftest: Running btrfs_split_item tests
+BTRFS: selftest: Running find delalloc tests
+mmc1: host does not support reading read-only switch, assuming write-enable
+mmc1: new high speed SDHC card at address 0007
+mmcblk0: mmc1:0007 SD8GB 7.42 GiB 
+ mmcblk0: p1 p2
+BTRFS: selftest: Running btrfs_get_extent tests
+BTRFS: selftest: Running hole first btrfs_get_extent test
+BTRFS: selftest: Running outstanding_extents tests
+BTRFS: selftest: Running qgroup tests
+BTRFS: selftest: Qgroup basic add
+BTRFS: selftest: Qgroup multiple refs test
+[SPM] pwrap node has not register regmap
+[SVS] SVSINITEN = 0x00000000
+mt-svs: probe of 1100b000.svs failed with error -22
+EXT4-fs (mmcblk0p2): couldn't mount as ext3 due to feature incompatibilities
+EXT4-fs (mmcblk0p2): mounted filesystem without journal. Opts: (null)
+VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 464K
+This architecture does not have kernel memory protection.
+random: systemd: uninitialized urandom read (16 bytes read, 10 bits of entropy available)
+systemd[1]: systemd 215 running in system mode. (+PAM +AUDIT +SELINUX +IMA +SYSVINIT +LIBCRYPTSETUP +GCRYPT +ACL +XZ -SECCOMP -APPARMOR)
+systemd[1]: Detected architecture 'arm64'.
+
+Welcome to Debian GNU/Linux 8 (jessie)!
+
+systemd[1]: Set hostname to <bpi-iot-ros-ai>.
+random: systemd-sysv-ge: uninitialized urandom read (16 bytes read, 13 bits of entropy available)
+random: systemd: uninitialized urandom read (16 bytes read, 18 bits of entropy available)
+random: systemd: uninitialized urandom read (16 bytes read, 18 bits of entropy available)
+random: systemd: uninitialized urandom read (16 bytes read, 18 bits of entropy available)
+random: systemd: uninitialized urandom read (16 bytes read, 19 bits of entropy available)
+random: systemd: uninitialized urandom read (16 bytes read, 19 bits of entropy available)
+random: systemd: uninitialized urandom read (16 bytes read, 19 bits of entropy available)
+random: systemd: uninitialized urandom read (16 bytes read, 20 bits of entropy available)
+random: systemd: uninitialized urandom read (16 bytes read, 21 bits of entropy available)
+systemd[1]: Starting Forward Password Requests to Wall Directory Watch.
+systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+systemd[1]: Expecting device dev-ttyS0.device...
+         Expecting device dev-ttyS0.device...
+systemd[1]: Starting Remote File Systems (Pre).
+[  OK  ] Reached target Remote File Systems (Pre).
+systemd[1]: Reached target Remote File Systems (Pre).
+systemd[1]: Starting Encrypted Volumes.
+[  OK  ] Reached target Encrypted Volumes.
+systemd[1]: Reached target Encrypted Volumes.
+systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+systemd[1]: Starting Dispatch Password Requests to Console Directory Watch.
+systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+systemd[1]: Starting Paths.
+[  OK  ] Reached target Paths.
+systemd[1]: Reached target Paths.
+systemd[1]: Starting Root Slice.
+[  OK  ] Created slice Root Slice.
+systemd[1]: Created slice Root Slice.
+systemd[1]: Starting /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
+systemd[1]: Starting Delayed Shutdown Socket.
+[  OK  ] Listening on Delayed Shutdown Socket.
+systemd[1]: Listening on Delayed Shutdown Socket.
+systemd[1]: Starting Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket (/dev/log).
+systemd[1]: Listening on Journal Socket (/dev/log).
+systemd[1]: Starting User and Session Slice.
+[  OK  ] Created slice User and Session Slice.
+systemd[1]: Created slice User and Session Slice.
+systemd[1]: Starting udev Control Socket.
+[  OK  ] Listening on udev Control Socket.
+systemd[1]: Listening on udev Control Socket.
+systemd[1]: Starting udev Kernel Socket.
+[  OK  ] Listening on udev Kernel Socket.
+systemd[1]: Listening on udev Kernel Socket.
+systemd[1]: Starting Journal Socket.
+[  OK  ] Listening on Journal Socket.
+systemd[1]: Listening on Journal Socket.
+systemd[1]: Starting System Slice.
+[  OK  ] Created slice System Slice.
+systemd[1]: Created slice System Slice.
+systemd[1]: Starting Increase datagram queue length...
+         Starting Increase datagram queue length...
+systemd[1]: Starting Restore / save the current clock...
+         Starting Restore / save the current clock...
+systemd[1]: Started Create list of required static device nodes for the current kernel.
+systemd[1]: Started Set Up Additional Binary Formats.
+systemd[1]: Mounting Debug File System...
+         Mounting Debug File System...
+systemd[1]: Starting Create Static Device Nodes in /dev...
+         Starting Create Static Device Nodes in /dev...
+systemd[1]: Starting udev Coldplug all Devices...
+         Starting udev Coldplug all Devices...
+systemd[1]: Mounted Huge Pages File System.
+systemd[1]: Mounting POSIX Message Queue File System...
+         Mounting POSIX Message Queue File System...
+systemd[1]: Starting LSB: Set keymap...
+         Starting LSB: Set keymap...
+systemd[1]: Starting system-getty.slice.
+[  OK  ] Created slice system-getty.slice.
+systemd[1]: Created slice system-getty.slice.
+systemd[1]: Starting system-serial\x2dgetty.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+systemd[1]: Created slice system-serial\x2dgetty.slice.
+systemd[1]: Starting Load Kernel Modules...
+         Starting Load Kernel Modules...
+systemd[1]: Starting File System Check on Root Device...
+         Starting File System Check on Root Device...
+systemd[1]: Starting Slices.
+[  OK  ] Reached target Slices.
+systemd[1]: Reached target Slices.
+[  OK  ]systemd[1]: Mounted POSIX Message Queue File System.
+ Mounted POSIX Msystemd[1]: Mounted Debug File System.
+essage Queue Filsystemd[1]: Started Increase datagram queue length.
+e System.
+[ystemd[1]: Started Restore / save the current clock.
+m  OK  ] Mousystemd[1]: Started Create Static Device Nodes in /dev.
+nted Debug File System.
+[ systemd[1]: Started LSB: Set keymap.
+ OK  ] Startsystemd[1]: systemd-modules-load.service: main process exited, code=exited, status=1/FAILURE
+ed Increase datasystemd[1]: Failed to start Load Kernel Modules.
+gram queue lengtsystemd[1]: Unit systemd-modules-load.service entered failed state.
+h.
+[  OK  ] Started Resystemd[1]: Time has been changed
+store / save the current clock.
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Started LSB: Set keymap.
+[FAILED] Failed to start Load Kernel Modules.
+See 'systemctl status systsystemd[1]: Started udev Coldplug all Devices.
+emd-modules-load.service' for details.
+[  OK  ] Started udev Coldplug all Devices.
+systemd[1]: Mounting FUSE Control File System...
+         Mounting FUSE Control File System...
+systemd[1]: Starting Apply Kernel Variables...
+         Starting Apply Kernel Variables...
+systemd[1]: Mounted Configuration File System.
+systemd[1]: Starting udev Kernel Device Manager...
+         Starting udev Kernel Device Manager...
+systemd[1]: Starting Syslog Socket.
+[  OK  ] Listening on Syslog Socket.
+systemd[1]: Listening on Syslog Socket.
+systemd-udevd[1326]: starting version 215
+systemd[1]: Starting Journal Service...
+         Starting Journal Service...
+[  OK  ] Started Journal Service.
+systemd[1]: Started Journal Service.
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started File System Check on Root Device.
+[  OK  ] Started Apply Kernel Variables.
+         Starting Copy rules generated while the root was ro...
+systemd-fsck[993]: BPI-ROOT: clean, 91749/455168 files, 699947/1817600 blocks
+         Starting LSB: Tune IDE hard disks...
+         Starting LSB: Set preliminary keymap...
+[  OK  ] Started Copy rules generated while the root was ro.
+[  OK  ] Started LSB: Tune IDE hard disks.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Started LSB: Set preliminary keymap.
+         Starting Remount Root and Kernel File Systems...
+EXT4-fs (mmcblk0p2): re-mounted. Opts: commit=600,errors=remount-ro
+[  OK  ] Started Remount Root and Kernel File Systems.
+         Activating swap /var/swap...
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /tmp...
+         Starting Load/Save Random Seed...
+[  OK  ] Mounted /tmp.
+[  OK  ] Reached target Local File Systems.
+Adding 131068k swap on /var/swap.  Priority:-1 extents:2 across:139260k SS
+         Starting Armbian enhanced Log2Ram...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Reached target Remote File Systems.
+         Starting Trigger Flushing of Journal to Persistent Storage...
+         Starting LSB: Prepare console...
+[  OK  ] Activated swap /var/swap.
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+         Starting LSB: Raise network interfaces....
+[  OK  ] Reached target Swap.
+systemd-journald[1327]: Received request to flush runtime journal from PID 1
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Started LSB: Prepare console.
+         Starting LSB: Set console font and keymap...
+[  OK  ] Started LSB: Raise network interfaces..
+[  OK  ] Reached target Network.
+[  OK  ] Reached target Network is Online.
+[  OK  ] Started LSB: Set console font and keymap.
+[  OK  ] Started Armbian enhanced Log2Ram.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Timers.
+         Starting Restore Sound Card State...
+[  OK  ] Reached target Basic System.
+         Starting Entropy daemon using the HAVEGE algorithm...
+[  OK  ] Started Entropy daemon using the HAVEGE algorithm.
+         Starting Network Manager...
+         Starting Regular background program processing daemon...
+[  OK  ] Started Regular background program processing daemon.
+         Starting OpenBSD Secure Shell server...
+[  OK  ] Started OpenBSD Secure Shell server.
+         Starting System Logging Service...
+         Starting /etc/rc.local Compatibility...
+         Starting Login Service...
+         Starting Permit User Sessions...
+         Starting D-Bus System Message Bus...
+[  OK  ] Started D-Bus System Message Bus.
+         Starting LSB: Load kernel modules needed to enable cpufreq scaling...
+         Starting LSB: Starts LIRC daemon....
+         Starting LSB: disk temperature monitoring daemon...
+         Starting LSB: Advanced IEEE 802.11 management daemon...
+         Starting LSB: Start xrdp and sesman daemons...
+         Starting LSB: Start/stop sysstat's sadc...
+         Starting LSB: Banana Pi init script...
+         Starting LSB: Start NTP daemon...
+[  OK  ] Started System Logging Service.
+[  OK  ] Started Restore Sound Card State.
+[  OK  ] Started /etc/rc.local Compatibility.
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started LSB: Starts LIRC daemon..
+[  OK  ] Started LSB: disk temperature monitoring daemon.
+[  OK  ] Started LSB: Advanced IEEE 802.11 management daemon.
+[  OK  ] Started LSB: Load kernel modules needed to enable cpufreq scaling.
+[  OK  ] Started LSB: Start/stop sysstat's sadc.
+         Starting LSB: set CPUFreq kernel parameters...
+         Starting Light Display Manager...
+         Starting Getty on tty1...
+[  OK  ] Started Getty on tty1.
+         Starting Serial Getty on ttyS0...
+[  OK  ] Started Serial Getty on ttyS0.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started LSB: Start NTP daemon.
+[  OK  ] Started LSB: set CPUFreq kernel parameters.
+[  OK  ] Started Login Service.
+         Starting LSB: Set sysfs variables from /etc/sysfs.conf...
+[  OK  ] Started LSB: Set sysfs variables from /etc/sysfs.conf.
+[  OK  ] Started LSB: Start xrdp and sesman daemons.
+         Starting Authenticate and Authorize Users to Run Privileged Tasks...
+[  OK  ] Started Light Display Manager.
+[  OK  ] Started Authenticate and Authorize Users to Run Privileged Tasks.
+[  OK  ] Started LSB: Banana Pi init script.
+[  OK  ] Started Network Manager.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+
+Debian GNU/Linux 8 bpi-iot-ros-ai ttyS0
+
+bpi-iot-ros-ai login: root
+Password: 
+Last login: Tue Dec 26 10:55:17 CST 2017 on ttyS0
+Linux bpi-iot-ros-ai 4.4.92-BPI-R64-Kernel #3 SMP PREEMPT Wed Dec 20 00:58:12 CST 2017 aarch64
+root@bpi-iot-ros-ai:~# ls
+Desktop  memtest
+root@bpi-iot-ros-ai:~# cd roo/root
+root@bpi-iot-ros-ai:~# ls
+Desktop  memtest
+root@bpi-iot-ros-ai:~# cd memtest/
+root@bpi-iot-ros-ai:~/memtest# ls
+g
+root@bpi-iot-ros-ai:~/memtest# sh g
+Cloning into 'tinymembench'...
+remote: Counting objects: 406, done.
+Receiving objects:   0% (1/406)   Receiving objects:   1% (5/406)   Receiving objects:   2% (9/406)   Receiving objects:   3% (13/406)   Receiving objects:   4% (17/406)   Receiving objects:   5% (21/406)   Receiving objects:   6% (25/406)   Receiving objects:   7% (29/406)   Receiving objects:   8% (33/406)   Receiving objects:   9% (37/406)   Receiving objects:  10% (41/406)   Receiving objects:  11% (45/406)   Receiving objects:  12% (49/406)   Receiving objects:  13% (53/406)   Receiving objects:  14% (57/406)   Receiving objects:  15% (61/406)   Receiving objects:  16% (65/406)   Receiving objects:  17% (70/406)   Receiving objects:  18% (74/406)   Receiving objects:  19% (78/406)   Receiving objects:  20% (82/406)   Receiving objects:  21% (86/406)   Receiving objects:  22% (90/406)   Receiving objects:  23% (94/406)   Receiving objects:  24% (98/406)   Receiving objects:  25% (102/406)   Receiving objects:  26% (106/406)   Receiving objects:  27% (110/406)   Receiving objects:  28% (114/406)   Receiving objects:  29% (118/406)   Receiving objects:  30% (122/406)   Receiving objects:  31% (126/406)   Receiving objects:  32% (130/406)   Receiving objects:  33% (134/406)   Receiving objects:  34% (139/406)   Receiving objects:  35% (143/406)   Receiving objects:  36% (147/406)   Receiving objects:  37% (151/406)   Receiving objects:  38% (155/406)   Receiving objects:  39% (159/406)   Receiving objects:  40% (163/406)   Receiving objects:  41% (167/406)   Receiving objects:  42% (171/406)   Receiving objects:  43% (175/406)   Receiving objects:  44% (179/406)   Receiving objects:  45% (183/406)   Receiving objects:  46% (187/406)   Receiving objects:  47% (191/406)   Receiving objects:  48% (195/406)   Receiving objects:  49% (199/406)   Receiving objects:  50% (203/406)   Receiving objects:  51% (208/406)   Receiving objects:  52% (212/406)   Receiving objects:  53% (216/406)   Receiving objects:  54% (220/406)   Receiving objects:  55% (224/406)   Receiving objects:  56% (228/406)   Receiving objects:  57% (232/406)   Receiving objects:  58% (236/406)   Receiving objects:  59% (240/406)   Receiving objects:  60% (244/406)   Receiving objects:  61% (248/406)   Receiving objects:  62% (252/406)   Receiving objects:  63% (256/406)   Receiving objects:  64% (260/406)   Receiving objects:  65% (264/406)   Receiving objects:  66% (268/406)   Receiving objects:  67% (273/406)   Receiving objects:  68% (277/406)   Receiving objects:  69% (281/406)   Receiving objects:  70% (285/406)   Receiving objects:  71% (289/406)   Receiving objects:  72% (293/406)   Receiving objects:  73% (297/406)   Receiving objects:  74% (301/406)   Receiving objects:  75% (305/406)   Receiving objects:  76% (309/406)   Receiving objects:  77% (313/406)   Receiving objects:  78% (317/406)   Receiving objects:  79% (321/406)   Receiving objects:  80% (325/406)   remote: Total 406 (delta 0), reused 0 (delta 0), pack-reused 406
+Receiving objects:  81% (329/406)   Receiving objects:  82% (333/406)   Receiving objects:  83% (337/406)   Receiving objects:  84% (342/406)   Receiving objects:  85% (346/406)   Receiving objects:  86% (350/406)   Receiving objects:  87% (354/406)   Receiving objects:  88% (358/406)   Receiving objects:  89% (362/406)   Receiving objects:  90% (366/406)   Receiving objects:  91% (370/406)   Receiving objects:  92% (374/406)   Receiving objects:  93% (378/406)   Receiving objects:  94% (382/406)   Receiving objects:  95% (386/406)   Receiving objects:  96% (390/406)   Receiving objects:  97% (394/406)   Receiving objects:  98% (398/406)   Receiving objects:  99% (402/406)   Receiving objects: 100% (406/406)   Receiving objects: 100% (406/406), 71.66 KiB | 0 bytes/s, done.
+Resolving deltas:   0% (0/263)   Resolving deltas:   1% (4/263)   Resolving deltas:   2% (6/263)   Resolving deltas:   3% (10/263)   Resolving deltas:   4% (11/263)   Resolving deltas:  11% (31/263)   Resolving deltas:  22% (59/263)   Resolving deltas:  24% (65/263)   Resolving deltas:  25% (67/263)   Resolving deltas:  32% (86/263)   Resolving deltas:  34% (90/263)   Resolving deltas:  38% (101/263)   Resolving deltas:  41% (109/263)   Resolving deltas:  57% (151/263)   Resolving deltas:  66% (176/263)   Resolving deltas:  68% (179/263)   Resolving deltas:  72% (191/263)   Resolving deltas:  98% (259/263)   Resolving deltas: 100% (263/263)   Resolving deltas: 100% (263/263), done.
+Checking connectivity... done.
+root@bpi-iot-ros-ai:~/memtest# ls
+g  tinymembench
+root@bpi-iot-ros-ai:~/memtest# cd tinymembench/
+root@bpi-iot-ros-ai:~/memtest/tinymembench# ls
+aarch64-asm.h  arm-neon.S  LICENSE   mips-32.h	 util.c     x86-sse2.h
+aarch64-asm.S  asm-opt.c   main.c    mips-32.S	 util.h     x86-sse2.S
+arm-neon.h     asm-opt.h   Makefile  readme.txt  version.h
+root@bpi-iot-ros-ai:~/memtest/tinymembench# make
+cc -O2  -c util.c
+cc -O2  -c asm-opt.c
+cc -O2  -c x86-sse2.S
+cc -O2  -c arm-neon.S
+cc -O2  -c mips-32.S
+cc -O2  -c aarch64-asm.S
+cc -O2  -o tinymembench main.c util.o asm-opt.o x86-sse2.o arm-neon.o mips-32.o aarch64-asm.o -lm
+root@bpi-iot-ros-ai:~/memtest/tinymembench# ls
+aarch64-asm.h  arm-neon.o  asm-opt.o  mips-32.h   tinymembench	version.h
+aarch64-asm.o  arm-neon.S  LICENSE    mips-32.o   util.c	x86-sse2.h
+aarch64-asm.S  asm-opt.c   main.c     mips-32.S   util.h	x86-sse2.o
+arm-neon.h     asm-opt.h   Makefile   readme.txt  util.o	x86-sse2.S
+root@bpi-iot-ros-ai:~/memtest/tinymembench# ./tinymembench 
+tinymembench v0.4.9 (simple benchmark for memory throughput and latency)
+
+==========================================================================
+== Memory bandwidth tests                                               ==
+==                                                                      ==
+== Note 1: 1MB = 1000000 bytes                                          ==
+== Note 2: Results for 'copy' tests show how many bytes can be          ==
+==         copied per second (adding together read and writen           ==
+==         bytes would have provided twice higher numbers)              ==
+== Note 3: 2-pass copy means that we are using a small temporary buffer ==
+==         to first fetch data into it, and only then write it to the   ==
+==         destination (source -> L1 cache, L1 cache -> destination)    ==
+== Note 4: If sample standard deviation exceeds 0.1%, it is shown in    ==
+==         brackets                                                     ==
+==========================================================================
+
+ C copy backwards                                     :   1178.1 MB/s (1.2%)
+ C copy backwards (32 byte blocks)                    :   1175.8 MB/s (1.1%)
+ C copy backwards (64 byte blocks)                    :   1201.6 MB/s (1.6%)
+ C copy                                               :   1193.9 MB/s (0.8%)
+ C copy prefetched (32 bytes step)                    :   1226.8 MB/s (1.1%)
+ C copy prefetched (64 bytes step)                    :   1211.9 MB/s (0.4%)
+ C 2-pass copy                                        :   1188.2 MB/s (0.4%)
+ C 2-pass copy prefetched (32 bytes step)             :   1182.7 MB/s (0.3%)
+ C 2-pass copy prefetched (64 bytes step)             :   1182.8 MB/s (0.4%)
+ C fill                                               :   2948.0 MB/s
+ C fill (shuffle within 16 byte blocks)               :   2948.4 MB/s (0.5%)
+ C fill (shuffle within 32 byte blocks)               :   2948.2 MB/s
+ C fill (shuffle within 64 byte blocks)               :   2948.7 MB/s (0.5%)
+ ---
+ standard memcpy                                      :   1245.8 MB/s (0.4%)
+ standard memset                                      :   2949.1 MB/s (0.5%)
+ ---
+ NEON LDP/STP copy                                    :   1237.0 MB/s (0.4%)
+ NEON LDP/STP copy pldl2strm (32 bytes step)          :    916.5 MB/s (0.7%)
+ NEON LDP/STP copy pldl2strm (64 bytes step)          :   1122.2 MB/s
+ NEON LDP/STP copy pldl1keep (32 bytes step)          :   1296.6 MB/s (0.4%)
+ NEON LDP/STP copy pldl1keep (64 bytes step)          :   1295.6 MB/s
+ NEON LD1/ST1 copy                                    :   1239.1 MB/s (0.6%)
+ NEON STP fill                                        :   2949.4 MB/s (0.5%)
+ NEON STNP fill                                       :   2810.9 MB/s
+ ARM LDP/STP copy                                     :   1232.2 MB/s (0.4%)
+ ARM STP fill                                         :   2948.5 MB/s
+ ARM STNP fill                                        :   2811.3 MB/s (1.1%)
+
+==========================================================================
+== Memory latency test                                                  ==
+==                                                                      ==
+== Average time is measured for random memory accesses in the buffers   ==
+== of different sizes. The larger is the buffer, the more significant   ==
+== are relative contributions of TLB, L1/L2 cache misses and SDRAM      ==
+== accesses. For extremely large buffer sizes we are expecting to see   ==
+== page table walk with several requests to SDRAM for almost every      ==
+== memory access (though 64MiB is not nearly large enough to experience ==
+== this effect to its fullest).                                         ==
+==                                                                      ==
+== Note 1: All the numbers are representing extra time, which needs to  ==
+==         be added to L1 cache latency. The cycle timings for L1 cache ==
+==         latency can be usually found in the processor documentation. ==
+== Note 2: Dual random read means that we are simultaneously performing ==
+==         two independent memory accesses at a time. In the case if    ==
+==         the memory subsystem can't handle multiple outstanding       ==
+==         requests, dual random read has the same timings as two       ==
+==         single reads performed one after another.                    ==
+==========================================================================
+
+block size : single random read / dual random read
+      1024 :    0.0 ns          /     0.0 ns 
+      2048 :    0.0 ns          /     0.0 ns 
+      4096 :    0.0 ns          /     0.0 ns 
+      8192 :    0.0 ns          /     0.0 ns 
+     16384 :    0.0 ns          /     0.0 ns 
+     32768 :    0.0 ns          /     0.1 ns 
+     65536 :    4.7 ns          /     8.5 ns 
+    131072 :    7.2 ns          /    12.1 ns 
+    262144 :    8.5 ns          /    13.7 ns 
+    524288 :   10.2 ns          /    15.9 ns 
+   1048576 :   73.5 ns          /   115.1 ns 
+   2097152 :  108.3 ns          /   150.5 ns 
+   4194304 :  129.8 ns          /   170.0 ns 
+   8388608 :  141.1 ns          /   178.8 ns 
+  16777216 :  147.6 ns          /   184.5 ns 
+  33554432 :  151.7 ns          /   187.9 ns 
+  67108864 :  154.4 ns          /   189.7 ns 
+root@bpi-iot-ros-ai:~/memtest/tinymembench# 
