@@ -4,6 +4,10 @@ BOARD=$(bpi-hw)
 load_modules()
 {
   case ${BOARD} in
+  bpi-r2)
+    #Enable NEC protocol
+    echo "+nec" >/sys/class/rc/rc0/protocols
+    ;;
   bpi-m3)
     modprobe sunxi-ir-rx
     ;;
