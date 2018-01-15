@@ -1,0 +1,87 @@
+#!/bin/bash
+#
+## debian lite
+#
+BPILICENSE="GPLv2 or any later version"
+BPICONF="boardlist.conf"
+BPICONFVERSION="v1.0.2"
+#END
+##########################################################################
+#!/bin/bash
+APP=$0
+echo $APP
+STARTTIME=`date +%s`
+_excode=0
+
+if [ "$(id -u)" != "0" ]; then
+   echo "Script must be run as root !"
+   exit 0
+fi
+
+#
+## show finished
+#
+show_finished() {
+  echo ""
+  date
+  echo ""
+  echo "************************************************************"
+  echo "Instalation finished."
+  echo "************************************************************"
+  ENDTIME=`date +%s`
+  RUNTIMESEC=$((ENDTIME-STARTTIME))
+  MIN=$(((RUNTIMESEC)/60))
+  SEC=$(((RUNTIMESEC)%60))
+  echo "RUNTIME" "$MIN:$SEC"
+  echo "************************************************************"
+}
+
+gen_boardlist_conf() {
+CONFFILE="$1"
+#
+CONF=`ls board`
+#
+  echo '#!/bin/bash' > $CONFFILE
+  echo '#' >> $CONFFILE
+  echo "## AUTOGEN BY $APP , DO NOT MODYFY THIS FILE" >> $CONFFILE
+  echo '#' >> $CONFFILE
+  echo 'BOARDLIST="' >> $CONFFILE
+  for IN in $CONF
+  do
+    echo "$IN" >> $CONFFILE
+  done
+  echo '"' >> $CONFFILE
+  cat $APP >> $CONFFILE
+}
+
+bpi_boardlist()
+{
+  echo BPIBOARD=$BPIBOARD
+  for IN in $BOARDLIST
+  do
+     if [[ $BPIBOARD == "" ]] ; then
+       echo "$IN"
+     else
+       echo "$IN" | grep $BPIBOARD
+     fi
+  done
+#  show_finished
+}
+
+##########################################################
+# main
+##########################################################
+case $APP in
+*boardlist)
+  CONFFILE="tools/boardlist.conf"
+  echo "$APP: gen_boardlist_conf $CONFFILE"
+  gen_boardlist_conf $CONFFILE
+  exit 0
+  ;;
+*)
+  #echo "run: boardlist.conf: $APP"
+  bpi_boardlist
+  exit 0
+  ;;
+esac
+
