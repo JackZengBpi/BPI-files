@@ -1,0 +1,103 @@
+#!/bin/bash
+#
+## debian lite
+#
+BPILICENSE="GPLv2 or any later version"
+BPICONF="boardlist.conf"
+BPICONFVERSION="v1.0.2"
+BPIPACKAGE=""
+#END
+##########################################################################
+#!/bin/bash
+APP=$0
+echo $APP
+STARTTIME=`date +%s`
+_excode=0
+
+if [ "$(id -u)" != "0" ]; then
+   echo "Script must be run as root !"
+   exit 0
+fi
+
+#
+## show finished
+#
+show_finished() {
+  echo ""
+  date
+  echo ""
+  echo "************************************************************"
+  echo "Instalation finished."
+  echo "************************************************************"
+  ENDTIME=`date +%s`
+  RUNTIMESEC=$((ENDTIME-STARTTIME))
+  MIN=$(((RUNTIMESEC)/60))
+  SEC=$(((RUNTIMESEC)%60))
+  echo "RUNTIME" "$MIN:$SEC"
+  echo "************************************************************"
+}
+
+generate_pkg_conf() {
+	PACKAGE=$1
+	
+	cat <<-EOT
+	#!/bin/bash
+	#
+	## bpi-pkg-${PACKAGE}.conf
+	#
+	BPILICENSE="GPLv2 or any later version"
+	BPICONF="bpi-pkg-${PACKAGE}.conf"
+	BPICONFVERSION="v1.0.1"
+	BPIPACKAGE="${PACKAGE}.tgz"
+	#
+	## PACKAGE to ROOTFS
+	#
+	BPIFILES="\$BPIPACKAGE"
+	#END
+	EOT
+}
+
+gen_package_conf() {
+#
+PKGS=`ls ../../bpi-pkg*.sh`
+#
+  for IN in $PKGS
+  do
+    eval `grep "^PACKAGE" $IN`
+    CONFFILE="pkg/bpi-pkg-${PACKAGE}.conf"
+    echo CONFFILE="$CONFFILE"
+    generate_pkg_conf "$PACKAGE" > $CONFFILE
+  done
+}
+
+bpi_boardlist()
+{
+  echo BPIBOARD=$BPIBOARD
+  for IN in $BOARDLIST
+  do
+     if [[ $BPIBOARD == "" ]] ; then
+       echo "$IN"
+     else
+       echo "$IN" | grep $BPIBOARD
+     fi
+  done
+#  show_finished
+}
+
+##########################################################
+# main
+##########################################################
+case $APP in
+*bpi-pkg-conf)
+  CONFFILE="tools/boardlist.conf"
+  echo "$APP: bpi-pkg-conf"
+  gen_package_conf
+  exit 0
+  ;;
+*)
+  #echo "run: boardlist.conf: $APP"
+  bpi_boardlist
+  exit 0
+  ;;
+esac
+
