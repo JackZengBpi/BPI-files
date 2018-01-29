@@ -9,7 +9,7 @@ BPICONFVERSION="v1.0.2"
 ##########################################################################
 #!/bin/bash
 APP=$0
-echo $APP
+echo APP=$APP
 STARTTIME=`date +%s`
 _excode=0
 
