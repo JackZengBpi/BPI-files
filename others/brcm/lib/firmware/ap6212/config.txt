@@ -2,7 +2,8 @@
 #For most country, channel 1-13
 
 #BPI
-nv_by_chip=3 43430 0 nvram_ap6212.txt 43430 1 nvram_ap6212a.txt 43455 0 nvram_ap6255.txt
+
+nv_by_chip=3 43430 0 nvram_ap6212.txt 43430 1 nvram_ap6212a.txt 17221 6 nvram_ap6255.txt
 ccode=CN
 regrev=0
 
