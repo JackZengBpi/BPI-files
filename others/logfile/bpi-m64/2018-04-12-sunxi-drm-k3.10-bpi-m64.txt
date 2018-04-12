@@ -1,0 +1,1301 @@
+HELLO! BOOT0 is starting!                                                    
+boot0 commit : f5548ce5d5020cb87acf87a10188c51e9d4ddcc3                      
+                                                                             
+boot0 version : 4.0                                                          
+set pll start                                                                
+set pll end                             
+rtc[0] value = 0x00000000               
+rtc[1] value = 0x00000000               
+rtc[2] value = 0x00000000               
+rtc[3] value = 0x00000000               
+rtc[4] value = 0x00000000               
+rtc[5] value = 0x00000000
+DRAM driver version: V1.2
+chipid:0x000000bb
+chipid:0x000000bb                                                               
+chipid:0x000000bb                                                               
+chipid:0x000000bb                                                               
+chipid:0x000000bb                                                               
+rsb_send_initseq: rsb clk 400Khz -> 3Mhz                                        
+PMU: AXP81X                                                                     
+ddr voltage = 1500 mv                                                           
+DRAM Type = 3 (2:DDR2,3:DDR3,6:LPDDR2,7:LPDDR3)                                 
+DRAM clk = 576 MHz                                                              
+DRAM zq value: 003b3bbb                                                         
+DRAM init OK                                                                    
+DRAM size = 1024 MB                                                             
+DRAM init ok                                                                    
+dram size =1024                                                                 
+card no is 2                                                                    
+sdcard 2 line count 8                                                           
+[mmc]: mmc driver ver 2015-09-24 15:58                                          
+[mmc]: ***Try MMC card 2***                                                     
+[mmc]: MMC 5.0                                                                  
+[mmc]: HSDDR52/DDR50 8 bit                                                      
+[mmc]: 50000000 Hz                                                              
+[mmc]: 7456 MB                                                                  
+[mmc]: ***SD/MMC 2 init OK!!!***                                                
+Succeed in loading uboot from sdmmc flash.                                      
+Entry_name        = u-boot                                                      
+Entry_name        = monitor                                                     
+Entry_name        = scp                                                         
+set arisc reset to de-assert state                                              
+Ready to disable icache.                                                        
+0xffffffff 0xffffffff                                                           
+0xff16ffff 0xffffffff                                                           
+0xff0dffff 0xffffffff                                                           
+0xffffffff 0xffffffff                                                           
+0xffffffff 0xffffffff                                                           
+K9f=�    Configuring SPC Controller                                             
+NOTICE:  BL3-1: v1.0(debug):41a9d1c                                             
+NOTICE:  BL3-1: Built : 14:01:05, Mar 10 2016                                   
+NOTICE:  BL3-1 commit: 41a9d1cb82ceb6bc28ac82a60d13c2f97acb69b9                 
+                                                                                
+INFO:    BL3-1: Initializing runtime services                                   
+ERROR:   Error initializing runtime service tspd_fast                           
+INFO:    BL3-1: Preparing for EL3 exit to normal world                          
+INFO:    BL3-1: Next image address = 0x4a000000                                 
+INFO:    BL3-1: Next image spsr = 0x1d3                                         
+                                                                                
+                                                                                
+U-Boot 2014.07 (Mar 07 2016 - 16:23:34) Allwinner Technology                    
+                                                                                
+uboot commit : f5548ce5d5020cb87acf87a10188c51e9d4ddcc3                         
+                                                                                
+normal mode: with secure monitor                                                
+rsb: secure monitor exist                                                       
+[      0.358]pmbus:   ready                                                     
+[      0.360][ARISC] :arisc initialize                                          
+[      0.500][ARISC] :arisc_dvfs_cfg_vf_table: support only one vf_table        
+[      0.584][ARISC] :arisc para ok                                             
+[SCP] :sunxi-arisc driver begin startup 2                                       
+[SCP] :arisc_para size:240                                                      
+[SCP] :arisc version: [v0.1.94]                                                 
+[SCP] :sunxi-arisc driver v1.10 is starting                                     
+[      0.601][ARISC] :sunxi-arisc driver startup succeeded                      
+[      0.622]PMU: AXP81X                                                        
+[      0.624]PMU: AXP81X found                                                  
+bat_vol=0, ratio=100                                                            
+[      0.645]PMU: dcdc2 1100                                                    
+[      0.687]PMU: cpux 1008 Mhz,AXI=336 Mhz                                     
+PLL6=600 Mhz,AHB1=200 Mhz, APB1=100Mhz AHB2=300Mhz MBus=400Mhz                  
+device_type = 3253, onoff=1                                                     
+dcdc1_vol = 3300, onoff=1                                                       
+dcdc2_vol = 1100, onoff=1                                                       
+dcdc6_vol = 1200, onoff=1                                                       
+aldo1_vol = 3300, onoff=0                                                       
+aldo2_vol = 3300, onoff=1                                                       
+aldo3_vol = 3000, onoff=1                                                       
+dldo1_vol = 3300, onoff=1                                                       
+dldo2_vol = 3100, onoff=1                                                       
+dldo3_vol = 2800, onoff=0                                                       
+dldo4_vol = 3300, onoff=0                                                       
+eldo1_vol = 1800, onoff=1                                                       
+eldo2_vol = 1800, onoff=0                                                       
+eldo3_vol = 1800, onoff=0                                                       
+fldo2_vol = 1100, onoff=1                                                       
+gpio0_vol = 3100, onoff=0                                                       
+vbus not exist                                                                  
+no battery, limit to dc                                                         
+run key detect                                                                  
+no key found                                                                    
+no uart input                                                                   
+DRAM:  1008 MiB                                                                 
+fdt addr: 0x76ea36a0                                                            
+Relocation Offset is: 35ef6000                                                  
+In:    serial                                                                   
+Out:   serial                                                                   
+Err:   serial                                                                   
+gic: sec monitor mode                                                           
+[box standby] read rtc = 0x0                                                    
+[box standby] start_type = 0x1                                                  
+[box standby] to kernel                                                         
+boot_init_gpio used                                                             
+workmode = 0,storage type = 2                                                   
+[      1.069]MMC:        2                                                      
+[mmc]: mmc driver ver 2015-08-14 18:40:00                                       
+[mmc]: get sdc_ex_dly_used 2, use auto tuning sdly                              
+SUNXI SD/MMC: 2                                                                 
+[mmc]: start mmc_calibrate_delay_unit, don't access device...                   
+[mmc]: delay chain cal done, sample: 161(ps)                                    
+[mmc]: delay chain cal done, ds: 161(ps)                                        
+[mmc]: media type 0x8000000                                                     
+[mmc]: ************Try MMC card 2************                                   
+[mmc]: host caps: 0x6f                                                          
+[mmc]: MID 000011 PSN 4b1c8c61                                                  
+[mmc]: PNM 008GE0 -- 0x30-30-38-47-45                                           
+[mmc]: PRV 0.0                                                                  
+[mmc]: MDT m-3 y-2015                                                           
+[mmc]: MMC v5.0                                                                 
+[mmc]: speed mode     : HSSDR52/SDR25                                           
+[mmc]: clock          : 50000000 Hz                                             
+[mmc]: bus_width      : 8 bit                                                   
+[mmc]: user capacity  : 7456 MB                                                 
+[mmc]: boot capacity  : 4096 KB                                                 
+[mmc]: rpmb capacity  : 4096 KB                                                 
+[mmc]: ************SD/MMC 2 init OK!!!************                              
+[mmc]: erase_grp_size      : 0x400WrBlk*0x200=0x80000 Byte                      
+[mmc]: secure_feature      : 0x55                                               
+[mmc]: secure_removal_type : 0x9                                                
+[mmc]: EOL Info(Rev blks): Normal                                               
+[mmc]: Wear out(type A): 0%-10% life time used                                  
+[mmc]: Wear out(type B): Not defined                                            
+[      1.334]sunxi flash init ok                                                
+[      1.350]start                                                              
+drv_disp_init                                                                   
+init_clocks: finish init_clocks.                                                
+enable power vcc-hdmi-33, ret=0                                                 
+speed=400000, slave=16                                                          
+drv_disp_init finish                                                            
+no the part:Reserve0                                                            
+could not get output resolution for 'hdmi_channel'                              
+display output attr: type 4, used 1, channel 0, mode 4                          
+no the part:Reserve0                                                            
+could not get output resolution for 'cvbs_channel'                              
+display output attr: type 2, used 1, channel 1, mode 11                         
+boot_disp.auto_hpd=1                                                            
+boot_disp.hdmi_mode_check=1                                                     
+boot_disp.output_type=3                                                         
+plugin                                                                          
+auto hpd result: hdmi_connect=1, cvbs_connect=0!                                
+vendor_id=410cecc0                                                              
+no the part:Reserve0                                                            
+disp0 device type(4) enable, already enable prepare                             
+attched ok, mgr0<-->device0, type=4, mode=4                                     
+[      2.954]end                                                                
+--------fastboot partitions--------                                             
+-total partitions:6-                                                            
+-name-        -start-       -size-                                              
+bootloader  : 1000000       1000000                                             
+env         : 2000000       1000000                                             
+boot        : 3000000       1000000                                             
+system      : 4000000       e0000000                                            
+workstation : e4000000      80000000                                            
+UDISK       : 64000000      0                                                   
+-----------------------------------                                             
+base bootcmd=run setargs_nand boot_normal                                       
+bootcmd set setargs_mmc                                                         
+no misc partition is found                                                      
+to be run cmd=run setargs_mmc boot_normal                                       
+read item0 copy0                                                                
+Item0 (Map) magic is bad                                                        
+the secure storage item0 copy0 is bad                                           
+read item0 copy1                                                                
+Item0 (Map) magic is bad                                                        
+the secure storage item0 copy0 == copy1, the data is good                       
+the secure storage map is empty                                                 
+no item name initcall_debug in the map                                          
+no item name selinux in the map                                                 
+no item name cma in the map                                                     
+no item name mac in the map                                                     
+no item name wifi_mac in the map                                                
+no item name bt_mac in the map                                                  
+no item name specialstr in the map                                              
+check user data form private                                                    
+the private part isn't exist                                                    
+update dtb dram start                                                           
+update dtb dram  end                                                            
+serial is: 00000000000000000000                                                 
+no battery exist                                                                
+[boot_disp] adver need show                                                     
+[boot disp] can not find the partition Reserve0                                 
+cat not find the advert.crc                                                     
+verify the advert.crc failed                                                    
+sunxi_advert_display failed,display default logo                                
+reading bootlogo.bmp                                                            
+4096054 bytes read in 95 ms (41.1 MiB/s)                                        
+screen_id =0, screen_width =1280, screen_height =720                            
+frame buffer address 47400036                                                   
+[      3.349]inter uboot shell                                                  
+Hit any key to stop autoboot:  0                                                
+read partition: boot or recovery                                                
+[      3.779]sunxi flash read :offset 3000000, 15912414 bytes OK                
+Android's image name: sun50i                                                    
+Kernel load addr 0x41080000 size 11837 KiB                                      
+RAM disk load addr 0x42000000 size 2679 KiB                                     
+[      3.859]ready to boot                                                      
+prepare for kernel                                                              
+[mmc]: mmc exit start                                                           
+[mmc]: start mmc_calibrate_delay_unit, don't access device...                   
+[mmc]: delay chain cal done, sample: 166(ps)                                    
+[mmc]: delay chain cal done, ds: 166(ps)                                        
+[mmc]: mmc 2 exit ok                                                            
+                                                                                
+Starting kernel ...                                                             
+                                                                                
+INFO:    BL3-1: Next image address = 0x41080000                                 
+INFO:    BL3-1: Next image spsr = 0x3c5                                         
+[    0.000000] Initializing cgroup subsys cpuset                                
+[    0.000000] Initializing cgroup subsys cpu                                   
+[    0.000000] Initializing cgroup subsys cpuacct                               
+[    0.000000] Linux version 3.10.65 (cuiyuntao@Exdroid10) (gcc version 4.9.3 27
+[    0.000000] CPU: AArch64 Processor [410fd034] revision 4                     
+[    0.000000] Machine: sun50iw1p1                                              
+[    0.000000] bootconsole [earlycon0] enabled                                  
+[    0.000000] cma: CMA: reserved 300 MiB at 6d400000                           
+[    0.000000] On node 0 totalpages: 258048                                     
+[    0.000000]   DMA zone: 3528 pages used for memmap                           
+[    0.000000]   DMA zone: 0 pages reserved                                     
+[    0.000000]   DMA zone: 258048 pages, LIFO batch:31                          
+[    0.000000] script_init enter!                                               
+[    0.000000] script_init exit!                                                
+[    0.000000] psci: probing for conduit method from DT.                        
+[    0.000000] psci: PSCIv0.2 detected in firmware.                             
+[    0.000000] psci: Using standard PSCI v0.2 function IDs                      
+[    0.000000] PERCPU: Embedded 12 pages/cpu @ffffffc02c37f000 s20288 r8192 d202
+[    0.000000] pcpu-alloc: s20288 r8192 d20672 u49152 alloc=12*4096             
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3                              
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pa0
+[    0.000000] Kernel command line: earlyprintk=sunxi-uart,0x01c28000 initcall_1
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)             
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)   
+[    0.000000] Memory: 1008MB = 1008MB total                                    
+[    0.000000] Memory: 690772k/690772k available, 341420k reserved              
+[    0.000000] Virtual kernel memory layout:                                    
+[    0.000000]     vmalloc : 0xffffff8000000000 - 0xffffffbbffff0000   (245759 )
+[    0.000000]     vmemmap : 0xffffffbc00e38000 - 0xffffffbc01c00000   (    13 )
+[    0.000000]     modules : 0xffffffbffc000000 - 0xffffffc000000000   (    64 )
+[    0.000000]     memory  : 0xffffffc000000000 - 0xffffffc03f000000   (  1008 )
+[    0.000000]       .init : 0xffffffc000ac0000 - 0xffffffc000b49f40   (   552 )
+[    0.000000]       .text : 0xffffffc000080000 - 0xffffffc000abfe14   ( 10496 )
+[    0.000000]       .data : 0xffffffc000b4a000 - 0xffffffc000c0f1f0   (   789 )
+[    0.000000] Preemptible hierarchical RCU implementation.                     
+[    0.000000] NR_IRQS:64 nr_irqs:64 0                                          
+[    0.000000] Architected cp15 timer(s) running at 24.00MHz (virt).            
+[    0.000000] Console: colour dummy device 80x25                               
+[    0.010000] Calibrating delay loop (skipped), value calculated using timer f)
+[    0.012452] pid_max: default: 32768 minimum: 301                             
+[    0.017403] Security Framework initialized                                   
+[    0.020020] SELinux:  Disabled at boot.                                      
+[    0.024019] Mount-cache hash table entries: 256                              
+[    0.030158] Initializing cgroup subsys debug                                 
+[    0.032509] Initializing cgroup subsys freezer                               
+[    0.037035] ftrace: allocating 27819 entries in 109 pages                    
+[    0.060783] CPU0: update cpu_power 1024                                      
+[    0.060817] hw perfevents: enabled with arm/armv8-pmuv3 PMU driver, 7 countee
+[    0.068631] virtual base = 0xffffff800000a000.                               
+[    0.070023] gicd_base = 0xffffff800000c000.                                  
+[    0.074159] gicc_base = 0xffffff800000e000.                                  
+[    0.010000] CPU1: Booted secondary processor                                 
+[    0.010000] CPU1: update cpu_power 1024                                      
+[    0.010000] CPU2: Booted secondary processor                                 
+[    0.010000] CPU2: update cpu_power 1024                                      
+[    0.010000] CPU3: Booted secondary processor                                 
+[    0.010000] CPU3: update cpu_power 1024                                      
+[    0.081243] Brought up 4 CPUs                                                
+[    0.090010] SMP: Total of 4 processors activated (192.00 BogoMIPS).          
+[    0.096946] devtmpfs: initialized                                            
+[    0.125961] atomic64 test passed                                             
+[    0.125961] pinctrl core: initialized pinctrl subsystem                      
+[    0.140549] NET: Registered protocol family 16                               
+[    0.141222] script_sysfs_init success                                        
+[    0.141838] dump_class_init,806, success                                     
+[    0.141838] vdso: 2 pages (1 code, 1 data) at base ffffffc000b59000          
+[    0.150033] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.    
+[    0.157947] software IO TLB [mem 0x6b000000-0x6b400000] (4MB) mapped at [fff]
+[    0.170744] DMA: preallocated 256 KiB pool for atomic allocations            
+[    0.175645] axp81x_board_init: axp regl_devs num = 23                        
+[    0.180178] pll_audio-set_default_rate=24576000 success!                     
+[    0.185059] pll_video0-set_default_rate=297000000 success!                   
+[    0.190047] pll_ve-set_default_rate=420000000 success!                       
+[    0.195111] pll_video1-set_default_rate=297000000 success!                   
+[    0.200144] pll_de-set_default_rate=432000000 success!                       
+[    0.205338] ahb1-set_default_rate=200000000 success!                         
+[    0.210886] de-set_default_source=pll_de success!                            
+[    0.214605] de-set_default_rate=432000000 success!                           
+[    0.219348] tcon0-set_default_source=pll_mipi success!                       
+[    0.220046] tcon1-set_default_source=pll_video0 success!                     
+[    0.225511] hdmi-set_default_source=pll_video0 success!                      
+[    0.231828] adda_com_reg_readl: reg = 0xffffff80000545c0                     
+[    0.235202] adda_com_reg_readl: reg = 0xffffff80000545c0                     
+[    0.240000] adda_com_reg_writel: val = 0x40, reg = 0xffffff80000545c0        
+[    0.250902] sun50i-r-pinctrl 1f02c00.pinctrl: initialized sunXi PIO driver   
+[    0.260045] [sun50iw1p1_pinctrl_probe][837]                                  
+[    0.262447] sun50i-pinctrl 1c20800.pinctrl: initialized sunXi PIO driver     
+[    0.270485] sunxi hwspinlock vbase:0xffffff800005c000                        
+[    0.290599] sunxi_chipid_probe,205: soc bin:0                                
+[    0.350355] bio: create slab <bio-0> at 0                                    
+[    0.350512] pwm module init!                                                 
+[    0.361011] SCSI subsystem initialized                                       
+[    0.361521] usbcore: registered new interface driver usbfs                   
+[    0.361647] usbcore: registered new interface driver hub                     
+[    0.370161] usbcore: registered new device driver usb                        
+[    0.380026] Linux video capture interface: v2.00                             
+[    0.382329] [ARISC] :sunxi-arisc driver v1.10                                
+[    0.410453] [ARISC] :sunxi-arisc driver v1.10 startup succeeded              
+[    0.410680] Advanced Linux Sound Architecture Driver Initialized.            
+[    0.410680] Bluetooth: Core ver 2.16                                         
+[    0.420027] NET: Registered protocol family 31                               
+[    0.424183] Bluetooth: HCI device and connection manager initialized         
+[    0.430040] Bluetooth: HCI socket layer initialized                          
+[    0.434792] Bluetooth: L2CAP socket layer initialized                        
+[    0.439775] Bluetooth: SCO socket layer initialized                          
+[    0.440593] cfg80211: Calling CRDA to update world regulatory domain         
+[    0.450287] [pm]aw_pm_init!                                                  
+[    0.452149] rtc physical base = 0x0000000001f00000 .                         
+[    0.460055] np name = /soc@01c00000/rtc@01f00000.                            
+[    0.464687] base = ffffff800006e100, len = 4.                                
+[    0.468951] pmu name: pmu0 .                                                 
+[    0.470056] pmu0_enable = 0x1.                                               
+[    0.473070] pmux_id = 0x6.                                                   
+[    0.475800] pmux_twi_id = 0x1.                                               
+[    0.478868] pmux_twi_addr = 0x34.                                            
+[    0.480008] pmu name: pmu1 .                                                 
+[    0.482869] Warning: can not find np for pmu1.                               
+[    0.487678] after inited: sys_mask config = 0xca55.                          
+[    0.490032] Warning: can not find np for dynamic_standby_para.               
+[    0.495935] [pm]valid                                                        
+[    0.498014] [pm]valid                                                        
+[    0.500008] Notice: sun9i&sun8iw5&sun50i not need support normal standby,   .
+[    0.510061] i2c-core: driver [ACX00-CHIP] using legacy suspend method        
+[    0.520012] i2c-core: driver [ACX00-CHIP] using legacy resume method         
+[    0.526239] acx00_detect, l:358, twi_id:0, adapter->nr:0                     
+[    0.530368] acx00_i2c_probe,l:260                                            
+[    0.530136] ACX00-CHIP 0-0010: system version (0x00000101)                   
+[    0.540160] acx00_init_work,l:128                                            
+[    0.543375] acx00_detect, l:358, twi_id:0, adapter->nr:1                     
+[    0.544794] Switching to clocksource arch_sys_counter                        
+[    0.587785] FS-Cache: Loaded                                                 
+[    0.588456] CacheFiles: Loaded                                               
+[    0.615517] NET: Registered protocol family 2                                
+[    0.617128] TCP established hash table entries: 8192 (order: 5, 131072 bytes)
+[    0.621531] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)       
+[    0.627903] TCP: Hash tables configured (established 8192 bind 8192)         
+[    0.635254] TCP: reno registered                                             
+[    0.637342] UDP hash table entries: 512 (order: 2, 16384 bytes)              
+[    0.643323] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)         
+[    0.650398] NET: Registered protocol family 1                                
+[    0.654846] RPC: Registered named UNIX socket transport module.              
+[    0.659676] RPC: Registered udp transport module.                            
+[    0.664670] RPC: Registered tcp transport module.                            
+[    0.669123] RPC: Registered tcp NFSv4.1 backchannel transport module.        
+[    0.675904] acx00_init_work,l:131                                            
+[    0.679634] Unpacking initramfs...                                           
+[    0.908871] Freeing initrd memory: 2676K (ffffffc001000000 - ffffffc00129d00)
+[    0.911945] lock super standby defaultly!                                    
+[    0.914554] lookup_scene_lock_name: new scene lock super_standby             
+[    0.920583] scene_lock_init name=super_standby                               
+[    0.924916] scene_lock: super_standby, type 5, count 1                       
+[    0.931441] audit: initializing netlink socket (disabled)                    
+[    0.935470] type=2000 audit(0.930:1): initialized                            
+[    0.945027] FS-Cache: Netfs 'nfs' registered for caching                     
+[    0.946660] FS-Cache: Netfs 'cifs' registered for caching                    
+[    0.951654] NTFS driver 2.1.30 [Flags: R/W].                                 
+[    0.955230] fuse init (API version 7.22)                                     
+[    0.960128] msgmni has been set to 1954                                      
+[    0.964499] NET: Registered protocol family 38                               
+[    0.967206] io scheduler noop registered                                     
+[    0.971110] io scheduler deadline registered                                 
+[    0.975394] io scheduler cfq registered (default)                            
+[    0.982110] uart0: ttyS0 at MMIO 0x1c28000 (irq = 32) is a SUNXI             
+[    0.985931] sw_uart_pm()864 - uart0 clk is already enable                    
+[    0.991399] sw_console_setup()1173 - console setup baud 115200 parity n bitsn
+[    0.999224] console [ttyS0] enabled, bootconsole disabled                    
+[    0.999224] console [ttyS0] enabled, bootconsole disabled                    
+[    1.011927] uart1: ttyS1 at MMIO 0x1c28400 (irq = 33) is a SUNXI             
+[    1.024941] misc dump reg init                                               
+[    1.029315] [drm] Initialized drm 1.1.0 20060810                             
+[    1.041513] loop: module loaded                                              
+[    1.045315] sunxi-bt bt.33: bt_power_name (vcc-wifi)                         
+[    1.051028] sunxi-bt bt.33: io_regulator_name (vcc-wifi-io)                  
+[    1.057151] sunxi-bt bt.33: bt_rst gpio=356  mul-sel=1  pull=-1  drv_level=-0
+[    1.066311] sunxi-bt bt.33: block state already is 1                         
+[    1.072318] sunxi-wlan wlan.32: wlan_busnum (1)                              
+[    1.077270] sunxi-wlan wlan.32: wlan_power_name (vcc-wifi)                   
+[    1.083463] sunxi-wlan wlan.32: io_regulator_name (vcc-wifi-io)              
+[    1.090067] sunxi-wlan wlan.32: wlan_regon gpio=354  mul-sel=1  pull=-1  drv0
+[    1.099409] sunxi-wlan wlan.32: wlan_hostwake gpio=355  mul-sel=6  pull=-1  0
+[    1.109342] sunxi-wlan wlan.32: get gpio wlan_clk_gpio failed                
+[    1.115751] sunxi-wlan wlan.32: enable clk                                   
+[    1.128087] tun: Universal TUN/TAP device driver, 1.6                        
+[    1.133727] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>           
+[    1.141578] WARNING: Get ephy clock is failed                                
+[    1.147740] PPP generic driver version 2.4.2                                 
+[    1.153028] PPP BSD Compression module registered                            
+[    1.158165] PPP Deflate Compression module registered                        
+[    1.163877] PPP MPPE Compression module registered                           
+[    1.169109] NET: Registered protocol family 24                               
+[    1.174181] PPTP driver version 0.8.5                                        
+[    1.178446] hso: drivers/net/usb/hso.c: Option Wireless                      
+[    1.184883] usbcore: registered new interface driver hso                     
+[    1.191151] usbcore: registered new interface driver asix                    
+[    1.197345] usbcore: registered new interface driver ax88179_178a            
+[    1.204312] usbcore: registered new interface driver cdc_ether               
+[    1.210998] usbcore: registered new interface driver net1080                 
+[    1.217474] usbcore: registered new interface driver cdc_subset              
+[    1.224247] usbcore: registered new interface driver zaurus                  
+[    1.230671] usbcore: registered new interface driver cdc_ncm                 
+[    1.236853] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver       
+[    1.244469] get ehci0-controller drv_vbus_gpio is fail                       
+[    1.250188] get ehci0-controller, regulator_io is no nocare                  
+[    1.256346] [sunxi-ehci0]: probe, pdev->name: 1c1a000.ehci0-controller, sunx8
+[    1.269955] sunxi-ehci 1c1a000.ehci0-controller: SW USB2.0 'Enhanced' Host Cr
+[    1.280044] sunxi-ehci 1c1a000.ehci0-controller: new USB bus registered, ass1
+[    1.290243] sunxi-ehci 1c1a000.ehci0-controller: irq 104, io mem 0xffffffc004
+[    1.310033] sunxi-ehci 1c1a000.ehci0-controller: USB 0.0 started, EHCI 1.00  
+[    1.317765] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002    
+[    1.325438] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber1
+[    1.333469] usb usb1: Product: SW USB2.0 'Enhanced' Host Controller (EHCI) Dr
+[    1.341788] usb usb1: Manufacturer: Linux 3.10.65 ehci_hcd                   
+[    1.347780] usb usb1: SerialNumber: sunxi-ehci                               
+[    1.353782] hub 1-0:1.0: USB hub found                                       
+[    1.357900] hub 1-0:1.0: 1 port detected                                     
+[    1.362625] [ehci0-controller]: sunxi_usb_disable_ehci                       
+[    1.368239] [sunxi-ehci0]: remove, pdev->name: 1c1a000.ehci0-controller, sun0
+[    1.378789] sunxi-ehci 1c1a000.ehci0-controller: remove, state 1             
+[    1.385476] usb usb1: USB disconnect, device number 1                        
+[    1.392808] sunxi-ehci 1c1a000.ehci0-controller: USB bus 1 deregistered      
+[    1.400359] get ehci1-controller, regulator_io is no nocare                  
+[    1.406667] [sunxi-ehci1]: probe, pdev->name: 1c1b000.ehci1-controller, sunxa
+[    1.420368] sunxi-ehci 1c1b000.ehci1-controller: SW USB2.0 'Enhanced' Host Cr
+[    1.430448] sunxi-ehci 1c1b000.ehci1-controller: new USB bus registered, ass1
+[    1.440472] sunxi-ehci 1c1b000.ehci1-controller: irq 106, io mem 0xffffffc004
+[    1.460031] sunxi-ehci 1c1b000.ehci1-controller: USB 0.0 started, EHCI 1.00  
+[    1.467752] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002    
+[    1.475429] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber1
+[    1.483460] usb usb1: Product: SW USB2.0 'Enhanced' Host Controller (EHCI) Dr
+[    1.491779] usb usb1: Manufacturer: Linux 3.10.65 ehci_hcd                   
+[    1.497771] usb usb1: SerialNumber: sunxi-ehci                               
+[    1.503666] hub 1-0:1.0: USB hub found                                       
+[    1.507784] hub 1-0:1.0: 1 port detected                                     
+[    1.512901] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver           
+[    1.519860] get ohci0-controller drv_vbus_gpio is fail                       
+[    1.525689] get ohci0-controller, regulator_io is no nocare                  
+[    1.531971] [sunxi-ohci0]: probe, pdev->name: 1c1a000.ohci0-controller, sunx0
+[    1.542389] sunxi-ohci 1c1a000.ohci0-controller: SW USB2.0 'Open' Host Contrr
+[    1.552082] sunxi-ohci 1c1a000.ohci0-controller: new USB bus registered, ass2
+[    1.561717] sunxi-ohci 1c1a000.ohci0-controller: irq 105, io mem 0x61ff726b6c
+[    1.634078] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001    
+[    1.641696] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber1
+[    1.649588] usb usb2: Product: SW USB2.0 'Open' Host Controller (OHCI) Driver
+[    1.657655] usb usb2: Manufacturer: Linux 3.10.65 ohci_hcd                   
+[    1.663754] usb usb2: SerialNumber: sunxi-ohci                               
+[    1.669519] hub 2-0:1.0: USB hub found                                       
+[    1.673716] hub 2-0:1.0: 1 port detected                                     
+[    1.678273] [ohci0-controller]: sunxi_usb_disable_ohci                       
+[    1.684065] [sunxi-ohci0]: remove, pdev->name: 1c1a000.ohci0-controller, sun0
+[    1.694509] sunxi-ohci 1c1a000.ohci0-controller: remove, state 1             
+[    1.701194] usb usb2: USB disconnect, device number 1                        
+[    1.707548] sunxi-ohci 1c1a000.ohci0-controller: USB bus 2 deregistered      
+[    1.715054] get ohci1-controller, regulator_io is no nocare                  
+[    1.721309] hci: request ohci1-controller gpio:1027                          
+[    1.726667] [sunxi-ohci1]: probe, pdev->name: 1c1b000.ohci1-controller, sunx0
+[    1.737241] sunxi-ohci 1c1b000.ohci1-controller: SW USB2.0 'Open' Host Contrr
+[    1.746933] sunxi-ohci 1c1b000.ohci1-controller: new USB bus registered, ass2
+[    1.756565] sunxi-ohci 1c1b000.ohci1-controller: irq 107, io mem 0x61ff726b6c
+[    1.824067] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001    
+[    1.831685] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber1
+[    1.839577] usb usb2: Product: SW USB2.0 'Open' Host Controller (OHCI) Driver
+[    1.847639] usb usb2: Manufacturer: Linux 3.10.65 ohci_hcd                   
+[    1.853738] usb usb2: SerialNumber: sunxi-ohci                               
+[    1.859450] hub 2-0:1.0: USB hub found                                       
+[    1.863645] hub 2-0:1.0: 1 port detected                                     
+[    1.868928] usbcore: registered new interface driver usb-storage             
+[    1.875818] usbcore: registered new interface driver ums-alauda              
+[    1.882587] usbcore: registered new interface driver ums-cypress             
+[    1.889443] usbcore: registered new interface driver ums-datafab             
+[    1.896312] usbcore: registered new interface driver ums_eneub6250           
+[    1.903385] usbcore: registered new interface driver ums-freecom             
+[    1.910256] usbcore: registered new interface driver ums-isd200              
+[    1.917027] usbcore: registered new interface driver ums-jumpshot            
+[    1.923997] usbcore: registered new interface driver ums-karma               
+[    1.930678] usbcore: registered new interface driver ums-onetouch            
+[    1.937647] usbcore: registered new interface driver ums-realtek             
+[    1.944520] usbcore: registered new interface driver ums-sddr09              
+[    1.951288] usbcore: registered new interface driver ums-sddr55              
+[    1.958054] usbcore: registered new interface driver ums-usbat               
+[    1.965339] usbcore: registered new interface driver usbserial               
+[    1.972020] usbcore: registered new interface driver option                  
+[    1.978391] usbserial: USB Serial support registered for GSM modem (1-port)  
+[    1.987408] mousedev: PS/2 mouse device common for all mice                  
+[    1.994075] usbcore: registered new interface driver xpad                    
+[    2.000280] usbcore: registered new interface driver usb_acecad              
+[    2.007046] usbcore: registered new interface driver aiptek                  
+[    2.013449] usbcore: registered new interface driver gtco                    
+[    2.019636] usbcore: registered new interface driver hanwang                 
+[    2.026122] usbcore: registered new interface driver kbtab                   
+[    2.032620] usbcore: registered new interface driver wacom                   
+[    2.040900] sunxi-rtc 1f00000.rtc: rtc core: registered rtc-sunxi as rtc0    
+[    2.048361] sunxi-rtc 1f00000.rtc: RTC enabled                               
+[    2.054101] IR NEC protocol handler initialized                              
+[    2.059048] IR RC5(x) protocol handler initialized                           
+[    2.064458] IR RC6 protocol handler initialized                              
+[    2.069403] IR JVC protocol handler initialized                              
+[    2.074518] IR Sony protocol handler initialized                             
+[    2.079558] IR RC5 (streamzap) protocol handler initialized                  
+[    2.085833] IR SANYO protocol handler initialized                            
+[    2.091061] IR MCE Keyboard/mouse protocol handler initialized               
+[    2.097431] sunxi cedar version 0.1                                          
+[    2.101620] [cedar]: install start!!!                                        
+[    2.105714] ycy the get irq is 90                                            
+[    2.110132] ycy clk_bass_vir 0x18  is ffffff80000b6018, the value:1002201    
+[    2.117549] ycy clk_bass_vir 0x13c  is ffffff80000b613c, the value:0         
+[    2.124733] ycy clk_bass_vir 0x64  is ffffff80000b6064, the value:601818     
+[    2.132181] ycy clk_bass_vir 0x2c4  is ffffff80000b62c4, the value:601c18    
+[    2.139595] ycy clk_bass_vir 0x100  is ffffff80000b6100, the value:0         
+[    2.146776] [cedar]: install end!!!                                          
+[    2.157298] input: axp81x-supplyer as /devices/platform/axp81x_board/axp81x-0
+[    2.181625] sunxi budget cooling probe start !                               
+[    2.186509] CPU freq cooling register Success                                
+[    2.191461] CPU hotplug cooling register Success                             
+[    2.196943] CPU budget cooling register Success                              
+[    2.202725] sunxi gpu cooling probe start !                                  
+[    2.207299] CPU gpu cooling register Success                                 
+[    2.212576] device-mapper: uevent: version 1.0.3                             
+[    2.218173] device-mapper: ioctl: 4.24.0-ioctl (2013-01-15) initialised: dm-m
+[    2.227756] Bluetooth: HCI UART driver ver 2.2                               
+[    2.232705] Bluetooth: HCI H4 protocol initialized                           
+[    2.237936] Bluetooth: HCI Realtek H5 protocol initialized                   
+[    2.244122] rtk_btcoex: rtk_uart_coex_init, version: 1.1                     
+[    2.250025] rtk_btcoex: create workqueue                                     
+[    2.257482] cpuidle: using governor ladder                                   
+[    2.262163] cpuidle: using governor menu                                     
+[    2.267649] sunxi-mmc 1c11000.sdmmc: SD/MMC/SDIO Host Controller Driver(v0.34
+[    2.280760] sunxi-mmc 1c11000.sdmmc: regulator prop vmmc,str vcc-emmc        
+[    2.287797] sunxi-mmc 1c11000.sdmmc: regulator prop vqmmc,str none           
+[    2.294784] sunxi-mmc 1c11000.sdmmc: regulator prop vdmmc,str none           
+[    2.301749] sunxi-mmc 1c11000.sdmmc: No vqmmc regulator found                
+[    2.308023] sunxi-mmc 1c11000.sdmmc: No vdmmc regulator found                
+[    2.315252] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 0Hz bm PP pm UP vdd 22B
+[    2.340027] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm PP pm ON vB
+[    2.370048] sunxi-mmc 1c11000.sdmmc: base:0xffffff80000b8000 irq:94          
+[    2.376901] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 52, RTO !!            
+[    2.384218] sunxi-mmc 1c0f000.sdmmc: SD/MMC/SDIO Host Controller Driver(v0.34
+[    2.397270] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 52, RTO !!            
+[    2.404049] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm PP pm ON vB
+[    2.404097] sunxi-mmc 1c0f000.sdmmc: regulator prop vmmc,str none            
+[    2.404105] sunxi-mmc 1c0f000.sdmmc: regulator prop vqmmc,str none           
+[    2.404112] sunxi-mmc 1c0f000.sdmmc: regulator prop vdmmc,str vcc-sdc        
+[    2.404186] sunxi-mmc 1c0f000.sdmmc: No vmmc regulator found                 
+[    2.404190] sunxi-mmc 1c0f000.sdmmc: No vqmmc regulator found                
+[    2.449298] sunxi-mmc 1c0f000.sdmmc: Got CD GPIO #166.                       
+[    2.455485] sunxi-mmc 1c0f000.sdmmc: base:0xffffff80000c0000 irq:92          
+[    2.456015] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm PP pm ON vB
+[    2.474026] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 8, RTO !!             
+[    2.481150] sunxi-mmc 1c10000.sdmmc: SD/MMC/SDIO Host Controller Driver(v0.34
+[    2.494203] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 5, RTO !!             
+[    2.500930] sunxi-mmc 1c10000.sdmmc: Can't get vmmc regulator string         
+[    2.507873] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 5, RTO !!             
+[    2.514665] sunxi-mmc 1c10000.sdmmc: Can't get vqmmc regulator string        
+[    2.521823] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 5, RTO !!             
+[    2.528388] sunxi-mmc 1c10000.sdmmc: Can't get vdmmc regulator string        
+[    2.535652] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 5, RTO !!             
+[    2.542337] get() with no identifier                                         
+[    2.546242] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 55, RTO !!            
+[    2.553076] get() with no identifier                                         
+[    2.556981] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 55, RTO !!            
+[    2.563815] get() with no identifier                                         
+[    2.567720] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 55, RTO !!            
+[    2.574559] sunxi-mmc 1c10000.sdmmc: No vmmc regulator found                 
+[    2.580842] sunxi-mmc 1c11000.sdmmc: smc 0 p2 err, cmd 55, RTO !!            
+[    2.587500] sunxi-mmc 1c10000.sdmmc: No vqmmc regulator found                
+[    2.587620] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm OD pm ON vB
+[    2.605577] sunxi-mmc 1c10000.sdmmc: No vdmmc regulator found                
+[    2.605589] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm OD pm ON vB
+[    2.605631] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm OD pm ON vB
+[    2.605667] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm OD pm ON vB
+[    2.647036] sunxi-mmc 1c10000.sdmmc: sdc set ios: clk 0Hz bm PP pm UP vdd 21B
+[    2.647410] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm OD pm ON vB
+[    2.669654] sunxi-mmc 1c10000.sdmmc: no vqmmc,Check if there is regulator    
+[    2.681204] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm PP pm ON vB
+[    2.692712] sunxi-mmc 1c10000.sdmmc: sdc set ios: clk 400000Hz bm PP pm ON vB
+[    2.716015] mmc0: BKOPS_EN bit is not set                                    
+[    2.720510] sunxi-mmc 1c10000.sdmmc: base:0xffffff80000c8000 irq:93          
+[    2.728141] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 400000Hz bm PP pm ON vB
+[    2.739720] mmc0: Check switch ready sunxi_mmc_check_timing_switch_done      
+[    2.747395] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 50000000Hz bm PP pm ONB
+[    2.759923] sunxi-mmc 1c11000.sdmmc: sdc set ios: clk 50000000Hz bm PP pm ONB
+[    2.772113] mmc0: new high speed MMC card at address 0001                    
+[    2.779805] mmcblk0: mmc0:0001 008GE0 7.28 GiB                               
+[    2.779942] hidraw: raw HID events driver (C) Jiri Kosina                    
+[    2.791648] usbcore: registered new interface driver usbhid                  
+[    2.791660] mmcblk0boot0: mmc0:0001 008GE0 partition 1 4.00 MiB              
+[    2.804450] usbhid: USB HID core driver                                      
+[    2.804492] mmcblk0boot1: mmc0:0001 008GE0 partition 2 4.00 MiB              
+[    2.816162] zram: Created 1 device(s) ...                                    
+[    2.816601]  mmcblk0: p1 p2 p3 < p5 p6 p7 p8 >                               
+[    2.816629] mmcblk0: p1 size 3629056 extends beyond EOD, truncated           
+[    2.833516] ion_heap_create: Invalid heap type 6                             
+[    2.834010]  mmcblk0boot1: unknown partition table                           
+[    2.844033] ion_heap_create 'secure' failured!                               
+[    2.850597] ashmem: initialized                                              
+[    2.851244]  mmcblk0boot0: unknown partition table                           
+[    2.859668] *mmc0 lock timeout*                                              
+[    2.859797] logger: created 256K log 'log_main'                              
+[    2.860133] logger: created 256K log 'log_events'                            
+[    2.860439] logger: created 256K log 'log_radio'                             
+[    2.860743] logger: created 256K log 'log_system'                            
+[    2.884532] sunxi-codec-machine sound.7:  codec-aif1 <-> 1c22c00.i2s0-controk
+[    2.894440] sunxi-codec-machine sound.7:  codec-aif2 <-> bb-dai mapping ok   
+[    2.902845] sunxi-codec-machine sound.7:  codec-aif2 <-> bb-dai mapping ok   
+[    2.910995] sunxi-codec-machine sound.7:  codec-aif3 <-> bb-dai mapping ok   
+[    2.922042] input: audiocodec sunxi Audio Jack as /devices/soc.0/sound.7/sou1
+[    2.933795] sndhdmi sound.8:  sndhdmi <-> 1c22800.daudio mapping ok          
+[    2.942617] u32 classifier                                                   
+[    2.945572]     Actions configured                                           
+[    2.949284] Netfilter messages via NETLINK v0.30.                            
+[    2.954755] nf_conntrack version 0.5.0 (7817 buckets, 31268 max)             
+[    2.961895] ctnetlink v0.93: registering with nfnetlink.                     
+[    2.969507] NF_TPROXY: Transparent proxy support initialized, version 4.1.0  
+[    2.977387] NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.               
+[    2.980875] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 52, RTO !!            
+[    2.981701] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 52, RTO !!            
+[    2.981721] sunxi-mmc 1c10000.sdmmc: sdc set ios: clk 400000Hz bm PP pm ON vB
+[    2.984164] sunxi-mmc 1c10000.sdmmc: sdc set ios: clk 400000Hz bm PP pm ON vB
+[    2.986028] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 8, RTO !!             
+[    2.986850] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 5, RTO !!             
+[    2.987670] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 5, RTO !!             
+[    2.988490] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 5, RTO !!             
+[    2.989310] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 5, RTO !!             
+[    2.990132] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 55, RTO !!            
+[    2.990953] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 55, RTO !!            
+[    2.991773] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 55, RTO !!            
+[    2.992592] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 55, RTO !!            
+[    2.992610] sunxi-mmc 1c10000.sdmmc: sdc set ios: clk 400000Hz bm OD pm ON vB
+[    2.993459] sunxi-mmc 1c10000.sdmmc: smc 2 p1 err, cmd 1, RTO !!             
+[    2.993476] sunxi-mmc 1c10000.sdmmc: sdc set ios: clk 0Hz bm OD pm OFF vdd 0B
+[    2.994528] *mmc2 unlock*                                                    
+[    3.114578] xt_time: kernel timezone is -0000                                
+[    3.119455] ipip: IPv4 over IPv4 tunneling driver                            
+[    3.125773] gre: GRE over IPv4 demultiplexor driver                          
+[    3.131206] ip_gre: GRE over IPv4 tunneling driver                           
+[    3.138770] ip_tables: (C) 2000-2006 Netfilter Core Team                     
+[    3.145114] arp_tables: (C) 2002 David S. Miller                             
+[    3.150369] TCP: bic registered                                              
+[    3.153794] TCP: cubic registered                                            
+[    3.157408] TCP: westwood registered                                         
+[    3.161497] TCP: htcp registered                                             
+[    3.165017] Initializing XFRM netlink socket                                 
+[    3.170132] NET: Registered protocol family 10                               
+[    3.177330] mip6: Mobile IPv6                                                
+[    3.180902] ip6_tables: (C) 2000-2006 Netfilter Core Team                    
+[    3.187240] sit: IPv6 over IPv4 tunneling driver                             
+[    3.193788] NET: Registered protocol family 17                               
+[    3.198696] NET: Registered protocol family 15                               
+[    3.204195] Bluetooth: RFCOMM TTY layer initialized                          
+[    3.209555] Bluetooth: RFCOMM socket layer initialized                       
+[    3.215435] Bluetooth: RFCOMM ver 1.11                                       
+[    3.219525] Bluetooth: BNEP (Ethernet Emulation) ver 1.3                     
+[    3.225504] Bluetooth: BNEP filters: protocol multicast                      
+[    3.231330] Bluetooth: BNEP socket layer initialized                         
+[    3.236749] Bluetooth: HIDP (Human Interface Emulation) ver 1.2              
+[    3.243435] Bluetooth: HIDP socket layer initialized                         
+[    3.249725] Registering SWP/SWPB emulation handler                           
+[    3.255367] sunxi_bootup_extend_init: bootup extend state 1                  
+[    3.263417] usb_serial_number:20080411                                       
+[    3.267997] [sw_udc]: alloc request: ep(0xffffffc000ba9ab8, ep0, 64), req(0x)
+[    3.277388] [sw_udc]: sunxi_udc_set_selfpowered_2320: usb device is not actie
+[    3.285533] [sw_udc]: sunxi_udc_pullup, is_on = 0                            
+[    3.290764] [sw_udc]: sunxi_udc_set_pullup_2337: usb device is not active    
+[    3.298564] file system registered                                           
+[    3.305818] android_usb gadget: Mass Storage Function, version: 2009/09/11   
+[    3.313477] android_usb gadget: Number of LUNs=3                             
+[    3.318544]  lun0: LUN: removable file: (no medium)                          
+[    3.324050]  lun1: LUN: removable file: (no medium)                          
+[    3.329374]  lun2: LUN: removable file: (no medium)                          
+[    3.335764] [sw_udc]: sunxi_udc_set_selfpowered_2320: usb device is not actie
+[    3.343806] android_usb gadget: android_usb ready                            
+[    3.348940] [sw_udc]: [sunxi_usb_udc]: binding gadget driver 'android_usb'   
+[    3.356862] sunxi-rtc 1f00000.rtc: setting system clock to 2017-01-01 00:00:)
+[    3.367827] input: sunxi-ths as /devices/virtual/input/input2                
+[    3.374733] thermal thermal_zone0: failed to read out thermal zone 0         
+[    3.389226] ALSA device list:                                                
+[    3.392680]   #0: audiocodec                                                 
+[    3.395819]   #1: sndhdmi                                                    
+[    3.399057] Freeing unused kernel memory: 548K (ffffffc000ac0000 - ffffffc00)
+Will entry userspace!                                                           
+e2fsck 1.42.12 (29-Aug-2014)                                                    
+/dev/mmcblk0p7: recovering journal                                              
+Clearing orphaned inode 64880 (uid=0, gid=0, mode=0100600, size=576)            
+Clearing orphaned inode 6278 (uid=0, gid=0, mode=0100600, size=2269)            
+Superblock last mount time is in the future.                                    
+        (by less than a day, probably due to the hardware clock being incorrects
+                                                                                
+Pass 1: Checking inodes, blocks, and sizes                                      
+Pass 2: Checking directory structure                                            
+Pass 3: Checking directory connectivity                                         
+Pass 4: Checking reference counts                                               
+Pass 5: Checking group summary information                                      
+Free blocks count wrong (115077, counted=113091).                               
+Fix? yes                                                                        
+                                                                                
+Free inodes count wrong (104885, counted=104883).                               
+Fix? yes                                                                        
+                                                                                
+                                                                                
+/dev/mmcblk0p7: ***** FILE SYSTEM WAS MODIFIED *****                            
+/dev/mmcblk0p7: 91725/196608 files (0.1% non-contiguous), 673341/786432 blocks  
+[    5.393127] EXT4-fs (mmcblk0p7): barriers disabled                           
+[    5.400224] EXT4-fs (mmcblk0p7): mounted filesystem with ordered data mode. d
+[    5.590177] systemd[1]: systemd 215 running in system mode. (+PAM +AUDIT +SE)
+[    5.605285] systemd[1]: Detected architecture 'arm64'.                       
+                                                                                
+Welcome to Debian GNU/Linux 8 (jessie)!                                         
+                                                                                
+[    5.640093]                                                                  
+[    5.640093]                                                                  
+[    5.640093] insmod_host_driver                                               
+[    5.640093]                                                                  
+[    5.648273] [ehci0-controller]: sunxi_usb_enable_ehci                        
+[    5.654045] [sunxi-ehci0]: probe, pdev->name: 1c1a000.ehci0-controller, sunx8
+[    5.667551] sunxi-ehci 1c1a000.ehci0-controller: SW USB2.0 'Enhanced' Host Cr
+[    5.677671] sunxi-ehci 1c1a000.ehci0-controller: new USB bus registered, ass3
+[    5.688067] sunxi-ehci 1c1a000.ehci0-controller: irq 104, io mem 0xffffffc000
+[    5.699193] systemd[1]: Failed to insert module 'autofs4'                    
+[    5.706060] systemd[1]: Set hostname to <debianpine64>.                      
+[    5.720063] sunxi-ehci 1c1a000.ehci0-controller: USB 0.0 started, EHCI 1.00  
+[    5.727853] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002    
+[    5.735598] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber1
+[    5.743783] usb usb3: Product: SW USB2.0 'Enhanced' Host Controller (EHCI) Dr
+[    5.752182] usb usb3: Manufacturer: Linux 3.10.65 ehci_hcd                   
+[    5.758224] usb usb3: SerialNumber: sunxi-ehci                               
+[    5.765845] hub 3-0:1.0: USB hub found                                       
+[    5.770228] hub 3-0:1.0: 1 port detected                                     
+[    5.774948] [ohci0-controller]: sunxi_usb_enable_ohci                        
+[    5.780733] [sunxi-ohci0]: probe, pdev->name: 1c1a000.ohci0-controller, sunx0
+[    5.791294] sunxi-ohci 1c1a000.ohci0-controller: SW USB2.0 'Open' Host Contrr
+[    5.801060] sunxi-ohci 1c1a000.ohci0-controller: new USB bus registered, ass4
+[    5.810768] sunxi-ohci 1c1a000.ohci0-controller: irq 105, io mem 0xffffffc020
+[    5.874507] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001    
+[    5.882187] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber1
+[    5.890231] usb usb4: Product: SW USB2.0 'Open' Host Controller (OHCI) Driver
+[    5.898032] usb usb4: Manufacturer: Linux 3.10.65 ohci_hcd                   
+[    5.904371] usb usb4: SerialNumber: sunxi-ohci                               
+[    5.910384] hub 4-0:1.0: USB hub found                                       
+[    5.914518] hub 4-0:1.0: 1 port detected                                     
+[    5.990765] systemd[1]: [/etc/systemd/system/eth0-mackeeper.service:6] Unkno'
+[    6.002334] systemd[1]: [/etc/systemd/system/eth0-mackeeper.service:7] Unkno'
+[    6.028594] systemd[1]: Expecting device dev-ttyS0.device...                 
+         Expecting device dev-ttyS0.device...                                   
+[    6.050140] systemd[1]: Starting Forward Password Requests to Wall Directory.
+[    6.059031] systemd[1]: Started Forward Password Requests to Wall Directory .
+[    6.067643] systemd[1]: Starting Remote File Systems (Pre).                  
+[  OK  ] Reached target Remote File Systems (Pre).                              
+[    6.090065] systemd[1]: Reached target Remote File Systems (Pre).            
+[    6.096796] systemd[1]: Starting Encrypted Volumes.                          
+[  OK  ] Reached target Encrypted Volumes.                                      
+[    6.120072] systemd[1]: Reached target Encrypted Volumes.                    
+[    6.126058] systemd[1]: Starting Dispatch Password Requests to Console Direc.
+[    6.135530] systemd[1]: Started Dispatch Password Requests to Console Direct.
+[    6.144379] systemd[1]: Starting Paths.                                      
+[  OK  ] Reached target Paths.                                                  
+[    6.170071] systemd[1]: Reached target Paths.                                
+[    6.175001] systemd[1]: Set up automount Arbitrary Executable File Formats F.
+[    6.185555] systemd[1]: Starting Swap.                                       
+[  OK  ] Reached target Swap.                                                   
+[    6.210064] systemd[1]: Reached target Swap.                                 
+[    6.214762] systemd[1]: Expecting device dev-mmcblk0p1.device...             
+         Expecting device dev-mmcblk0p1.device...                               
+[    6.240073] systemd[1]: Starting Root Slice.                                 
+[  OK  ] Created slice Root Slice.                                              
+[    6.260066] systemd[1]: Created slice Root Slice.                            
+[    6.265232] systemd[1]: Starting User and Session Slice.                     
+[  OK  ] Created slice User and Session Slice.                                  
+[    6.290068] systemd[1]: Created slice User and Session Slice.                
+[    6.296379] systemd[1]: Starting /dev/initctl Compatibility Named Pipe.      
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.                    
+[    6.320075] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.  
+[    6.327710] systemd[1]: Starting Delayed Shutdown Socket.                    
+[  OK  ] Listening on Delayed Shutdown Socket.                                  
+[    6.350068] systemd[1]: Listening on Delayed Shutdown Socket.                
+[    6.356375] systemd[1]: Starting Journal Socket (/dev/log).                  
+[  OK  ] Listening on Journal Socket (/dev/log).                                
+[    6.380067] systemd[1]: Listening on Journal Socket (/dev/log).              
+[    6.386638] systemd[1]: Starting udev Control Socket.                        
+[  OK  ] Listening on udev Control Socket.                                      
+[    6.410069] systemd[1]: Listening on udev Control Socket.                    
+[    6.416057] systemd[1]: Starting udev Kernel Socket.                         
+[  OK  ] Listening on udev Kernel Socket.                                       
+[    6.440068] systemd[1]: Listening on udev Kernel Socket.                     
+[    6.445934] systemd[1]: Starting Journal Socket.                             
+[  OK  ] Listening on Journal Socket.                                           
+[    6.470067] systemd[1]: Listening on Journal Socket.                         
+[    6.475612] systemd[1]: Starting System Slice.                               
+[  OK  ] Created slice System Slice.                                            
+[    6.500068] systemd[1]: Created slice System Slice.                          
+[    6.505556] systemd[1]: Started File System Check on Root Device.            
+[    6.512448] systemd[1]: Starting system-systemd\x2dfsck.slice.               
+[  OK  ] Created slice system-systemd\x2dfsck.slice.                            
+[    6.540065] systemd[1]: Created slice system-systemd\x2dfsck.slice.          
+[    6.546945] systemd[1]: Starting system-getty.slice.                         
+[  OK  ] Created slice system-getty.slice.                                      
+[    6.570065] systemd[1]: Created slice system-getty.slice.                    
+[    6.575989] systemd[1]: Starting system-serial\x2dgetty.slice.               
+[  OK  ] Created slice system-serial\x2dgetty.slice.                            
+[    6.600064] systemd[1]: Created slice system-serial\x2dgetty.slice.          
+[    6.607079] systemd[1]: Starting Increase datagram queue length...           
+         Starting Increase datagram queue length...                             
+[    6.632294] systemd[1]: Starting Restore / save the current clock...         
+         Starting Restore / save the current clock...                           
+[    6.663509] systemd[1]: Mounting Debug File System...                        
+         Mounting Debug File System...                                          
+[    6.705554] systemd[1]: Starting Load Kernel Modules...                      
+         Starting Load Kernel Modules...                                        
+[    6.732452] systemd[1]: Started Create list of required static device nodes .
+[    6.742824] systemd[1]: Mounted Huge Pages File System.                      
+[    6.748944] systemd[1]: Starting Create Static Device Nodes in /dev...       
+         Starting Create Static Device Nodes in /dev...                         
+[    6.782451] systemd[1]: Starting udev Coldplug all Devices...                
+         Starting udev Coldplug all Devices...                                  
+[    6.812707] systemd[1]: Mounted POSIX Message Queue File System.             
+[    6.824257] systemd[1]: Started Set Up Additional Binary Formats.            
+[    6.831216] systemd[1]: Starting Slices.                                     
+[  OK  ] Reached target Slices.                                                 
+[    6.850209] systemd[1]: Reached target Slices.                               
+[  OK  ] Mounted Debug File System.                                             
+[    6.870158] systemd[1]: Mounted Debug File System.                           
+[  OK  ] Started Increase datagram queue length.                                
+[    6.900227] systemd[1]: Started Increase datagram queue length.              
+[  OK  ] Started Restore / save the current clock.                              
+[    6.930208] systemd[1]: Started Restore / save the current clock.            
+[    6.938329] systemd[1]: systemd-modules-load.service: main process exited, cE
+[FAILED] Failed to start Load Kernel Modules.                                   
+See 'systemctl status systemd-modules-load.service' for details.                
+[    6.990157] systemd[1]: Failed to start Load Kernel Modules.                 
+[    6.996415] systemd[1]: Unit systemd-modules-load.service entered failed sta.
+[  OK  ] Started Create Static Device Nodes in /dev.                            
+[    7.030378] systemd[1]: Started Create Static Device Nodes in /dev.          
+[    7.042649] systemd[1]: Time has been changed                                
+[    7.078379] systemd[1]: Starting udev Kernel Device Manager...               
+         Starting udev Kernel Device Manager...                                 
+[    7.103531] systemd[1]: Mounting Configuration File System...                
+         Mounting Configuration File System...                                  
+[    7.120346] systemd-udevd[1455]: starting version 215                        
+[    7.132804] systemd[1]: Starting Apply Kernel Variables...                   
+         Starting Apply Kernel Variables...                                     
+[    7.162668] systemd[1]: Mounting FUSE Control File System...                 
+         Mounting FUSE Control File System...                                   
+[    7.192665] systemd[1]: Starting Syslog Socket.                              
+[  OK  ] Listening on Syslog Socket.                                            
+[    7.220249] systemd[1]: Listening on Syslog Socket.                          
+[    7.225736] systemd[1]: Starting Journal Service...                          
+         Starting Journal Service...                                            
+[  OK  ] Started Journal Service.                                               
+[    7.270398] systemd[1]: Started Journal Service.                             
+[  OK  ] Mounted FUSE Control File System.                                      
+[  OK  ] Mounted Configuration File System.                                     
+[  OK  ] Started udev Kernel Device Manager.                                    
+[  OK  ] Started udev Coldplug all Devices.                                     
+[  OK  ] Started Apply Kernel Variables.                                        
+         Starting Copy rules generated while the root was ro...                 
+         Starting LSB: Set preliminary keymap...                                
+[  OK  ] Started Copy rules generated while the root was ro.                    
+[  OK  ] Started LSB: Set preliminary keymap.                                   
+         Starting Remount Root and Kernel File Systems...                       
+[    7.623816] EXT4-fs (mmcblk0p7): re-mounted. Opts: (null)                    
+[  OK  ] Started Remount Root and Kernel File Systems.                          
+         Starting Load/Save Random Seed...                                      
+[  OK  ] Reached target Local File Systems (Pre).                               
+[  OK  ] Started Load/Save Random Seed.                                         
+[    7.947824] ------------[ cut here ]------------                             
+[    7.952529] WARNING: at drivers/clk/clk.c:853 __clk_disable+0x40/0x78()      
+[    7.952529] Modules linked in:                                               
+[    7.952529] CPU: 0 PID: 1900 Comm: alsactl Not tainted 3.10.65 #4            
+[    7.952529] Call trace:                                                      
+[    7.952529] [<ffffffc00008872c>] dump_backtrace+0x0/0x11c                    
+[    7.952529] [<ffffffc000088868>] show_stack+0x20/0x30                        
+[    7.952529] [<ffffffc000777e94>] dump_stack+0x1c/0x28                        
+[    7.952529] [<ffffffc000099c5c>] warn_slowpath_common+0x7c/0xa8              
+[    7.952529] [<ffffffc000099dd8>] warn_slowpath_null+0x38/0x4c                
+[    7.952529] [<ffffffc00056fd4c>] __clk_disable+0x3c/0x78                     
+[    7.952529] [<ffffffc00056fe8c>] clk_disable+0x24/0x3c                       
+[    7.952529] [<ffffffc0005b3454>] set_src_function+0xfc/0x190                 
+[    7.952529] [<ffffffc000584374>] snd_ctl_elem_write+0xcc/0x144               
+[    7.952529] [<ffffffc000585ea4>] snd_ctl_ioctl+0x3bc/0x73c                   
+[    7.952529] [<ffffffc0001a6380>] vfs_ioctl+0x48/0x6c                         
+[    7.952529] [<ffffffc0001a6d08>] do_vfs_ioctl+0x480/0x550                    
+[    7.952529] [<ffffffc0001a6e40>] SyS_ioctl+0x68/0x94                         
+[    7.952529] ---[ end trace e082068ab94e6e61 ]---                             
+[    8.056203] ------------[ cut here ]------------                             
+[    8.061411] WARNING: at drivers/clk/clk.c:762 __clk_unprepare+0x34/0x84()    
+[    8.068857] Modules linked in:                                               
+[    8.072471] CPU: 3 PID: 1900 Comm: alsactl Tainted: G        W    3.10.65 #4 
+[    8.080365] Call trace:                                                      
+[    8.083044] [<ffffffc00008872c>] dump_backtrace+0x0/0x11c                    
+[    8.090104] [<ffffffc000088868>] show_stack+0x20/0x30                        
+[    8.095640] [<ffffffc000777e94>] dump_stack+0x1c/0x28                        
+[    8.101370] [<ffffffc000099c5c>] warn_slowpath_common+0x7c/0xa8              
+[    8.107842] [<ffffffc000099dd8>] warn_slowpath_null+0x38/0x4c                
+[    8.114366] [<ffffffc000570db0>] __clk_unprepare+0x30/0x84                   
+[    8.120511] [<ffffffc000570e24>] clk_unprepare+0x20/0x34                     
+[    8.126314] [<ffffffc0005b345c>] set_src_function+0x104/0x190                
+[    8.132799] [<ffffffc000584374>] snd_ctl_elem_write+0xcc/0x144               
+[    8.139170] [<ffffffc000585ea4>] snd_ctl_ioctl+0x3bc/0x73c                   
+[    8.145387] [<ffffffc0001a6380>] vfs_ioctl+0x48/0x6c                         
+[    8.150974] [<ffffffc0001a6d08>] do_vfs_ioctl+0x480/0x550                    
+[    8.156870] [<ffffffc0001a6e40>] SyS_ioctl+0x68/0x94                         
+[    8.162488] ---[ end trace e082068ab94e6e62 ]---                             
+[ TIME ] Timed out waiting for device dev-mmcblk0p1.device.                     
+[DEPEND] Dependency failed for /boot.                                           
+[DEPEND] Dependency failed for Local File Systems.                              
+[DEPEND] Dependency failed for File System Check on /dev/mmcblk0p1.             
+[ TIME ] Timed out waiting for device dev-ttyS0.device.                         
+[  OK  ] Stopped Getty on tty1.                                                 
+[  OK  ] Stopped Serial Getty on ttyS0.                                         
+[  OK  ] Stopped getty on tty2-tty6 if dbus and logind are not available.       
+[  OK  ] Stopped target Graphical Interface.                                    
+[  OK  ] Stopped Light Display Manager.                                         
+[  OK  ] Stopped target Multi-User System.                                      
+[  OK  ] Stopped Initialize hardware monitoring sensors.                        
+[  OK  ] Stopped Fix eth0 mac address to uEnv.txt.                              
+[  OK  ] Stopped Regular background program processing daemon.                  
+[  OK  ] Stopped Run anacron jobs.                                              
+[  OK  ] Stopped OpenBSD Secure Shell server.                                   
+[  OK  ] Stopped Restore /etc/resolv.conf if the system crash...was shut down.. 
+[  OK  ] Stopped CPU corekeeper.                                                
+[  OK  ] Stopped Modem Manager.                                                 
+[  OK  ] Stopped Network Manager.                                               
+[  OK  ] Stopped /etc/rc.local Compatibility.                                   
+[  OK  ] Stopped Login Service.                                                 
+[  OK  ] Reached target Login Prompts.                                          
+[  OK  ] Stopped LSB: exim Mail Transport Agent.                                
+[  OK  ] Stopped LSB: Speech Dispatcher.                                        
+[  OK  ] Stopped LSB: disk temperature monitoring daemon.                       
+[  OK  ] Stopped LSB: Start NTP daemon.                                         
+[  OK  ] Stopped Avahi mDNS/DNS-SD Stack.                                       
+[  OK  ] Closed Avahi mDNS/DNS-SD Stack Activation Socket.                      
+[  OK  ] Stopped D-Bus System Message Bus.                                      
+[  OK  ] Closed D-Bus System Message Bus Socket.                                
+[  OK  ] Stopped Permit User Sessions.                                          
+[  OK  ] Reached target Remote File Systems.                                    
+         Starting Trigger Flushing of Journal to Persistent Storage...          
+[  OK  ] Stopped System Logging Service.                                        
+[  OK  ] Stopped target Basic System.                                           
+[  OK  ] Reached target Timers.                                                 
+[  OK  ] Stopped target System Initialization.                                  
+         Starting Restore Sound Card State...                                   
+         Starting Create Volatile Files and Directories...                      
+         Starting LSB: Set console font and keymap...                           
+[   97.042551] ------------[ cut here ]------------                             
+[   97.047661] WARNING: at drivers/clk/clk.c:853 __clk_disable+0x40/0x78()      
+[   97.047668] Modules linked in:                                               
+[   97.047676] CPU: 2 PID: 1939 Comm: alsactl Tainted: G        W    3.10.65 #4 
+[   97.047679] Call trace:                                                      
+[   97.047690] [<ffffffc00008872c>] dump_backtrace+0x0/0x11c                    
+[   97.047695] [<ffffffc000088868>] show_stack+0x20/0x30                        
+[   97.047703] [<ffffffc000777e94>] dump_stack+0x1c/0x28                        
+[   97.047710] [<ffffffc000099c5c>] warn_slowpath_common+0x7c/0xa8              
+[   97.047715] [<ffffffc000099dd8>] warn_slowpath_null+0x38/0x4c                
+[   97.047720] [<ffffffc00056fd4c>] __clk_disable+0x3c/0x78                     
+[   97.047725] [<ffffffc00056fe8c>] clk_disable+0x24/0x3c                       
+[   97.047733] [<ffffffc0005b3454>] set_src_function+0xfc/0x190                 
+[   97.047739] [<ffffffc000584374>] snd_ctl_elem_write+0xcc/0x144               
+[   97.047745] [<ffffffc000585ea4>] snd_ctl_ioctl+0x3bc/0x73c                   
+[   97.047753] [<ffffffc0001a6380>] vfs_ioctl+0x48/0x6c                         
+[   97.047757] [<ffffffc0001a6d08>] do_vfs_ioctl+0x480/0x550                    
+[   97.047762] [<ffffffc0001a6e40>] SyS_ioctl+0x68/0x94                         
+[   97.047765] ---[ end trace e082068ab94e6e63 ]---                             
+[   97.049440] ------------[ cut here ]------------                             
+[   97.049463] WARNING: at drivers/clk/clk.c:762 __clk_unprepare+0x34/0x84()    
+[   97.049468] Modules linked in:                                               
+[   97.049476] CPU: 2 PID: 1939 Comm: alsactl Tainted: G        W    3.10.65 #4 
+[   97.049479] Call trace:                                                      
+[   97.049491] [<ffffffc00008872c>] dump_backtrace+0x0/0x11c                    
+[   97.049497] [<ffffffc000088868>] show_stack+0x20/0x30                        
+[   97.049505] [<ffffffc000777e94>] dump_stack+0x1c/0x28                        
+[   97.049512] [<ffffffc000099c5c>] warn_slowpath_common+0x7c/0xa8              
+[   97.049517] [<ffffffc000099dd8>] warn_slowpath_null+0x38/0x4c                
+[   97.049522] [<ffffffc000570db0>] __clk_unprepare+0x30/0x84                   
+[   97.049527] [<ffffffc000570e24>] clk_unprepare+0x20/0x34                     
+[   97.049534] [<ffffffc0005b345c>] set_src_function+0x104/0x190                
+[   97.049541] [<ffffffc000584374>] snd_ctl_elem_write+0xcc/0x144               
+[   97.049546] [<ffffffc000585ea4>] snd_ctl_ioctl+0x3bc/0x73c                   
+[   97.049554] [<ffffffc0001a6380>] vfs_ioctl+0x48/0x6c                         
+[   97.049559] [<ffffffc0001a6d08>] do_vfs_ioctl+0x480/0x550                    
+[   97.049564] [<ffffffc0001a6e40>] SyS_ioctl+0x68/0x94                         
+[   97.049567] ---[ end trace e082068ab94e6e64 ]---                             
+         Starting LSB: Raise network interfaces....                             
+[  OK  ] Closed Syslog Socket.                                                  
+[  OK  ] Reached target Sockets.                                                
+         Starting Emergency Shell...                                            
+[  OK  ] Started Emergency Shell.                                               
+[  OK  ] Reached target Emergency Mode.                                         
+[  OK  ] Started Restore Sound Card State.                                      
+[  OK  ] Started Create Volatile Files and Directories.                         
+[  OK  ] Started LSB: Set console font and keymap.                              
+[   97.453418] systemd-journald[1867]: Received request to flush runtime journa1
+[  OK  ] Started Trigger Flushing of Journal to Persistent Storage.             
+         Starting Update UTMP about System Boot/Shutdown...                     
+[  OK  ] Started Update UTMP about System Boot/Shutdown.                        
+         Starting Update UTMP about System Runlevel Changes...                  
+[  OK  ] Started LSB: Raise network interfaces..                                
+[  OK  ] Started Update UTMP about System Runlevel Changes.                     
+[  OK  ] Reached target Network.                                                
+[  OK  ] Reached target Network is Online.                                      
+Welsulogin: root account is locked, starting shell                              
+root@debianpine64:~# [  124.985042] ehci_irq: highspeed device connect          
+[  125.160053] ehci_irq: highspeed device disconnect                            
+[  125.165293] ohci_irq: fullspeed or lowspeed device connect                   
+[  125.710038] usb 4-1: new full-speed USB device number 2 using sunxi-ohci     
+[  125.937090] usb 4-1: New USB device found, idVendor=046d, idProduct=c534     
+[  125.944559] usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[  125.952491] usb 4-1: Product: USB Receiver                                   
+[  125.956962] usb 4-1: Manufacturer: Logitech                                  
+[  125.972395] input: Logitech USB Receiver as /devices/soc.0/1c1a000.ohci0-con3
+[  125.984879] hid-generic 0003:046D:C534.0001: input,hidraw0: USB HID v1.11 Ke0
+[  126.080757] input: Logitech USB Receiver as /devices/soc.0/1c1a000.ohci0-con4
+[  126.095552] hid-generic 0003:046D:C534.0002: input,hiddev0,hidraw1: USB HID 1
+                                                                                
+root@debianpine64:~# startx                                                     
+                                                                                
+                                                                                
+X.Org X Server 1.16.4                                                           
+Release Date: 2014-12-20                                                        
+X Protocol Version 11, Revision 0                                               
+Build Operating System: Linux 3.16.0-4-arm64 aarch64 Debian                     
+Current Operating System: Linux debianpine64 3.10.65 #4 SMP PREEMPT Wed Jan 18 4
+Kernel command line: earlyprintk=sunxi-uart,0x01c28000 initcall_debug=0 console1
+Build Date: 11 February 2015  01:19:23AM                                        
+xorg-server 2:1.16.4-1 (http://www.debian.org/support)                          
+Current version of pixman: 0.32.6                                               
+        Before reporting problems, check http://wiki.x.org                      
+        to make sure that you have the latest version.                          
+Markers: (--) probed, (**) from config file, (==) default setting,              
+        (++) from command line, (!!) notice, (II) informational,                
+        (WW) warning, (EE) error, (NI) not implemented, (??) unknown.           
+(==) Log file: "/var/log/Xorg.0.log", Time: Tue Apr 25 14:56:51 2017            
+(==) Using config file: "/etc/X11/xorg.conf"                                    
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"                 
+(EE)                                                                            
+Fatal server error:                                                             
+(EE) no screens found(EE)                                                       
+(EE)                                                                            
+Please consult the The X.Org Foundation support                                 
+         at http://wiki.x.org                                                   
+ for help.                                                                      
+(EE) Please also check the log file at "/var/log/Xorg.0.log" for additional inf.
+(EE)                                                                            
+(EE) Server terminated with error (1). Closing log file.                        
+                                                                                
+^Cxinit: giving up                                                              
+xinit: unable to connect to X server: Connection refused                        
+xinit: unexpected signal 2                                                      
+root@debianpine64:~# lsmod                                                      
+Module                  Size  Used by                                           
+root@debianpine64:~# mount /dev/mmcblk0p8  ~/workstation/                       
+[  169.084474] EXT4-fs (mmcblk0p8): recovery complete                           
+[  169.090365] EXT4-fs (mmcblk0p8): mounted filesystem with ordered data mode. )
+root@debianpine64:~# cd workstation/                                            
+root@debianpine64:~/workstation# ls                                             
+backups  JetCui          lost+found  test     xorg                              
+dengbo   lib_workstaion  modules     wayland                                    
+root@debianpine64:~/workstation# cd modules/                                    
+root@debianpine64:~/workstation/modules# ls                                     
+drm_kms_helper.ko  mali_drm_r6p2.ko  mali_r5p1.ko  old_sunxdrm.ko               
+H64                mali.ko           mali_r6p0.ko  sunxidrm.ko                  
+root@debianpine64:~/workstation/modules# cd ..                                  
+root@debianpine64:~/workstation# ls                                             
+backups  JetCui          lost+found  test     xorg                              
+dengbo   lib_workstaion  modules     wayland                                    
+root@debianpine64:~/workstation# cd xorg/                                       
+root@debianpine64:~/workstation/xorg# ls                                        
+arm_dma   ddk_r6p0_bak                mali-r6p0-01-km.tar.bz2  xorg.conf        
+ddk_r5p1  ddk_r6p0_can_build.tar.bz2  mali-r6p0-01.tar.bz2                      
+ddk_r6p0  mali-r5p1-01-um018.tar.bz2  mesa-demos                                
+root@debianpine64:~/workstation/xorg# cd ..                                     
+root@debianpine64:~/workstation# ls                                             
+backups  JetCui          lost+found  test     xorg                              
+dengbo   lib_workstaion  modules     wayland                                    
+root@debianpine64:~/workstation# cd JetCui/                                     
+root@debianpine64:~/workstation/JetCui# ls                                      
+cmake  deqp  external_deqp.tgz  glmark2-2014.03                                 
+root@debianpine64:~/workstation/JetCui# cd ..                                   
+root@debianpine64:~/workstation# ls                                             
+backups  JetCui          lost+found  test     xorg                              
+dengbo   lib_workstaion  modules     wayland                                    
+root@debianpine64:~/workstation# cd lib_workstaion/                             
+root@debianpine64:~/workstation/lib_workstaion# ls                              
+lib_fbdev  lib_wayland  lib_xorg  package                                       
+root@debianpine64:~/workstation/lib_workstaion# cd lib_                         
+bash: cd: lib_: No such file or directory                                       
+root@debianpine64:~/workstation/lib_workstaion# cd lib_xorg/                    
+root@debianpine64:~/workstation/lib_workstaion/lib_xorg# ls                     
+kkk                  libMali.so                                                 
+libEGL.so            libMali.so_bak                                             
+libEGL.so.1          libMali.so_r6p0                                            
+libEGL.so.1.4        libMali.so_r6p0_um001_debug.so                             
+libGLESv1_CM.so      libMali.so_r6p0_um001_release                              
+libGLESv1_CM.so.1    libMali.so_r6p2_01um009                                    
+libGLESv1_CM.so.1.1  libMali.so_r6p2_debug                                      
+libGLESv2.so         libMali.so_r6p2_release                                    
+libGLESv2.so.2       version                                                    
+libGLESv2.so.2.0                                                                
+root@debianpine64:~/workstation/lib_workstaion/lib_xorg# cd ../..               
+root@debianpine64:~/workstation# ls                                             
+backups  JetCui          lost+found  test     xorg                              
+dengbo   lib_workstaion  modules     wayland                                    
+root@debianpine64:~/workstation# cd ..                                          
+root@debianpine64:~# cd workstation/                                            
+root@debianpine64:~/workstation# ls                                             
+backups  JetCui          lost+found  test     xorg                              
+dengbo   lib_workstaion  modules     wayland                                    
+root@debianpine64:~/workstation# cd modules/                                    
+root@debianpine64:~/workstation/modules# ls                                     
+drm_kms_helper.ko  mali_drm_r6p2.ko  mali_r5p1.ko  old_sunxdrm.ko               
+H64                mali.ko           mali_r6p0.ko  sunxidrm.ko                  
+root@debianpine64:~/workstation/modules# insmod  sunxidrm.ko                    
+[  246.826068] sunxidrm: Unknown symbol drm_kms_helper_poll_fini (err 0)        
+[  246.833377] sunxidrm: Unknown symbol drm_fb_helper_single_add_all_connectors)
+[  246.842000] sunxidrm: Unknown symbol drm_fb_helper_init (err 0)              
+[  246.848531] sunxidrm: Unknown symbol drm_fb_helper_fill_fix (err 0)          
+[  246.855618] sunxidrm: Unknown symbol drm_kms_helper_poll_init (err 0)        
+[  246.862819] sunxidrm: Unknown symbol drm_fb_helper_setcmap (err 0)           
+[  246.869579] sunxidrm: Unknown symbol drm_helper_disable_unused_functions (er)
+[  246.877978] sunxidrm: Unknown symbol drm_fb_helper_fini (err 0)              
+[  246.884742] sunxidrm: Unknown symbol drm_fb_helper_hotplug_event (err 0)     
+[  246.892256] sunxidrm: Unknown symbol drm_fb_helper_blank (err 0)             
+[  246.898829] sunxidrm: Unknown symbol drm_fb_helper_check_var (err 0)         
+[  246.906069] sunxidrm: Unknown symbol drm_helper_crtc_in_use (err 0)          
+[  246.913209] sunxidrm: Unknown symbol drm_fb_helper_fill_var (err 0)          
+[  246.920189] sunxidrm: Unknown symbol drm_helper_encoder_in_use (err 0)       
+[  246.927358] sunxidrm: Unknown symbol drm_helper_mode_fill_fb_struct (err 0)  
+[  246.935253] sunxidrm: Unknown symbol drm_fb_helper_restore_fbdev_mode (err 0)
+[  246.943186] sunxidrm: Unknown symbol drm_helper_connector_dpms (err 0)       
+[  246.950448] sunxidrm: Unknown symbol drm_fb_helper_pan_display (err 0)       
+[  246.957663] sunxidrm: Unknown symbol drm_helper_probe_single_connector_modes)
+[  246.966452] sunxidrm: Unknown symbol drm_fb_helper_initial_config (err 0)    
+[  246.974014] sunxidrm: Unknown symbol drm_crtc_helper_set_config (err 0)      
+[  246.981373] sunxidrm: Unknown symbol drm_fb_helper_set_par (err 0)           
+insmod: ERROR: could not insert module sunxidrm.ko: Unknown symbol in module    
+root@debianpine64:~/workstation/modules# ls                                     
+drm_kms_helper.ko  mali_drm_r6p2.ko  mali_r5p1.ko  old_sunxdrm.ko               
+H64                mali.ko           mali_r6p0.ko  sunxidrm.ko                  
+root@debianpine64:~/workstation/modules# insmod drm_kms_helper.ko               
+root@debianpine64:~/workstation/modules# insmod  sunxidrm.ko                    
+[  263.315180] [drm:sunxi_drm_get_name_node] *ERROR* of_find_compatible_node all
+[  263.325338] [drm:disp_sys_script_get_item] *ERROR* get [lcd1] item err.      
+[  263.333019] [drm:sunxi_drm_get_name_node] *ERROR* of_find_compatible_node all
+[  263.343085] [drm:disp_sys_script_get_item] *ERROR* get [lcd1] item err.      
+[  263.350608] [drm:sunxi_drm_get_name_node] *ERROR* of_find_compatible_node all
+[  263.360664] [drm:disp_sys_script_get_item] *ERROR* get [lcd1] item err.      
+[  263.368123] [drm] [1048] crtc_id:0(22)                                       
+[  263.372520] [drm] [1048] crtc_id:1(35)                                       
+[  263.376615] [drm] [640] encoder_id:0(36) possible_crtcs:0x3                  
+[  263.382944] [drm] [640] encoder_id:1(37) possible_crtcs:0x3                  
+[  263.389604] [drm] failed to get gpio[hdmi_io_0].                             
+[  263.394851] [drm] failed to get gpio[hdmi_io_1].                             
+[  263.399893] [drm] failed to get gpio[hdmi_io_2].                             
+[  263.405109] [drm] failed to get gpio[hdmi_io_3].                             
+[  263.410241] [drm] failed to get gpio[hdmi_io_4].                             
+[  263.415394] [drm] suceess to enable regulator vcc-hdmi-33!                   
+[  263.950646] [drm] [549]sunxi_con_id:0(38), fix:1                             
+[  263.956169] [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).      
+[  263.963633] [drm] No driver support for vblank timestamp query.              
+[  264.740149] [drm] sunxi_hdmi_get_edid:add 34 cout modes.                     
+[  264.746011] [drm] connetor(0)--->crtc(0) encoder:37,resolution(1920 x 1080)  
+[  264.753858] [drm] surface(1920 x 1080), fb(1920 x 1080) and bpp(32) form(875)
+[  264.766052] addr:0x6d751000  size:16588800                                   
+[  264.771425] sunxi-drm sunxi-drm: fb0:  frame buffer device                   
+[  264.777443] sunxi-drm sunxi-drm: registered panic notifier                   
+[  264.783676] [drm] Initialized sunxi 1.0.0 20160530 on minor 0                
+root@debianpine64:~/workstation/modules# startx&                                
+[1] 2088                                                                        
+root@debianpine64:~/workstation/modules#                                        
+                                                                                
+X.Org X Server 1.16.4                                                           
+Release Date: 2014-12-20                                                        
+X Protocol Version 11, Revision 0                                               
+B[  275.811039] [drm] [CRTC:22] [FB:40] #connectors=1 (x y) (0 0)               
+uild Operating System: Linux 3.16.0-4-arm64 aarch64 Debian                      
+Current Operating System: Linux debianpine64 3.10.65 #4 SMP PREEMPT Wed Jan 18 4
+Kernel command line: earlyprintk=sunxi-uart,0x01c28000 initcall_debug=0 console1
+Build Date: 11 February 2015  01:19:23AM                                        
+xorg-server 2:1.16.4-1 (http://www.debian.org/support)                          
+Current version of pixman: 0.32.6                                               
+        Before reporting problems, check http://wiki.x.org                      
+        to make sure that you have the latest version.                          
+Markers: (--) probed, (**) from config file, (==) default setting,              
+        (++) from command line, (!!) notice, (II) informational,                
+        (WW) warning, (EE) error, (NI) not implemented, (??) unknown.           
+(==) Log file: "/var/log/Xorg.0.log", Time: Tue Apr 25 14:59:11 2017            
+(==) Using config file: "/etc/X11/xorg.conf"                                    
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"                 
+[  275.920268] [drm] [CRTC:35] [NOFB]                                           
+[  275.937047] [drm] [CRTC:22] [FB:40] #connectors=1 (x y) (0 0)                
+[  275.943651] [drm] [CRTC:35] [NOFB]                                           
+[  275.947569] [drm] [CRTC:22] [FB:40] #connectors=1 (x y) (0 0)                
+[  275.954080] [drm] [CRTC:35] [NOFB]                                           
+[  275.958305] [drm] [CRTC:22] [FB:40] #connectors=1 (x y) (0 0)                
+[  275.964808] [drm] [CRTC:35] [NOFB]                                           
+[  275.968991] [drm] [CRTC:22] [FB:40] #connectors=1 (x y) (0 0)                
+[  275.975495] [drm] [CRTC:35] [NOFB]                                           
+[  275.979341] [drm] [CRTC:22] [FB:40] #connectors=1 (x y) (0 0)                
+[  275.985861] [drm] [CRTC:35] [NOFB]                                           
+[  276.760932] [drm] sunxi_hdmi_get_edid:add 34 cout modes.                     
+[  277.537077] [drm] sunxi_hdmi_get_edid:add 34 cout modes.                     
+[  277.571375] [drm] [CRTC:22] [FB:41] #connectors=1 (x y) (0 0)                
+[  277.578016] [drm] [CRTC:35] [NOFB]                                           
+[  277.683454] [drm] [CRTC:22] [FB:41] #connectors=1 (x y) (0 0)                
+[  277.960741] [drm] [CRTC:22] [FB:41] #connectors=1 (x y) (0 0)                
+[  280.220335] hdmi video isn't insmod, hdmi interface is null                  
+[  280.226611] hdmi video isn't insmod, hdmi interface is null                  
+[  280.240776] hdmi video isn't insmod, hdmi interface is null                  
+[  280.247045] hdmi video isn't insmod, hdmi interface is null                  
+[  280.260853] hdmi video isn't insmod, hdmi interface is null                  
+[  280.267148] hdmi video isn't insmod, hdmi interface is null                  
+[  280.791561] [drm] sunxi_hdmi_get_edid:add 34 cout modes.                     
+[  280.839050] [drm] [CRTC:22] [FB:41] #connectors=1 (x y) (0 0)                
+                                                                                
+root@debianpine64:~/workstation/modules# ls                                     
+drm_kms_helper.ko  mali_drm_r6p2.ko  mali_r5p1.ko  old_sunxdrm.ko               
+H64                mali.ko           mali_r6p0.ko  sunxidrm.ko                  
+root@debianpine64:~/workstation/modules# insmod  mali_drm_r6p2.ko               
+[  312.246371] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.259250]            get_str_from_fex() 467                                
+           Failed to get [gpu_mali400_0, regulator_id] in sys_config.fex!       
+[  312.271383]                                                                  
+[  312.273022] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.285711]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, dvfs_status] in sys_config.fex!        
+[  312.297608]                                                                  
+[  312.299236] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.312025]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, max_level] in sys_config.fex!          
+[  312.323839]                                                                  
+[  312.325467] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.338156]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, begin_level] in sys_config.fex!        
+[  312.350158]                                                                  
+[  312.351786] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.364476]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, lv0_freq] in sys_config.fex!           
+[  312.376085]                                                                  
+[  312.377713] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.390496]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, lv0_volt] in sys_config.fex!           
+[  312.402204]                                                                  
+[  312.403849] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.416533]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, lv1_freq] in sys_config.fex!           
+[  312.428132]                                                                  
+[  312.429754] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.442532]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, lv1_volt] in sys_config.fex!           
+[  312.454231]                                                                  
+[  312.455858] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.468539]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, lv2_freq] in sys_config.fex!           
+[  312.480243]                                                                  
+[  312.481865] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.494549]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, lv2_volt] in sys_config.fex!           
+[  312.506149]                                                                  
+[  312.507771] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.520548]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, lv3_freq] in sys_config.fex!           
+[  312.532241]                                                                  
+[  312.533864] Mali: ERR: /home/cuiyuntao/gpu-src/modules/gpu/mali400/kernel_moc
+[  312.546547]            get_u32_from_fex() 435                                
+           Failed to get [gpu_mali400_0, lv3_volt] in sys_config.fex!           
+[  312.558171]                                                                  
+[  312.559791] Mali: There is no regulator id for GPU.                          
+[  312.565347] Mali: Set gpu frequency to 456 MHz                               
+[  312.570393] mali  addr:0x6d751000  size:16588800                             
+[  312.575441] Mali: Mali GPU initialization finished.                          
+[  312.591451] gpu cooling callback register Success                            
+[  312.596614] Mali: Mali device driver loaded                                  
+root@debianpine64:~/workstation/modules#                                        
+root@debianpine64:~/workstation/modules# [  313.380045] gpu cooling callback se0
+                                                                                
+
