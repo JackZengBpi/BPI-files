@@ -26,6 +26,9 @@ load_modules()
   bpi-m64)
     modprobe ft5x_ts
     ;;
+  bpi-r18-avs)
+    #modprobe ft5x_ts
+    ;;
   bpi-m2m)
     modprobe gt9xxnew_ts
     ;;
