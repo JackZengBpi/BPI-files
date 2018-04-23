@@ -1,0 +1,10 @@
+0. SPI ROM update (android lk) Press ESC key
+usb start
+fatload usb 0:1 0x01500000 2018-04-23-dvrboot.exe.bin
+chain 0x01500000
+
+0. SPI ROM update (linux uboot) Press ESC key
+usb start
+fatload usb 0:1 0x01500000 2018-04-23-dvrboot.exe.bin
+go 0x01500000
+
