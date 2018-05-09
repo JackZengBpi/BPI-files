@@ -1,0 +1,67 @@
+BPI-IoT> usb start                                                              
+starting USB...                                                                 
+rtk_usb_clock_init:49: Realtek-usb: Enable 1296 u3host clock and power          
+USB0:   Register 2000140 NbrPorts 2                                             
+Starting the controller                                                         
+USB XHCI 1.10                                                                   
+scanning bus 0 for devices... Unknown request , typeReq = 0x200c                
+1 USB Device(s) found                                                           
+USB1:   Register 1000140 NbrPorts 1                                             
+Starting the controller                                                         
+USB XHCI 1.10                                                                   
+scanning bus 1 for devices... Unknown request , typeReq = 0x200c                
+2 USB Device(s) found                                                           
+USB2:   USB EHCI 1.00                                                           
+scanning bus 2 for devices... 2 USB Device(s) found                             
+USB3:   Register 2000140 NbrPorts 2                                             
+Starting the controller                                                         
+USB XHCI 1.10                                                                   
+scanning bus 3 for devices... Unknown request , typeReq = 0x200c                
+USB device descriptor short read (expected 18, got 8)                           
+1 USB Device(s) found                                                           
+       scanning usb for storage devices...  address 5                           
+1 Storage Device(s) found                                                       
+BPI-IoT> fatload usb 0:1 0x01500000 2018-04-23-dvrboot.exe.bin                  
+reading 2018-04-23-dvrboot.exe.bin                                              
+690408 bytes read in 56 ms (11.8 MiB/s)                                         
+BPI-IoT> go 0x01500000                                                          
+Starting application at 0x01500000 ...                                          
+flash_type: SPI                                                                 
+begin:                                                                          
+                                                                                
+nor flash id [0x00EF4018]                                                       
+      sector 256k en: 0x00000000                                                
+      sector  64k en: 0x00000001                                                
+      sector  32k en: 0x00000001                                                
+      sector   4k en: 0x00000001                                                
+      page_program  : 0x00000001                                                
+      max capacity  : 0x01000000                                                
+      spi type name : WINBOND_W325Q128BV_128Mbit                                
+init                                                                            
+spi : erase 0x00100000 bytes from 0x88100000                                    
+////////////////                                                                
+spi : write arm romcode, start=0x88100000, len=0x00017BC8                       
+................................................................................
+..............                                                                  
+spi : write lexra romcode, start=0x8811F000, len=0x00000348                     
+                                                                                
+spi : write hw setting&signature, start=0x88120800, len=0x00000C80              
+...                                                                             
+spi : write bootcode, start=0x88121480, len=0x0005C1C0                          
+................................................................................
+................................................................................
+................................................................................
+................................................................................
+................................................                                
+spi : write bootcode signature, start=0x8817D640, len=0x00000020                
+                                                                                
+spi : write fsbl, start=0x8817D660, len=0x00019980                              
+................................................................................
+......................                                                          
+spi : write fsbl sig, start=0x88196FE0, len=0x00000020                          
+                                                                                
+spi : write parameter, start=0x88120000, len=0x00000420                         
+.exit                                                                           
+Finish                                                                          
+reset...                                                                        
+C1:80000000

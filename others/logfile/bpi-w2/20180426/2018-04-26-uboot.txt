@@ -1,0 +1,239 @@
+1:80000000                                                                      
+C2                                                                              
+?                                                                               
+C3h                                                                             
+SD card is detected !!                                                          
+C4                                                                              
+Command 0x00000000                                                              
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x000000A0                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000000                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x00000000                                        
+Command 0x00000008                                                              
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000008                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000001                                        
+        response 0x9801058D = 0x000000AA                                        
+        response 0x9801058E = 0x00000013                                        
+Command 0x00000037                                                              
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000037                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000001                                        
+        response 0x9801058D = 0x00000020                                        
+        response 0x9801058E = 0x00000083                                        
+AppCommand 0x00000029                                                           
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x0000003F                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x000000FF                                        
+        response 0x9801058C = 0x00000080                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x000000FF                                        
+Command 0x00000037                                                              
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000037                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000001                                        
+        response 0x9801058D = 0x00000020                                        
+        response 0x9801058E = 0x00000083                                        
+AppCommand 0x00000029                                                           
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x0000003F                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x000000FF                                        
+        response 0x9801058C = 0x00000080                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x000000FF                                        
+Command 0x00000037                                                              
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000037                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000001                                        
+        response 0x9801058D = 0x00000020                                        
+        response 0x9801058E = 0x00000083                                        
+AppCommand 0x00000029                                                           
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x0000003F                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x000000FF                                        
+        response 0x9801058C = 0x00000080                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x000000FF                                        
+Command 0x00000037                                                              
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000037                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000001                                        
+        response 0x9801058D = 0x00000020                                        
+        response 0x9801058E = 0x00000083                                        
+AppCommand 0x00000029                                                           
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x0000003F                                        
+        response 0x9801058A = 0x000000C1                                        
+        response 0x9801058B = 0x000000FF                                        
+        response 0x9801058C = 0x00000080                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x000000FF                                        
+card powerup status = 0x000000C1                                                
+card capacity status = 0x00000001                                               
+can switch to 1.8V = 0x00000001                                                 
+Command 0x0000000B                                                              
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x0000000B                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000003                                        
+        response 0x9801058D = 0x00000020                                        
+        response 0x9801058E = 0x000000BD                                        
+wait 0x98010585[4:0] 0                                                          
+wait 0x98010585[4:0] done                                                       
+wait 0x98010585[4:0] 1                                                          
+wait 0x98010585[4:0] done                                                       
+Command 0x00000002                                                              
+        interrupt 0x98010424 = 0x00000012                                       
+        Command pass                                                            
+        response 0x98010589 = 0x000000BB                                        
+        response 0x9801058A = 0x00000042                                        
+        response 0x9801058B = 0x000000F2                                        
+        response 0x9801058C = 0x00000000                                        
+        response 0x9801058D = 0x000000F6                                        
+        response 0x9801058E = 0x00000099                                        
+        CID 0xA0000 = 0x%x                                                      
+4453033F                                                                        
+        CID 0xA0004 = 0x%x                                                      
+36314C53                                                                        
+        CID 0xA0008 = 0x%x                                                      
+BB358047                                                                        
+        CID 0xA000C = 0x%x                                                      
+F600F242                                                                        
+Command 0x00000003                                                              
+        interrupt 0x98010424 = 0x00000012                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000003                                        
+        response 0x9801058A = 0x000000AA                                        
+        response 0x9801058B = 0x000000AA                                        
+        response 0x9801058C = 0x00000005                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x000000B5                                        
+RCA = 0x0000AAAA                                                                
+Command 0x00000007                                                              
+        interrupt 0x98010424 = 0x00000012                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000007                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000007                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x00000075                                        
+SD card has been initialized.                                                   
+Command 0x00000037                                                              
+        interrupt 0x98010424 = 0x00000012                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000037                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000009                                        
+        response 0x9801058D = 0x00000020                                        
+        response 0x9801058E = 0x00000033                                        
+AppCommand 0x00000006                                                           
+        interrupt 0x98010424 = 0x00000012                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000006                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000009                                        
+        response 0x9801058D = 0x00000020                                        
+        response 0x9801058E = 0x000000B9                                        
+4-bit bus width                                                                 
+SDR12/normal mode.                                                              
+Command 0x00000006                                                              
+        interrupt 0x98010424 = 0x00000012                                       
+        Command pass                                                            
+        response 0x98010589 = 0x00000006                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000009                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x000000DD                                        
+DMA finished                                                                    
+cr_auto_Read_Write_1, cmd_idx = 0x00000012                                      
+        Command pass                                                            
+        response 0x98010589 = 0x0000000C                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x0000000B                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x0000007F                                        
+        interrupt 0x98010424 = 0x00000012                                       
+Command 0x0000000D                                                              
+        interrupt 0x98010424 = 0x00000002                                       
+        Command pass                                                            
+        response 0x98010589 = 0x0000000D                                        
+        response 0x9801058A = 0x00000000                                        
+        response 0x9801058B = 0x00000000                                        
+        response 0x9801058C = 0x00000009                                        
+        response 0x9801058D = 0x00000000                                        
+        response 0x9801058E = 0x0000003F                                        
+64b                                                                             
+                                                                                
+                                                                                
+U-Boot 2015.07 (Apr 26 2018 - 09:08:32 +0800)                                   
+                                                                                
+CPU  : Cortex-A53 Quad Core - AARCH64                                           
+Board: Realtek QA Board                                                         
+DRAM:  2 GiB                                                                    
+Watchdog: Disabled                                                              
+mapping memory 0x20000000-0x40000000 non-cached                                 
+flushing dcache successfully.                                                   
+SD:                                                                             
+SD device index# 0                                                              
+mmc->scr[0]=2358003,mmc->scr[1]=0                                               
+SD: init done, no error                                                         
+SD: capacity 31116288 sectors(0x1dacc00), (15193 MB)                            
+Factory: SD                                                                     
+[FAC] No factory data in SD                                                     
+------------can't find tmp/factory/000BootParam.h                               
+[ENV] read_env from factory failed                                              
+Using default environment                                                       
+                                                                                
+*** Warning - bad CRC, using default environment                                
+                                                                                
+In:    serial                                                                   
+Out:   serial                                                                   
+Err:   serial                                                                   
+vid=31,22,21,20,19,18,17,16,7,6,5,4,3,2,1,                                      
+------------can't find tmp/factory/video_rpc.bin                                
+tv_system=25 mode=1                                                             
+Net:   Realtek PCIe GBE Family Controller mcfg = 0024                           
+dev->name=r8168#0                                                               
+Checking default environment                                                    
+Hit Esc or Tab key to enter console mode or rescue linux:  3                    
+------------can't find tmp/factory/recovery                                     
+                                                                                
+Press Esc Key                                                                   
+                                                                                
+Enter console mode, disable watchdog ...                                        
+                                                                                
+BPI-IoT> 
+

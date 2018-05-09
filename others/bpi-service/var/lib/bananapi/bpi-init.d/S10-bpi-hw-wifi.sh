@@ -10,6 +10,9 @@ load_modules()
   bpi-m64)
     modprobe bcmdhd
     ;;
+  bpi-r18-avs)
+    modprobe bcmdhd
+    ;;
   bpi-m2m)
     modprobe bcmdhd
     ;;

@@ -12,6 +12,9 @@ load_modules()
   bpi-m64)
     MODULES="dw9714_act ov5640 vfe_v4l2"
     ;;
+  bpi-r18-avs)
+    MODULES="dw9714_act ov5640 vfe_v4l2"
+    ;;
   bpi-m2m)
     MODULES="ov5640 vfe_v4l2"
     ;;

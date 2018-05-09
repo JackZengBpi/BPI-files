@@ -1,0 +1,18 @@
+
+root@TinaLinux:/# arecord -Dhw:2,0 -c 2 -r 16000 -f S24_LE /tmp/test.wav
+Recording WAVE '/tmp/test.wav' : Signed 24 bit Little Endian, Rate 16000 Hz, Stereo
+^CAborted by signal Interrupt...
+root@TinaLinux:/# ls
+bin       etc       mnt       rom       sys       var
+boot-res  lib       overlay   root      tmp       www
+dev       lib64     proc      sbin      usr
+root@TinaLinux:/# ls /tmp/test.wav 
+/tmp/test.wav
+root@TinaLinux:/# arecord -Dhw:2,0 -c 2 -r 16000 -f S16_LE /tmp/test.wav
+Recording WAVE '/tmp/test.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Stereo
+^CAborted by signal Interrupt...
+root@TinaLinux:/# arecord -Dhw:2,0 -c 1 -r 16000 -f S16_LE /tmp/test1.wav
+Recording WAVE '/tmp/test1.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+^CAborted by signal Interrupt...
+root@TinaLinux:/# 
+
